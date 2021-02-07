@@ -1,0 +1,53 @@
+Breakdown9/29/20209/29/20199/29/20189/29/2017
+Total Assets	323,888,000	338,516,000	365,725,000	375,319,000
+Current Assets	143,713,000	162,819,000	131,339,000	128,645,000
+Cash, Cash Equivalents & Short Term Investments	90,943,000	100,557,000	66,301,000	74,181,000
+Cash And Cash Equivalents	38,016,000	48,844,000	25,913,000	20,289,000
+Cash	17,773,000	12,204,000	11,575,000	7,982,000
+Cash Equivalents	20,243,000	36,640,000	14,338,000	12,307,000
+Other Short Term Investments	52,927,000	51,713,000	40,388,000	53,892,000
+Receivables	37,445,000	45,804,000	48,995,000	35,673,000
+Accounts receivable	16,120,000	22,926,000	23,186,000	17,874,000
+Gross Accounts Receivable	-	-	-	17,932,000
+Allowance For Doubtful Accounts Receivable	-	-	-	-58,000
+Other Receivables	21,325,000	22,878,000	25,809,000	17,799,000
+Inventory	4,061,000	4,106,000	3,956,000	4,855,000
+Other Current Assets	11,264,000	12,352,000	12,087,000	13,936,000
+Total non-current assets	180,175,000	175,697,000	234,386,000	246,674,000
+Total Liabilities Net Minority Interest	258,549,000	248,028,000	258,578,000	241,272,000
+Current Liabilities	105,392,000	105,718,000	116,866,000	100,814,000
+Payables And Accrued Expenses	42,296,000	46,236,000	55,888,000	74,793,000
+Payables	42,296,000	46,236,000	55,888,000	49,049,000
+Accounts Payable	42,296,000	46,236,000	55,888,000	49,049,000
+Current Accrued Expenses	-	-	-	25,744,000
+Current Debt And Capital Lease Obligation	13,769,000	16,240,000	20,748,000	18,473,000
+Current Debt	13,769,000	16,240,000	20,748,000	18,473,000
+Commercial Paper	4,996,000	5,980,000	11,964,000	11,977,000
+Other Current Borrowings	8,773,000	10,260,000	8,784,000	6,496,000
+Current Deferred Liabilities	6,643,000	5,522,000	7,543,000	7,548,000
+Current Deferred Revenue	6,643,000	5,522,000	7,543,000	7,548,000
+Other Current Liabilities	42,684,000	37,720,000	32,687,000	-
+Total Non Current Liabilities Net Minority Interest	153,157,000	142,310,000	141,712,000	140,458,000
+Long Term Debt And Capital Lease Obligation	98,667,000	91,807,000	93,735,000	97,207,000
+Long Term Debt	98,667,000	91,807,000	93,735,000	97,207,000
+Non Current Deferred Liabilities	-	-	3,223,000	34,340,000
+Non Current Deferred Taxes Liabilities	-	-	426,000	31,504,000
+Non Current Deferred Revenue	-	-	2,797,000	2,836,000
+Tradeand Other Payables Non Current	28,170,000	29,545,000	33,589,000	-
+Other Non Current Liabilities	26,320,000	20,958,000	11,165,000	8,911,000
+Total Equity Gross Minority Interest	65,339,000	90,488,000	107,147,000	134,047,000
+Stockholders' Equity	65,339,000	90,488,000	107,147,000	134,047,000
+Capital Stock	50,779,000	45,174,000	40,201,000	35,867,000
+Common Stock	50,779,000	45,174,000	40,201,000	35,867,000
+Retained Earnings	14,966,000	45,898,000	70,400,000	98,330,000
+Gains Losses Not Affecting Retained Earnings	-406,000	-584,000	-3,454,000	-150,000
+Total Capitalization	164,006,000	182,295,000	200,882,000	231,254,000
+Common Stock Equity	65,339,000	90,488,000	107,147,000	134,047,000
+Net Tangible Assets	65,339,000	90,488,000	107,147,000	126,032,000
+Working Capital	38,321,000	57,101,000	14,473,000	27,831,000
+Invested Capital	177,775,000	198,535,000	221,630,000	249,727,000
+Tangible Book Value	65,339,000	90,488,000	107,147,000	126,032,000
+Total Debt	112,436,000	108,047,000	114,483,000	115,680,000
+Net Debt	74,420,000	59,203,000	88,570,000	95,391,000
+Share Issued	16,976,763	17,772,944	19,019,944	20,504,804
+Ordinary Shares Number	16,976,763	17,772,944	19,019,944	20,504,804
