@@ -5,6 +5,7 @@ Info  : This script reads the financial data  from the folder "inputs"
 
 import os
 
+# source_path = Path where the script is saved 
 source_path = os.path.dirname(__file__)
 source_path = source_path.replace('/','\\')
 
