@@ -34,12 +34,18 @@ class Base:
             self.path.append(os.path.join(source_path, 'inputs\\', file))
 
         with open(self.path[0], 'r') as bs:
+            logger.info("Reading Balance sheet")
             balsheet = bs.readlines()
+            logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
+            logger.info("Reading Cash flow statement")
             cashflow = cf.readlines()
+            logger.info("Cash flow statement read")
 
         with open(self.path[1], 'r') as ins:
+            logger.info("Reading Income statement")
             incomestmt = ins.readlines()
+            logger.info("Income statement read")
 
         return balsheet, cashflow,incomestmt
