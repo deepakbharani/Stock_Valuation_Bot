@@ -1,0 +1,9 @@
+INFO - [10/02/2021] (22:20:30) - __main__ - Stock Valuation started
+INFO - [10/02/2021] (22:20:30) - Base - All 3 Financial statements have been accepted
+INFO - [10/02/2021] (22:20:30) - Base - Creating list of paths for the files containing financial data
+INFO - [10/02/2021] (22:20:30) - Base - Reading Balance sheet
+INFO - [10/02/2021] (22:20:30) - Base - Balance sheet read
+INFO - [10/02/2021] (22:20:30) - Base - Reading Cash flow statement
+INFO - [10/02/2021] (22:20:30) - Base - Cash flow statement read
+INFO - [10/02/2021] (22:20:30) - Base - Reading Income statement
+INFO - [10/02/2021] (22:20:30) - Base - Income statement read
