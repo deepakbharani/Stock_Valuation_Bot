@@ -1,22 +1,36 @@
 """
 Author: Bharani Deepak
-Info  : This script reads the financial data  from the folder "inputs"
+Info  : This Base Class contains common Methods and Attributes
 """
-
 import os
+import logging
 
-# source_path is the path where this script is saved
-source_path = os.path.dirname(__file__)
-source_path = source_path.replace('/','\\')
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('logfile.log')
+file_handler.setLevel(logging.ERROR)
+logger.addHandler(file_handler)
 
-# files inside "input" folder is defined in tuple
-input_data = ('balance_sheet.txt','cash_flow.txt','income_statement.txt')
+class Base:
 
-# Set path for all the financial files inside "inputs" folder
-path = []
-for file in input_data:
-    path.append(os.path.join(source_path,'inputs\\',file))
+    def __init__(self,input_data=[]):
+        self.indata = input_data
 
-for i in range(len(path)):
-    with open(path[i],'r') as bs:
-        print("Data Read")
+        if len(self.indata) is 3:
+            logger.info(" All 3 Financial statements have been accepted")
+        else:
+            logger.error("There must be 3 financial statements -> please check input folder")
+
+    def readfinancials(self,self.indata):
+
+        # source_path is the path where this script is saved
+        source_path = os.path.dirname(__file__)
+        source_path = source_path.replace('/', '\\')
+
+        logger.info("Creating list of paths for the files containing financial data")
+        # Set path for all the financial files inside "inputs" folder
+        path = []
+        for file in self.indata:
+            path.append(os.path.join(source_path, 'inputs\\', file))
+
+        return path
+
