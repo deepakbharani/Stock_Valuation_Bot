@@ -40,6 +40,7 @@ class Base:
             logger.info("Reading Balance sheet")
             self.balsheet = bs.readlines()
             self.balsheet = [i.split() for i in self.balsheet]
+            self.balsheet = [' '.join(i[0:len(i) - 4]) for i in self.balsheet]
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
