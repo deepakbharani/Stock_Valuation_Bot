@@ -10,9 +10,5 @@ if __name__ == "__main__":
 
     mainlogger.info("Stock Valuation started")
 
-    # files inside "input" folder is defined in tuple
-    input_data = ('balance_sheet.txt', 'cash_flow.txt', 'income_statement.txt')
-
-    rf = Base(input_data)
-
-
+    # Creating object for base class
+    baseobj = Base()
