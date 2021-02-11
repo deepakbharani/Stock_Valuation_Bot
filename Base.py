@@ -1,7 +1,7 @@
 """
 Author : Bharani Deepak
 Info   : This Base Class contains common Methods and Attributes
-Purpose: Reads the financial statements and returns a list containing the data
+Purpose: Reads the financial statements and returns tuples containing the data
 """
 import os
 import logging
@@ -38,17 +38,17 @@ class Base:
 
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")
-            self.balsheet = bs.readlines()
+            self.balsheet = tuple(bs.readlines())
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
             logger.info("Reading Cash flow statement")
-            self.cashflow = cf.readlines()
+            self.cashflow = tuple(cf.readlines())
             logger.info("Cash flow statement read")
 
         with open(self.path[1], 'r') as ins:
             logger.info("Reading Income statement")
-            self.incomestmt = ins.readlines()
+            self.incomestmt = tuple(ins.readlines())
             logger.info("Income statement read")
 
         return self.balsheet, self.cashflow, self.incomestmt
