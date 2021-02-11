@@ -1,4 +1,5 @@
 import logging
+import pandas as pd
 from Base import *
 
 
@@ -12,3 +13,11 @@ if __name__ == "__main__":
 
     # Creating object for base class
     baseobj = Base()
+
+    print(baseobj.balsheet)
+    df = pd.DataFrame(baseobj.balsheet)
+
+    for items in baseobj.balsheet:
+        print(items)
+        #items = items.split('\\t')
+
