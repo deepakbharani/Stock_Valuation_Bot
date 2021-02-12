@@ -5,6 +5,7 @@ Purpose: Reads the financial statements and returns lists containing the data
 """
 import os
 import logging
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -38,9 +39,8 @@ class Base:
 
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")
-            self.balsheet = bs.readlines()
-            self.balsheet = [i.split() for i in self.balsheet]
-            self.balsheet = [' '.join(i[0:len(i) - 4]) for i in self.balsheet]
+            #self.balsheet = bs.readlines()
+            self.balsheet = pd.read_table(self.path[0])
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
