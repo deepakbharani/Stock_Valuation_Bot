@@ -61,9 +61,7 @@ class Base:
     def listformatter(self, data):
 
         # This function formats the data from input file to meaningful elements of the list
-
         formatted_list = []
-
         if len(data[0]) is 46:
             data[0] = "Breakdown 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
             num_years = 4
@@ -77,5 +75,5 @@ class Base:
             items = items.split()
             items[0:(len(items) - num_years)] = [' '.join(items[0:(len(items) - num_years)])]
             formatted_list.append(items)
-
+            
         return formatted_list
