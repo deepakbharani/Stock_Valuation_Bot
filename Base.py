@@ -39,11 +39,13 @@ class Base:
 
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")
-            self.balsheet = bs.readlines()
-            #self.balsheet = pd.read_table(self.path[0])
-            self.balsheet = pd.DataFrame(self.balsheet)
-            self.balsheet = self.balsheet.drop(self.balsheet.index[0])
-            self.balsheet = self.balsheet.apply(lambda x: pd.Series(str(x).split("\\t")))
+            data = bs.readlines()
+            data.pop(0)
+            self.balsheet = []
+            for items in data:
+                items = items.split()
+                items[0:(len(items)-4)] = [' '.join(items[0:(len(items)-4)])]
+                self.balsheet.append(items)
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
