@@ -1,8 +1,9 @@
 """
 Author : Bharani Deepak
 Info   : This Base Class contains common Methods and Attributes
-Purpose: Reads the financial statements and returns lists containing the data
+Purpose: Reads the financial statements and returns dataframes containing the data
 """
+
 import os
 import logging
 import pandas as pd
@@ -39,25 +40,35 @@ class Base:
 
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")
-            data = bs.readlines()
-            data.pop(0)
-            self.balsheet = []
-            for items in data:
-                items = items.split()
-                items[0:(len(items)-4)] = [' '.join(items[0:(len(items)-4)])]
-                self.balsheet.append(items)
+            data_bs = bs.readlines()
+            data_bs.pop(0)
+            self.balsheet = pd.DataFrame(self.listformatter(data_bs))
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
             logger.info("Reading Cash flow statement")
-            self.cashflow = cf.readlines()
-            self.cashflow = [i.split() for i in self.cashflow]
+            data_cf = cf.readlines()
+            data_cf.pop(0)
+            self.cashflow = pd.DataFrame(self.listformatter(data_cf))
             logger.info("Cash flow statement read")
 
-        with open(self.path[1], 'r') as ins:
+        with open(self.path[2], 'r') as ins:
             logger.info("Reading Income statement")
-            self.incomestmt = ins.readlines()
-            self.incomestmt = [i.split() for i in self.incomestmt]
+            data_ins = ins.readlines()
+            data_ins.pop(0)
+            self.incomestmt = pd.DataFrame(self.listformatter(data_ins))
             logger.info("Income statement read")
 
-        return self.balsheet,self.cashflow, self.incomestmt
+        return self.balsheet, self.cashflow, self.incomestmt
+
+    def listformatter(self, data):
+        # This function formats the data from input file to meaningful elements of the list
+        formatted_list = []
+        for items in data:
+            items = items.split()
+            items[0:(len(items) - 4)] = [' '.join(items[0:(len(items) - 4)])]
+            formatted_list.append(items)
+
+        return formatted_list
+
+
