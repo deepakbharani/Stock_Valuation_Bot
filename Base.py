@@ -74,6 +74,8 @@ class Base:
         for items in data:
             items = items.split()
             items[0:(len(items) - num_years)] = [' '.join(items[0:(len(items) - num_years)])]
+            for elements in range(-num_years,0):
+                items[elements] = items[elements].replace(',','')
             formatted_list.append(items)
             
         return formatted_list
