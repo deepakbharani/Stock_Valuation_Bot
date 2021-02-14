@@ -7,4 +7,8 @@ derive a fair value of the stock.
 In this example Apple(AAPL) stock is valuated
 
 # Base.py
-This script will read and extract the data from financial data which was stored in as .txt file 
+Base.py is the base class which reads the financial statements as .txt files and formats the data to create a data 
+frame which can be used for further analysis
+
+# logfile.log
+Log file 
