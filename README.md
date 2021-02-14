@@ -6,5 +6,5 @@ derive a fair value of the stock.
 
 In this example Apple(AAPL) stock is valuated
 
-# ReadFinancials
+# Base.py
 This script will read and extract the data from financial data which was stored in as .txt file 
