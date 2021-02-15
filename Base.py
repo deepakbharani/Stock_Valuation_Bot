@@ -42,10 +42,6 @@ class Base:
             logger.info("Reading Balance sheet")
             data_bs = bs.readlines()
             self.balsheet = self.listformatter(data_bs)
-            # self.balsheet,self.num_years = self.listformatter(data_bs)
-            #
-            # self.balsheet = pd.DataFrame(self.balsheet,columns="")
-            # self.balsheet.set_index(0,inplace=True)
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
