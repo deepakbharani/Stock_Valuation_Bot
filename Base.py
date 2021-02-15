@@ -41,19 +41,23 @@ class Base:
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")
             data_bs = bs.readlines()
-            self.balsheet = pd.DataFrame(self.listformatter(data_bs))
+            self.balsheet = self.listformatter(data_bs)
+            # self.balsheet,self.num_years = self.listformatter(data_bs)
+            #
+            # self.balsheet = pd.DataFrame(self.balsheet,columns="")
+            # self.balsheet.set_index(0,inplace=True)
             logger.info("Balance sheet read")
 
         with open(self.path[1], 'r') as cf:
             logger.info("Reading Cash flow statement")
             data_cf = cf.readlines()
-            self.cashflow = pd.DataFrame(self.listformatter(data_cf))
+            self.cashflow = self.listformatter(data_cf)
             logger.info("Cash flow statement read")
 
         with open(self.path[2], 'r') as ins:
             logger.info("Reading Income statement")
             data_ins = ins.readlines()
-            self.incomestmt = pd.DataFrame(self.listformatter(data_ins))
+            self.incomestmt = self.listformatter(data_ins)
             logger.info("Income statement read")
 
         return self.balsheet, self.cashflow, self.incomestmt
@@ -64,12 +68,15 @@ class Base:
         formatted_list = []
         if len(data[0]) is 46:
             data[0] = "Breakdown 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
+            column_name = list(data[0].split())
             num_years = 4
         elif len(data[0]) is 49:
             data[0] = "Breakdown TTM 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
+            column_name = list(data[0].split())
             num_years = 5
         else:
             num_years = 4
+            column_name = ['Breakdown','2020','2019','2018','2017']
 
         for items in data:
             items = items.split()
@@ -77,5 +84,9 @@ class Base:
             for elements in range(-num_years,0):
                 items[elements] = items[elements].replace(',','')
             formatted_list.append(items)
-            
-        return formatted_list
+
+        dataframe = pd.DataFrame(formatted_list, columns = column_name)
+        dataframe.drop(0,inplace = True)
+        dataframe.set_index('Breakdown',inplace=True)
+
+        return dataframe
