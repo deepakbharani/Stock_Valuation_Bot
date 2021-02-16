@@ -91,3 +91,8 @@ class Base:
         dataframe.set_index('Breakdown',inplace=True)
 
         return dataframe
+
+    @classmethod
+    def percentage_growth(self,val1,val2):
+        # Calculate percentage change / growth for two value
+        return ((val2-val1)/val1) * 100
