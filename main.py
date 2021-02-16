@@ -1,4 +1,5 @@
 from Base import *
+from BalancesheetAnalysis import *
 
 if __name__ == "__main__":
 
@@ -8,9 +9,9 @@ if __name__ == "__main__":
 
     mainlogger.info("Stock Valuation started")
 
-    # Creating object for base class
-    baseobj = Base()
+    # Creating object for class BalancesheetAnalysis
+    bs = BalancesheetAnalysis()
 
-    print(baseobj.balsheet.head())
-    print(baseobj.cashflow.head())
-    print(baseobj.incomestmt.head())
+    print(bs.balsheet.head())
+    print(bs.cashflow.head())
+    print(bs.incomestmt.head())
