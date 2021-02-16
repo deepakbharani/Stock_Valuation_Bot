@@ -15,11 +15,16 @@ logger.addHandler(file_handler)
 
 class Base:
 
-    def __init__(self,path=[]):
+    def __init__(self,path = None):
 
         # files inside "input" folder is defined in tuple
         self.indata = ('balance_sheet.txt', 'cash_flow.txt', 'income_statement.txt')
-        self.path = path
+
+        if path == None:
+            self.path = []
+        else:
+            self.path = path
+
 
         if len(self.indata) is 3:
             logger.info("All 3 Financial statements have been accepted")
