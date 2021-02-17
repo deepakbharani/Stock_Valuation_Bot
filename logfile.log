@@ -1,9 +1,10 @@
-INFO - [11/02/2021] (22:46:12) - __main__ - Stock Valuation started
-INFO - [11/02/2021] (22:46:12) - Base - All 3 Financial statements have been accepted
-INFO - [11/02/2021] (22:46:12) - Base - Creating list of paths for the files containing financial data
-INFO - [11/02/2021] (22:46:12) - Base - Reading Balance sheet
-INFO - [11/02/2021] (22:46:12) - Base - Balance sheet read
-INFO - [11/02/2021] (22:46:12) - Base - Reading Cash flow statement
-INFO - [11/02/2021] (22:46:12) - Base - Cash flow statement read
-INFO - [11/02/2021] (22:46:12) - Base - Reading Income statement
-INFO - [11/02/2021] (22:46:12) - Base - Income statement read
+INFO - [17/02/2021] (20:38:20) - __main__ - Stock Valuation started
+INFO - [17/02/2021] (20:38:20) - Base - All 3 Financial statements have been accepted
+INFO - [17/02/2021] (20:38:20) - Base - Creating list of paths for the files containing financial data
+INFO - [17/02/2021] (20:38:20) - Base - Reading Balance sheet
+INFO - [17/02/2021] (20:38:20) - Base - Balance sheet read
+INFO - [17/02/2021] (20:38:20) - Base - Reading Cash flow statement
+INFO - [17/02/2021] (20:38:20) - Base - Cash flow statement read
+INFO - [17/02/2021] (20:38:20) - Base - Reading Income statement
+INFO - [17/02/2021] (20:38:20) - Base - Income statement read
+INFO - [17/02/2021] (20:38:20) - Base - Calculating Current Ratio and its growth
