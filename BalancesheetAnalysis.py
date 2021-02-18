@@ -11,7 +11,7 @@ class BalancesheetAnalysis(Base):
 
     def __init__(self):
         super().__init__()
-        self.G_cur_ratio = self.currentratio()
+        self.G_cur_ratio = self.currentratio()                      # Growth in current ratio
 
     def currentratio(self):
 
@@ -19,5 +19,5 @@ class BalancesheetAnalysis(Base):
         cur_asset = np.array(self.balsheet.loc['Current Assets']).astype('int32')
         cur_liability = np.array(self.balsheet.loc['Current Liabilities']).astype('int32')
         cur_ratio = cur_asset/cur_liability
-        
+
         return Base.percentage_growth(cur_ratio)
