@@ -11,7 +11,6 @@ if __name__ == "__main__":
     # Creating object for class BalancesheetAnalysis
     bs = BalancesheetAnalysis()
 
-    bs.currentratio()
     # print(bs.balsheet.head())
     # print(bs.cashflow.head())
     # print(bs.incomestmt.head())
