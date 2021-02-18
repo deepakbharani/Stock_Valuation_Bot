@@ -7,6 +7,11 @@ Purpose: Accesses the Balance Sheet and performs Balance Sheet analysis
 from Base import *
 import pandas as pd
 
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('logfile.log')
+file_handler.setLevel(logging.ERROR)
+logger.addHandler(file_handler)
+
 class BalancesheetAnalysis(Base):
 
     def __init__(self):
