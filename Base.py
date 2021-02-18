@@ -7,6 +7,7 @@ Purpose: Reads the financial statements and returns dataframes containing the da
 import os
 import logging
 import pandas as pd
+import numpy as np
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -106,11 +107,11 @@ class Base:
         return dataframe,column_name
 
     @classmethod
-    def percentage_growth(self,list_data):
+    def percentage_growth(self,vector):
 
         # Calculate percentage change / growth for two value
         growth = []
-        for i in range(0,len(list_data)-1):
-            growth.append(((list_data[i+1]-list_data[i])/list_data[i]) * 100)
+        for i in range(0,len(vector)-1):
+            growth.append(((vector[i+1]-vector[i])/vector[i]) * 100)
 
         return growth
