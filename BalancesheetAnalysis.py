@@ -13,12 +13,13 @@ class BalancesheetAnalysis(Base):
         super().__init__()
 
     def currentratio(self):
-        logger.info("Calculating Current Ratio and its growth")
-        cur_asset = list(map(float, (self.balsheet.loc['Current Assets'])))
-        cur_liability = list(map(float, (self.balsheet.loc['Current Liabilities'])))
-        cur_ratio = []
-        for i in range(0,len(cur_asset)):
-            cur_ratio.append(cur_asset[i]/cur_liability[i])
 
-        G_CurrRatio = Base.percentage_growth(cur_ratio)
-        print(G_CurrRatio)
+        logger.info("Calculating Current Ratio and its growth")
+        cur_asset = np.array(self.balsheet.loc['Current Assets']).astype('int32')
+        cur_liability = np.array(self.balsheet.loc['Current Liabilities']).astype('int32')
+        cur_ratio = cur_asset/cur_liability
+        print(cur_asset)
+        print(cur_liability)
+        G_cur_ratio = Base.percentage_growth(cur_ratio)
+        print(G_cur_ratio)
+
