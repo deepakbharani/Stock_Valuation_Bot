@@ -13,5 +13,8 @@ frame which can be used for further analysis
 # BalancesheetAnalysis.py
 This Subclass helps to analyse the Balance sheet which is now available as a dataframe from Base class method 'listformatter'
 
+# Plotter.py
+A Class which is to plot the results from calculations and the data 
+
 # logfile.log
 Log file 
