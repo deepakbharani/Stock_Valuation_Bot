@@ -1,4 +1,5 @@
 from BalancesheetAnalysis import *
+from Plotter import *
 
 if __name__ == "__main__":
 
@@ -10,7 +11,7 @@ if __name__ == "__main__":
 
     # Creating object for class BalancesheetAnalysis
     bs = BalancesheetAnalysis()
-
+    print(bs.G_cur_ratio)
     # print(bs.balsheet.head())
     # print(bs.cashflow.head())
     # print(bs.incomestmt.head())
