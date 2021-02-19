@@ -104,7 +104,7 @@ class Base:
         dataframe.set_index('Breakdown',inplace=True)
         dataframe = dataframe[cname[1:len(cname)]]                      # Rearranging columns
 
-        return dataframe,column_name
+        return dataframe,cname
 
     @classmethod
     def percentage_growth(self,vector):
