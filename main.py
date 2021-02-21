@@ -1,4 +1,4 @@
-from BalancesheetAnalysis import *
+from LiquidityRatio import *
 from Plotter import *
 
 if __name__ == "__main__":
@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
     mainlogger.info("Stock Valuation started")
 
-    # Creating object for class BalancesheetAnalysis
-    bs = BalancesheetAnalysis()
-    print(bs.G_cur_ratio)
+    # Creating object for class LiquidityRatio
+    bs = LiquidityRatio()
+
     # print(bs.balsheet.head())
     # print(bs.cashflow.head())
     # print(bs.incomestmt.head())
