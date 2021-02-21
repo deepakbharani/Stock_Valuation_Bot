@@ -4,7 +4,7 @@ Info   : This Subclass contains Methods and Attributes for plotting the results
 Purpose: plot
 """
 
-from BalancesheetAnalysis import *
+from LiquidityRatio import *
 from matplotlib import pyplot as plt
 
 #plt.xkcd()
