@@ -1,13 +1,13 @@
-INFO - [20/02/2021] (21:00:26) - __main__ - Stock Valuation started
-INFO - [20/02/2021] (21:00:26) - Base - All 3 Financial statements have been accepted
-INFO - [20/02/2021] (21:00:26) - Base - Creating list of paths for the files containing financial data
-INFO - [20/02/2021] (21:00:26) - Base - Reading Balance sheet
-INFO - [20/02/2021] (21:00:26) - Base - Balance sheet read
-INFO - [20/02/2021] (21:00:26) - Base - Reading Cash flow statement
-INFO - [20/02/2021] (21:00:26) - Base - Cash flow statement read
-INFO - [20/02/2021] (21:00:26) - Base - Reading Income statement
-INFO - [20/02/2021] (21:00:26) - Base - Income statement read
-INFO - [20/02/2021] (21:00:26) - BalancesheetAnalysis - Calculating Current Ratio and its growth
-INFO - [20/02/2021] (21:00:26) - BalancesheetAnalysis - Analysing Book Value
-INFO - [20/02/2021] (21:00:27) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [20/02/2021] (21:00:27) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [21/02/2021] (19:22:32) - __main__ - Stock Valuation started
+INFO - [21/02/2021] (19:22:32) - Base - All 3 Financial statements have been accepted
+INFO - [21/02/2021] (19:22:32) - Base - Creating list of paths for the files containing financial data
+INFO - [21/02/2021] (19:22:32) - Base - Reading Balance sheet
+INFO - [21/02/2021] (19:22:32) - Base - Balance sheet read
+INFO - [21/02/2021] (19:22:32) - Base - Reading Cash flow statement
+INFO - [21/02/2021] (19:22:32) - Base - Cash flow statement read
+INFO - [21/02/2021] (19:22:32) - Base - Reading Income statement
+INFO - [21/02/2021] (19:22:32) - Base - Income statement read
+INFO - [21/02/2021] (19:22:32) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [21/02/2021] (19:22:32) - LiquidityRatio - Calculating Debt to Equity ratio
+INFO - [21/02/2021] (19:22:32) - LiquidityRatio - Calculating Cash Ratio
+INFO - [21/02/2021] (19:22:32) - LiquidityRatio - Calculating Operating Cashflow ratio
