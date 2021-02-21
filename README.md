@@ -14,8 +14,7 @@ frame which can be used for further analysis
 This Subclass helps to calculate the Liquidity ratios such as 
 - Current Ratio
 - Cash Ratio
-- Operating Cashflow Ratio
-with the data which are now available as a dataframe from Base class method 'listformatter'
+- Operating Cashflow Ratio, with the data which are now available as a dataframe from Base class method 'listformatter'
 
 # Plotter.py
 A Class which is to plot the results from calculations and the data 
