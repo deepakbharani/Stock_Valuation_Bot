@@ -28,5 +28,3 @@ class Plotter():
         plt.grid(True)
         plt.legend()
         plt.show()
-
-        pass
