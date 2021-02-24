@@ -42,8 +42,12 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
             return Base.percentage_growth(self.debt2equity)
 
-        except:
-            logger.info("Debt to Equity ratio can't be calculated")
+        except KeyError:
+            logger.error("Debt to Equity ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
 
     def interest_coverage_ratio(self):
 
@@ -61,10 +65,14 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             self.int_cov_ratio = np.divide(self.ebit,self.interest_expense)
 
             ## PLOTTING
-            pt.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
-                        self.int_cov_ratio,self.ins_column_name[1:])
+            # pt.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
+            #             self.int_cov_ratio,self.ins_column_name[1:])
 
             return Base.percentage_growth(self.int_cov_ratio)
 
-        except:
-            logger.info("Interest Coverage ratio can't be calculated")
+        except KeyError:
+            logger.error("Interest Coverage ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
