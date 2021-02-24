@@ -46,8 +46,13 @@ class LiquidityRatio(Base,Plotter):
 
             return Base.percentage_growth(self.cur_ratio)
 
-        except:
-            logger.info("Current Ratio can't be calculated")
+        except KeyError:
+            logger.error("Current Ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
+
 
     def cashratio(self):
 
@@ -68,8 +73,12 @@ class LiquidityRatio(Base,Plotter):
 
             return Base.percentage_growth(self.cshratio)
 
-        except:
-            logger.info("Cash Ratio can't be calculated")
+        except KeyError:
+            logger.error("Cash Ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
 
     def oper_cashflow_ratio(self):
 
@@ -92,8 +101,12 @@ class LiquidityRatio(Base,Plotter):
 
             return Base.percentage_growth(self.op_cashflow_ratio)
 
-        except:
-            logger.info("Operative Cashflow Ratio can't be calculated")
+        except KeyError:
+            logger.error("Operative Cashflow Ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
 
     def inventory_turnover_ratio(self):
 
@@ -117,5 +130,9 @@ class LiquidityRatio(Base,Plotter):
 
             return Base.percentage_growth(self.inv_turnover_ratio)
 
-        except:
-            logger.info("Inventory turnover ratio can't be calculated")
+        except KeyError:
+            logger.error("Inventory turnover ratio can't be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
