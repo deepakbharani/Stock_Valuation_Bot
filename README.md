@@ -17,9 +17,15 @@ This Subclass helps to calculate the Liquidity ratios such as
 - Operating Cashflow Ratio, with the data which are now available as a dataframe from Base class method 'listformatter'
 
 # SolvencyRatio.py
-This Subclass helps to calculate the Liquidity ratios such as 
+This Subclass helps to calculate the Solvency ratios such as 
 - Debt to Equity Ratio
 - Interest Coverage Ratio
+
+# ProfitabilityRatio.py
+This Subclass helps to calculate the Profitability ratios such as 
+- Return on Assets (ROA)
+- Return on Equity (ROE)
+- EBITDA Margin
 
 # Plotter.py
 A Class which is to plot the results from calculations and the data 
