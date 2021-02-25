@@ -86,9 +86,9 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating EBITDA Margin")
 
-            self.ebitda = np.array(self.incomestmt.loc['EBITDA'])
+            self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
 
-            print(self.ebitda)
+            print(self.ebitda) 
             self.roe = np.divide(self.net_income[:-1],self.shareholder_equity) * 100
 
             ## PLOTTING

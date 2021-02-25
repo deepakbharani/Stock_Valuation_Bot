@@ -96,7 +96,8 @@ class Base:
             items = items.split()
             items[0:(len(items) - num_years)] = [' '.join(items[0:(len(items) - num_years)])]
             for elements in range(-num_years,0):
-                items[elements] = items[elements].replace(',','')
+                items[elements] = items[elements].replace(',', '')
+                items[elements] = items[elements].replace('-', '0')
             formatted_list.append(items)
 
         dataframe = pd.DataFrame(formatted_list, columns = column_name)
