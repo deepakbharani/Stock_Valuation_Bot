@@ -26,6 +26,8 @@ This Subclass helps to calculate the Profitability ratios such as
 - Return on Assets (ROA)
 - Return on Equity (ROE)
 - EBITDA Margin
+- Net profit Margin
+- Operating Income Margin
 
 # Plotter.py
 A Class which is to plot the results from calculations and the data 
