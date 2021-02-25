@@ -1,5 +1,4 @@
 from ProfitabilityRatio import *
-
 from Plotter import *
 
 if __name__ == "__main__":

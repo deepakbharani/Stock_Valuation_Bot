@@ -53,6 +53,8 @@ class LiquidityRatio(Base,Plotter):
         except ValueError:
             logger.exception(ValueError)
 
+        except AttributeError:
+            logger.exception(AttributeError)
 
     def cashratio(self):
 
@@ -79,6 +81,9 @@ class LiquidityRatio(Base,Plotter):
 
         except ValueError:
             logger.exception(ValueError)
+
+        except AttributeError:
+            logger.exception(AttributeError)
 
     def oper_cashflow_ratio(self):
 
@@ -108,6 +113,9 @@ class LiquidityRatio(Base,Plotter):
         except ValueError:
             logger.exception(ValueError)
 
+        except AttributeError:
+            logger.exception(AttributeError)
+
     def inventory_turnover_ratio(self):
 
         try:
@@ -136,3 +144,6 @@ class LiquidityRatio(Base,Plotter):
 
         except ValueError:
             logger.exception(ValueError)
+
+        except AttributeError:
+            logger.exception(AttributeError)

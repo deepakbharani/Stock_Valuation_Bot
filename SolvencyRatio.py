@@ -49,12 +49,15 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         except ValueError:
             logger.exception(ValueError)
 
+        except AttributeError:
+            logger.exception(AttributeError)
+
     def interest_coverage_ratio(self):
 
         try:
             """
             Interest Coverage ratio:
-            The interest coverage ratio measures how many times a 
+            The interest coverage ratio measures how many times a
             company can cover its current interest payment with its available earnings
             ***HIGHER the BETTER***
             """
@@ -76,3 +79,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
         except ValueError:
             logger.exception(ValueError)
+
+        except AttributeError:
+            logger.exception(AttributeError)
