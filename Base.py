@@ -33,6 +33,17 @@ class Base:
         else:
             logger.error("There must be 3 financial statements -> please check input folder")
 
+
+
+        # def logger():
+        #
+        #     def log():
+        #
+        #
+        #     return log
+
+
+
     def readfinancials(self):
 
         # source_path is the path where this script is saved

@@ -11,3 +11,4 @@ if __name__ == "__main__":
 
     # Creating object for class LiquidityRatio
     pr = ProfitabilityRatio()
+    pt = Plotter()

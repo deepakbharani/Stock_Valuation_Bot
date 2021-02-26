@@ -154,7 +154,11 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             logger.info("Calculating Operating Income Margin")
 
             self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
-            self.opr_income_margin = np.divide(self.opr_income,self.tot_revenue) * 100
+
+            # self.opr_income_margin = self.margin_calculator(self.opr_income)()
+            #                   OR
+            margin_for_op_income  = self.margin_calculator(self.opr_income)
+            self.opr_income_margin = margin_for_op_income()
 
             ## PLOTTING
             # pt.twoDplot('Operating Income Margin', 'Years', 'Operating Income Margin', 'Operating Income Margin',
@@ -171,3 +175,11 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
 
         except AttributeError:
             logger.exception(AttributeError)
+
+    def margin_calculator(self,args):
+
+        def margin():
+            mrgn = np.divide(args,self.tot_revenue) * 100
+            return mrgn
+
+        return margin
