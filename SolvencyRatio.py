@@ -7,6 +7,7 @@ Helper : Plot arguments (labeltext,xlabel,ylabel,title,array,xaxis = None):
 
 from LiquidityRatio import *
 from Plotter import *
+from Log import *
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -19,9 +20,11 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
     def __init__(self):
         super().__init__()
-        self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
+        # self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
+        self.debttoequity()
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
+    @Log
     def debttoequity(self):
 
         try:
@@ -30,7 +33,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             Long term debt to its shareholders equity
             ***LOWER the BETTER***
             """
-            logger.info("Calculating Debt to Equity ratio")
+            # logger.info("Calculating Debt to Equity ratio")
 
             self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
             self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
