@@ -26,23 +26,12 @@ class Base:
         else:
             self.path = path
 
-
         if len(self.indata) is 3:
             logger.info("All 3 Financial statements have been accepted")
             self.balsheet,self.cashflow,self.incomestmt = self.readfinancials()
+            self.variablefunction()
         else:
             logger.error("There must be 3 financial statements -> please check input folder")
-
-
-
-        # def logger():
-        #
-        #     def log():
-        #
-        #
-        #     return log
-
-
 
     def readfinancials(self):
 
@@ -117,6 +106,33 @@ class Base:
         dataframe = dataframe[cname[1:len(cname)]]                      # Rearranging columns
 
         return dataframe,cname
+
+    def variablefunction(self):
+
+        # Balance Sheet parameters
+        self.tot_assets = np.array(self.balsheet.loc['Total Assets']).astype('float')
+        self.cur_assets = np.array(self.balsheet.loc['Current Assets']).astype('float')
+        self.cash_cashequ = np.array(self.balsheet.loc['Cash And Cash Equivalents']).astype('float')
+        self.cash = np.array(self.balsheet.loc['Cash']).astype('float')
+        self.cashequ = np.array(self.balsheet.loc['Cash Equivalents']).astype('float')
+        self.receivables = np.array(self.balsheet.loc['Receivables']).astype('float')
+        self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
+        self.tot_noncur_assets = np.array(self.balsheet.loc['Total non-current assets']).astype('float')
+        self.cur_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
+        self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
+        self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
+
+        # Cashflow statement parameters
+        self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
+
+        # Income statement parameters
+        self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')
+        self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
+        self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
+        self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
+        self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
+        self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
+
 
     @classmethod
     def percentage_growth(self,vector):
