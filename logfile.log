@@ -1,13 +1,28 @@
-INFO - [27/02/2021] (21:11:51) - __main__ - Stock Valuation started
-INFO - [27/02/2021] (21:11:51) - Base - All 3 Financial statements have been accepted
-INFO - [27/02/2021] (21:11:51) - Base - Creating list of paths for the files containing financial data
-INFO - [27/02/2021] (21:11:51) - Base - Reading Balance sheet
-INFO - [27/02/2021] (21:11:51) - Base - Balance sheet read
-INFO - [27/02/2021] (21:11:51) - Base - Reading Cash flow statement
-INFO - [27/02/2021] (21:11:51) - Base - Cash flow statement read
-INFO - [27/02/2021] (21:11:51) - Base - Reading Income statement
-INFO - [27/02/2021] (21:11:51) - Base - Income statement read
-INFO - [27/02/2021] (21:11:51) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [27/02/2021] (21:11:51) - LiquidityRatio - Calculating Cash Ratio
-INFO - [27/02/2021] (21:11:51) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [27/02/2021] (21:11:51) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [28/02/2021] (19:17:35) - Base - All 3 Financial statements have been accepted
+INFO - [28/02/2021] (19:17:35) - Base - Creating list of paths for the files containing financial data
+INFO - [28/02/2021] (19:17:35) - Base - Reading Balance sheet
+INFO - [28/02/2021] (19:17:35) - Base - Balance sheet read
+INFO - [28/02/2021] (19:17:35) - Base - Reading Cash flow statement
+INFO - [28/02/2021] (19:17:35) - Base - Cash flow statement read
+INFO - [28/02/2021] (19:17:35) - Base - Reading Income statement
+INFO - [28/02/2021] (19:17:35) - Base - Income statement read
+INFO - [28/02/2021] (19:17:35) - __main__ - Stock Valuation started
+INFO - [28/02/2021] (19:17:35) - Base - All 3 Financial statements have been accepted
+INFO - [28/02/2021] (19:17:35) - Base - Creating list of paths for the files containing financial data
+INFO - [28/02/2021] (19:17:35) - Base - Reading Balance sheet
+INFO - [28/02/2021] (19:17:35) - Base - Balance sheet read
+INFO - [28/02/2021] (19:17:35) - Base - Reading Cash flow statement
+INFO - [28/02/2021] (19:17:35) - Base - Cash flow statement read
+INFO - [28/02/2021] (19:17:35) - Base - Reading Income statement
+INFO - [28/02/2021] (19:17:35) - Base - Income statement read
+INFO - [28/02/2021] (19:17:35) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [28/02/2021] (19:17:35) - LiquidityRatio - Calculating Cash Ratio
+INFO - [28/02/2021] (19:17:35) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [28/02/2021] (19:17:35) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [28/02/2021] (19:17:35) - Log - Calculating Debt to Equity ratio
+INFO - [28/02/2021] (19:17:35) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [28/02/2021] (19:17:35) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [28/02/2021] (19:17:35) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [28/02/2021] (19:17:35) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [28/02/2021] (19:17:35) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [28/02/2021] (19:17:35) - ProfitabilityRatio - Calculating Operating Income Margin
