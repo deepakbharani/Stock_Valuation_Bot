@@ -7,6 +7,7 @@ Helper : Plot arguments (labeltext,xlabel,ylabel,title,array,xaxis = None):
 
 from Base import *
 from Plotter import *
+import logging
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -34,9 +35,7 @@ class LiquidityRatio(Base,Plotter):
             """
 
             logger.info("Calculating Current Ratio and its growth")
-            self.cur_asset = np.array(self.balsheet.loc['Current Assets']).astype('float')
-            self.cur_liability = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
-            self.cur_ratio = np.divide(self.cur_asset,self.cur_liability)
+            self.cur_ratio = np.divide(self.cur_assets,self.cur_liabilities)
             self.A_cur_ratio = self.cur_ratio.mean()
 
             ## PLOTTING
@@ -65,9 +64,7 @@ class LiquidityRatio(Base,Plotter):
             ***HIGHER the BETTER***
             """
             logger.info("Calculating Cash Ratio")
-            self.cash_cashequ = np.array(self.balsheet.loc['Cash And Cash Equivalents']).astype('float')
-            self.curr_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
-            self.cshratio = np.divide(self.cash_cashequ,self.cur_liability)
+            self.cshratio = np.divide(self.cash_cashequ,self.cur_liabilities)
 
             ## PLOTTING
             # pt.twoDplot('Cash and Cash Equivalent to Current Liabilities', 'Years', 'Cash Ratio', 'Cash Ratio', self.cshratio,
@@ -96,8 +93,7 @@ class LiquidityRatio(Base,Plotter):
             """
 
             logger.info("Calculating Operating Cashflow ratio")
-            self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
-            self.op_cashflow_ratio = np.divide(self.op_cashflow[0:-1],self.cur_liability)
+            self.op_cashflow_ratio = np.divide(self.op_cashflow[0:-1],self.cur_liabilities)
 
             ## PLOTTING
             # pt.twoDplot('Operating Cashflow to Current Liabilities', 'Years', 'Operating Cashflow ratio',
@@ -126,8 +122,6 @@ class LiquidityRatio(Base,Plotter):
             """
 
             logger.info("Calculating Inventory turnover ratio")
-            self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')
-            self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
             self.inv_turnover_ratio = np.divide(self.tot_revenue[0:-1], self.inventory)
 
             ## PLOTTING

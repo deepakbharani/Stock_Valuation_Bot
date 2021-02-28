@@ -36,9 +36,7 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating Return on Assets (ROA)")
 
-            self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
-            self.tot_asset = np.array(self.balsheet.loc['Total Assets']).astype('float')
-            self.roa = np.divide(self.net_income[:-1],self.tot_asset) * 100
+            self.roa = np.divide(self.net_income[:-1],self.tot_assets) * 100
 
             ## PLOTTING
             # pt.twoDplot('Return on Assets', 'Years', 'Return on Assets', 'ROA',
@@ -65,7 +63,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             ***HIGHER the BETTER***
             """
             logger.info("Calculating Return on Equity (ROE)")
-
             self.roe = np.divide(self.net_income[:-1],self.shareholder_equity) * 100
 
             ## PLOTTING
@@ -94,8 +91,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating EBITDA Margin")
 
-            self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
-            self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')
             self.ebitda_margin = np.divide(self.ebitda,self.tot_revenue) * 100
 
             ## PLOTTING
@@ -124,7 +119,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating Net Profit Margin")
 
-            self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
             self.net_prft_margin = np.divide(self.net_income,self.tot_revenue) * 100
 
             ## PLOTTING
@@ -152,8 +146,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             ***HIGHER the BETTER***
             """
             logger.info("Calculating Operating Income Margin")
-
-            self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
 
             # self.opr_income_margin = self.margin_calculator(self.opr_income)()
             #                   OR

@@ -20,12 +20,12 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
     def __init__(self):
         super().__init__()
-        # self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
-        self.debttoequity()
+        self.G_debtequity = self.debttoequity(self.long_term_debt,self.shareholder_equity)                     # Growth in Debt to Equity
+
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
     @Log
-    def debttoequity(self):
+    def debttoequity(self,*args, **kwargs):
 
         try:
             """
@@ -34,9 +34,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             ***LOWER the BETTER***
             """
             # logger.info("Calculating Debt to Equity ratio")
-
-            self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
-            self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
             self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
 
             ## PLOTTING
@@ -66,8 +63,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             """
             logger.info("Calculating Interest Coverage ratio")
 
-            self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
-            self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
             self.int_cov_ratio = np.divide(self.ebit,self.interest_expense)
 
             ## PLOTTING
