@@ -7,12 +7,16 @@ Helper : Plot arguments (labeltext,xlabel,ylabel,title,array,xaxis = None):
 
 from LiquidityRatio import *
 from Plotter import *
-from Log import *
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
 file_handler.setLevel(logging.ERROR)
 logger.addHandler(file_handler)
+
+val_logger = logging.getLogger(__name__)
+val_file_handler = logging.FileHandler('valuationlog.log')
+val_file_handler.setLevel(logging.ERROR)
+val_logger.addHandler(val_file_handler)
 
 pt = Plotter()
 
@@ -20,11 +24,27 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
     def __init__(self):
         super().__init__()
-        self.G_debtequity = self.debttoequity(self.long_term_debt,self.shareholder_equity)                     # Growth in Debt to Equity
+        self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
 
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
-    @Log
+    def valuation(func):
+
+        def wrapper(*args, **kwargs):
+            if func.__name__ == "debttoequity":
+                d2e = func(*args, **kwargs)
+                if d2e.mean() < 1:
+                    val_logger.info("Debt to Equity Ratio is GOOD")
+                else:
+                    val_logger.info("Debt to Equity Ratio is BAD")
+            else:
+                logger.info("Keep working hard")
+            return 0
+
+        return wrapper
+
+
+    @valuation
     def debttoequity(self,*args, **kwargs):
 
         try:
@@ -33,14 +53,14 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             Long term debt to its shareholders equity
             ***LOWER the BETTER***
             """
-            # logger.info("Calculating Debt to Equity ratio")
+            logger.info("Calculating Debt to Equity ratio")
             self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
 
             ## PLOTTING
             # pt.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
             #             self.bs_column_name[1:])
 
-            return Base.percentage_growth(self.debt2equity)
+            return self.debt2equity
 
         except KeyError:
             logger.error("Debt to Equity ratio can't be calculated")
@@ -80,3 +100,4 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
         except AttributeError:
             logger.exception(AttributeError)
+
