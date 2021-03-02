@@ -13,11 +13,6 @@ file_handler = logging.FileHandler('logfile.log')
 file_handler.setLevel(logging.ERROR)
 logger.addHandler(file_handler)
 
-val_logger = logging.getLogger(__name__)
-val_file_handler = logging.FileHandler('valuationlog.log')
-val_file_handler.setLevel(logging.ERROR)
-val_logger.addHandler(val_file_handler)
-
 pt = Plotter()
 
 class SolvencyRatio(LiquidityRatio,Plotter):
@@ -25,7 +20,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
     def __init__(self):
         super().__init__()
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
-
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
     def valuation(func):
@@ -34,15 +28,20 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             if func.__name__ == "debttoequity":
                 d2e = func(*args, **kwargs)
                 if d2e.mean() < 1:
-                    val_logger.info("Debt to Equity Ratio is GOOD")
+                    logger.info("Debt to Equity Ratio is GOOD : %f",d2e.mean())
                 else:
-                    val_logger.info("Debt to Equity Ratio is BAD")
+                    logger.info("Debt to Equity Ratio is BAD : %f",d2e.mean())
+            elif func.__name__ == "interest_coverage_ratio":
+                icr = func(*args, **kwargs)
+                if icr.mean() > 2:
+                    logger.info("Interest Coverage Ratio is GOOD : %f",icr.mean())
+                else:
+                    logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
             else:
                 logger.info("Keep working hard")
             return 0
 
         return wrapper
-
 
     @valuation
     def debttoequity(self,*args, **kwargs):
@@ -60,6 +59,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             # pt.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
             #             self.bs_column_name[1:])
 
+            # return self.debt2equity, Base.percentage_growth(self.debt2equity)
             return self.debt2equity
 
         except KeyError:
@@ -72,6 +72,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
+    @valuation
     def interest_coverage_ratio(self):
 
         try:
@@ -89,7 +90,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             # pt.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
             #             self.int_cov_ratio,self.ins_column_name[1:])
 
-            return Base.percentage_growth(self.int_cov_ratio)
+            return self.int_cov_ratio
 
         except KeyError:
             logger.error("Interest Coverage ratio can't be calculated")

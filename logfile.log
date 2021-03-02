@@ -1,21 +1,22 @@
-INFO - [01/03/2021] (21:47:40) - __main__ - Stock Valuation started
-INFO - [01/03/2021] (21:47:40) - Base - All 3 Financial statements have been accepted
-INFO - [01/03/2021] (21:47:40) - Base - Creating list of paths for the files containing financial data
-INFO - [01/03/2021] (21:47:40) - Base - Reading Balance sheet
-INFO - [01/03/2021] (21:47:40) - Base - Balance sheet read
-INFO - [01/03/2021] (21:47:40) - Base - Reading Cash flow statement
-INFO - [01/03/2021] (21:47:40) - Base - Cash flow statement read
-INFO - [01/03/2021] (21:47:40) - Base - Reading Income statement
-INFO - [01/03/2021] (21:47:40) - Base - Income statement read
-INFO - [01/03/2021] (21:47:40) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [01/03/2021] (21:47:40) - LiquidityRatio - Calculating Cash Ratio
-INFO - [01/03/2021] (21:47:40) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [01/03/2021] (21:47:40) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [01/03/2021] (21:47:40) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [01/03/2021] (21:47:40) - SolvencyRatio - Debt to Equity Ratio is BAD
-INFO - [01/03/2021] (21:47:40) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [01/03/2021] (21:47:40) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [01/03/2021] (21:47:40) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [01/03/2021] (21:47:40) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [01/03/2021] (21:47:40) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [01/03/2021] (21:47:40) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [02/03/2021] (20:29:53) - __main__ - Stock Valuation started
+INFO - [02/03/2021] (20:29:53) - Base - All 3 Financial statements have been accepted
+INFO - [02/03/2021] (20:29:53) - Base - Creating list of paths for the files containing financial data
+INFO - [02/03/2021] (20:29:53) - Base - Reading Balance sheet
+INFO - [02/03/2021] (20:29:53) - Base - Balance sheet read
+INFO - [02/03/2021] (20:29:53) - Base - Reading Cash flow statement
+INFO - [02/03/2021] (20:29:53) - Base - Cash flow statement read
+INFO - [02/03/2021] (20:29:53) - Base - Reading Income statement
+INFO - [02/03/2021] (20:29:53) - Base - Income statement read
+INFO - [02/03/2021] (20:29:53) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [02/03/2021] (20:29:53) - LiquidityRatio - Calculating Cash Ratio
+INFO - [02/03/2021] (20:29:53) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [02/03/2021] (20:29:53) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [02/03/2021] (20:29:53) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [02/03/2021] (20:29:53) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
+INFO - [02/03/2021] (20:29:53) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [02/03/2021] (20:29:53) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
+INFO - [02/03/2021] (20:29:53) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [02/03/2021] (20:29:53) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [02/03/2021] (20:29:53) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [02/03/2021] (20:29:53) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [02/03/2021] (20:29:53) - ProfitabilityRatio - Calculating Operating Income Margin

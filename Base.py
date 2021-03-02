@@ -33,6 +33,15 @@ class Base:
         else:
             logger.error("There must be 3 financial statements -> please check input folder")
 
+    def setup_logger(self,name,log_file):
+
+        file_handler = logging.FileHandler(log_file)
+        logger = logging.getLogger(name)
+        logger.setLevel(logging.ERROR)
+        logger.addHandler(file_handler)
+
+        return logger
+
     def readfinancials(self):
 
         # source_path is the path where this script is saved
