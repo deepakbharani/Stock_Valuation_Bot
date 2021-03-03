@@ -39,7 +39,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
                     logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
             else:
                 logger.info("Keep working hard")
-            return 0
 
         return wrapper
 

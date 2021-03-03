@@ -25,6 +25,42 @@ class LiquidityRatio(Base,Plotter):
         self.G_oper_cashflow_ratio = self.oper_cashflow_ratio()     # Growth in Operating Cashflow
         self.G_inv_turnover_ratio = self.inventory_turnover_ratio() # Growth in Inventory turnover ratio
 
+    def valuation(func):
+
+        def wrapper(*args,**kwargs):
+
+            if func.__name__ == "currentratio":
+                cr = func(*args,*kwargs)
+                if cr.mean() > 2:
+                    logger.info("Current Ratio is GOOD : %f", cr.mean())
+                else:
+                    logger.info("Current Ratio is BAD : %f", cr.mean())
+
+            elif func.__name__ == "cashratio":
+                cashr = func(*args,**kwargs)
+                if cashr.mean() > 1:
+                    logger.info("Cash Ratio is GOOD : %f",cashr.mean())
+                else:
+                    logger.info("Cash Ratio is BAD : %f", cashr.mean())
+
+            elif func.__name__ == "oper_cashflow_ratio":
+                ocr = func(*args,**kwargs)
+                if ocr.mean() > 1:
+                    logger.info("Operating Cashflow Ratio is GOOD : %f",ocr.mean())
+                else:
+                    logger.info("Operating Cashflow Ratio is BAD : %f", ocr.mean())
+
+            else:
+                # decorator code for inventory turnover ratio
+                itr = func(*args, **kwargs)
+                if itr.mean() > 5:
+                    logger.info("Inventory Turnover Ratio is GOOD : %f", itr.mean())
+                else:
+                    logger.info("Inventory Turnover Ratio is BAD : %f", itr.mean())
+
+        return wrapper
+
+    @valuation
     def currentratio(self):
 
         try:
@@ -43,7 +79,7 @@ class LiquidityRatio(Base,Plotter):
             #             self.bs_column_name[1:])
             # pt.twoDplot('Growth in Current Ratio', 'Years', 'Growth', 'Current Ratio growth', Base.percentage_growth(self.cur_ratio))
 
-            return Base.percentage_growth(self.cur_ratio)
+            return self.cur_ratio
 
         except KeyError:
             logger.error("Current Ratio can't be calculated")
@@ -55,6 +91,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
+    @valuation
     def cashratio(self):
 
         try:
@@ -70,7 +107,7 @@ class LiquidityRatio(Base,Plotter):
             # pt.twoDplot('Cash and Cash Equivalent to Current Liabilities', 'Years', 'Cash Ratio', 'Cash Ratio', self.cshratio,
             #             self.bs_column_name[1:])
 
-            return Base.percentage_growth(self.cshratio)
+            return self.cshratio
 
         except KeyError:
             logger.error("Cash Ratio can't be calculated")
@@ -82,6 +119,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
+    @valuation
     def oper_cashflow_ratio(self):
 
         try:
@@ -100,7 +138,7 @@ class LiquidityRatio(Base,Plotter):
             #             'Operating Cashflow ratio', self.op_cashflow_ratio,self.bs_column_name[1:])
             # pt.twoDplot('Growth in Current Ratio', 'Years', 'Growth', 'Current Ratio growth', Base.percentage_growth(self.cur_ratio))
 
-            return Base.percentage_growth(self.op_cashflow_ratio)
+            return self.op_cashflow_ratio
 
         except KeyError:
             logger.error("Operative Cashflow Ratio can't be calculated")
@@ -112,6 +150,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
+    @valuation
     def inventory_turnover_ratio(self):
 
         try:
@@ -130,7 +169,7 @@ class LiquidityRatio(Base,Plotter):
             # pt.twoDplot('Growth in Inventory turnover ratio', 'Years', 'Growth', 'Inventory turnover ratio growth',
             #             Base.percentage_growth(self.inv_turnover_ratio))
 
-            return Base.percentage_growth(self.inv_turnover_ratio)
+            return self.inv_turnover_ratio
 
         except KeyError:
             logger.error("Inventory turnover ratio can't be calculated")
