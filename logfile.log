@@ -1,31 +1,31 @@
-INFO - [03/03/2021] (20:00:40) - __main__ - Stock Valuation started
-INFO - [03/03/2021] (20:00:40) - Base - All 3 Financial statements have been accepted
-INFO - [03/03/2021] (20:00:40) - Base - Creating list of paths for the files containing financial data
-INFO - [03/03/2021] (20:00:40) - Base - Reading Balance sheet
-INFO - [03/03/2021] (20:00:40) - Base - Balance sheet read
-INFO - [03/03/2021] (20:00:40) - Base - Reading Cash flow statement
-INFO - [03/03/2021] (20:00:40) - Base - Cash flow statement read
-INFO - [03/03/2021] (20:00:40) - Base - Reading Income statement
-INFO - [03/03/2021] (20:00:40) - Base - Income statement read
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Current Ratio is BAD : 1.325909
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Calculating Cash Ratio
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Cash Ratio is BAD : 0.311429
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [03/03/2021] (20:00:40) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
-INFO - [03/03/2021] (20:00:40) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [03/03/2021] (20:00:40) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
-INFO - [03/03/2021] (20:00:40) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [03/03/2021] (20:00:40) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - EBITDA Margin is : 6.054182
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [03/03/2021] (20:00:40) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900
+INFO - [03/03/2021] (20:46:39) - __main__ - Stock Valuation started
+INFO - [03/03/2021] (20:46:39) - Base - All 3 Financial statements have been accepted
+INFO - [03/03/2021] (20:46:39) - Base - Creating list of paths for the files containing financial data
+INFO - [03/03/2021] (20:46:39) - Base - Reading Balance sheet
+INFO - [03/03/2021] (20:46:39) - Base - Balance sheet read
+INFO - [03/03/2021] (20:46:39) - Base - Reading Cash flow statement
+INFO - [03/03/2021] (20:46:39) - Base - Cash flow statement read
+INFO - [03/03/2021] (20:46:39) - Base - Reading Income statement
+INFO - [03/03/2021] (20:46:39) - Base - Income statement read
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Current Ratio is BAD : 1.325909
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Calculating Cash Ratio
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Cash Ratio is BAD : 0.311429
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [03/03/2021] (20:46:39) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
+INFO - [03/03/2021] (20:46:39) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [03/03/2021] (20:46:39) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
+INFO - [03/03/2021] (20:46:39) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [03/03/2021] (20:46:39) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - EBITDA Margin is : 6.054182
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [03/03/2021] (20:46:39) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900

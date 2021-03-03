@@ -1,4 +1,4 @@
-from ProfitabilityRatio import *
+from DCF import *
 
 if __name__ == "__main__":
 
@@ -10,4 +10,4 @@ if __name__ == "__main__":
     mainlogger.info("Stock Valuation started")
 
     # Creating object for class LiquidityRatio
-    pr = ProfitabilityRatio()
+    pr = DCF()
