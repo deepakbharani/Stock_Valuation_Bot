@@ -133,6 +133,7 @@ class Base:
 
         # Cashflow statement parameters
         self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
+        self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
 
         # Income statement parameters
         self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')
