@@ -1,37 +1,37 @@
-INFO - [05/03/2021] (20:17:15) - __main__ - Stock Valuation started
-INFO - [05/03/2021] (20:17:15) - Base - All 3 Financial statements have been accepted
-INFO - [05/03/2021] (20:17:15) - Base - Creating list of paths for the files containing financial data
-INFO - [05/03/2021] (20:17:15) - Base - Reading Balance sheet
-INFO - [05/03/2021] (20:17:15) - Base - Balance sheet read
-INFO - [05/03/2021] (20:17:15) - Base - Reading Cash flow statement
-INFO - [05/03/2021] (20:17:15) - Base - Cash flow statement read
-INFO - [05/03/2021] (20:17:15) - Base - Reading Income statement
-INFO - [05/03/2021] (20:17:15) - Base - Income statement read
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Current Ratio is BAD : 1.325909
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Calculating Cash Ratio
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Cash Ratio is BAD : 0.311429
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [05/03/2021] (20:17:15) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
-INFO - [05/03/2021] (20:17:15) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [05/03/2021] (20:17:15) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
-INFO - [05/03/2021] (20:17:15) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [05/03/2021] (20:17:15) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - EBITDA Margin is : 6.054182
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [05/03/2021] (20:17:15) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900
-INFO - [05/03/2021] (20:17:20) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
-INFO - [05/03/2021] (20:17:20) - DCF - Calculating Weighted average cost of capital
-INFO - [05/03/2021] (20:17:20) - DCF - Calculating Terminal Value
-INFO - [05/03/2021] (20:17:20) - DCF - Calculating intrinsic value
-INFO - [05/03/2021] (20:17:20) - DCF - Intrinsic Value is : 0.000018
-INFO - [05/03/2021] (20:17:20) - DCF - Margin of Safety is : -99.999985
+INFO - [05/03/2021] (20:25:59) - __main__ - Stock Valuation started
+INFO - [05/03/2021] (20:25:59) - Base - All 3 Financial statements have been accepted
+INFO - [05/03/2021] (20:25:59) - Base - Creating list of paths for the files containing financial data
+INFO - [05/03/2021] (20:25:59) - Base - Reading Balance sheet
+INFO - [05/03/2021] (20:25:59) - Base - Balance sheet read
+INFO - [05/03/2021] (20:25:59) - Base - Reading Cash flow statement
+INFO - [05/03/2021] (20:25:59) - Base - Cash flow statement read
+INFO - [05/03/2021] (20:25:59) - Base - Reading Income statement
+INFO - [05/03/2021] (20:25:59) - Base - Income statement read
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Current Ratio is BAD : 1.325909
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Calculating Cash Ratio
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Cash Ratio is BAD : 0.311429
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [05/03/2021] (20:25:59) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
+INFO - [05/03/2021] (20:25:59) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [05/03/2021] (20:25:59) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
+INFO - [05/03/2021] (20:25:59) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [05/03/2021] (20:25:59) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - EBITDA Margin is : 6.054182
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [05/03/2021] (20:25:59) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900
+INFO - [05/03/2021] (20:26:05) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
+INFO - [05/03/2021] (20:26:05) - DCF - Calculating Weighted average cost of capital
+INFO - [05/03/2021] (20:26:05) - DCF - Calculating Terminal Value
+INFO - [05/03/2021] (20:26:05) - DCF - Calculating intrinsic value
+INFO - [05/03/2021] (20:26:05) - DCF - Intrinsic Value is : 0.178737
+INFO - [05/03/2021] (20:26:05) - DCF - Margin of Safety is : -99.851448

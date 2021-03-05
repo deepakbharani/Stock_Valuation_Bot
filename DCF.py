@@ -63,7 +63,7 @@ class DCF(ProfitabilityRatio):
 
         # Calculate Margin of Safety
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
-        logger.info("Margin of Safety is : %f", self.margin_of_safety)
+        logger.info("Margin of Safety is : %f", self.margin_of_safety,"%")
 
 
     def get_current_price(self):
@@ -101,9 +101,13 @@ class DCF(ProfitabilityRatio):
         logger.info("Calculating Terminal Value")
         self.terminal_value = self.free_cashflow[-1] * (1 + self.perpetual_growth / 100) / (
                     (self.wacc / 100) - (self.perpetual_growth / 100))
+        print(self.terminal_value)
         self.present_terminal_value = self.terminal_value / self.discount_factor[-1]
-        self.today_value = (sum(self.present_value)+self.present_terminal_value)*0.0001
-
+        print(self.present_terminal_value)
+        # self.today_value = (sum(self.present_value)+self.present_terminal_value)*0.0001
+        self.today_value = (sum(self.present_value) + self.present_terminal_value)
+        print(self.present_value)
+        print(self.today_value)
         return self.today_value
 
     # Calculate CAGR of the growth rate of total_revenue
