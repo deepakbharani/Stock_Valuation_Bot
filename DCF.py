@@ -22,7 +22,6 @@ class DCF(ProfitabilityRatio):
         self.years_to_forcast = 5
         self.num_period = 4
         self.risk_free_return = 4
-        self.expected_return = 10
         self.corp_tax = 30
         self.perpetual_growth = 2.5
         self.discount_factor = []
@@ -32,6 +31,7 @@ class DCF(ProfitabilityRatio):
         self.stock_ticker = 'AAPL'
         self.tic = yf.Ticker(self.stock_ticker)
         self.beta = self.tic.info.get('beta')
+        self.marketcap = self.tic.info.get('marketCap')
         self.sharesoutstanding = self.tic.info.get('sharesOutstanding')
         self.cagr_tot_rev_gr = self.cagr_tot_revenue_gr()
 
@@ -46,13 +46,15 @@ class DCF(ProfitabilityRatio):
         self.free_cashflow_to_net_income = np.divide(self.free_cashflow,self.net_income) * 100
         self.avg_free_cashflow_to_net_income = self.free_cashflow_to_net_income.mean()
 
+        # Calculate rate of interest expense
+        self.rate_of_interest_expense = (self.interest_expense[:-1] / self.long_term_debt) * 100
+
+        # Calculate expected return / WACC
+        self.expected_return = self.wacc()
+        print(self.expected_return)
+
         # Calculate discount factor and the present value of projected free cashflow
         self.discount_factor, self.present_value = self.forcast()
-
-        # Calculate rate of interest expense
-        self.rate_of_interest_expense = (self.interest_expense[:-1]/self.long_term_debt) * 100
-
-        self.waac = self.wacc()
 
         self.today_value = self.terminal_value()
 
@@ -63,7 +65,7 @@ class DCF(ProfitabilityRatio):
 
         # Calculate Margin of Safety
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
-        logger.info("Margin of Safety is : %f", self.margin_of_safety,"%")
+        logger.info("Margin of Safety is : %f", self.margin_of_safety)
 
 
     def get_current_price(self):
@@ -117,12 +119,14 @@ class DCF(ProfitabilityRatio):
 
     def wacc(self):
         logger.info("Calculating Weighted average cost of capital")
-        self.total_equity = self.shareholder_equity + self.long_term_debt
-        self.weighted_equity_capital = np.divide(self.shareholder_equity,self.total_equity)
-        self.weight_debt_capital = np.divide(self.long_term_debt,self.total_equity)
-        self.ror_equity_capital = self.risk_free_return + (self.beta*(self.expected_return-self.risk_free_return))
+        self.total_equity = self.marketcap+ self.long_term_debt[-1]
+        self.weighted_equity_capital = np.divide(self.marketcap,self.total_equity)
+        self.weight_debt_capital = np.divide(self.long_term_debt[-1],self.total_equity)
+        # 10 is expected return on Equity
+        self.ror_equity_capital = self.risk_free_return + (self.beta*(10-self.risk_free_return))
         self.ror_debt_capital = self.rate_of_interest_expense*(1-(self.corp_tax / 100))
         self.wacc = (self.weighted_equity_capital*self.ror_equity_capital) + (self.weight_debt_capital*self.ror_debt_capital)
+
         self.wacc = self.wacc.mean()
 
         return self.wacc
