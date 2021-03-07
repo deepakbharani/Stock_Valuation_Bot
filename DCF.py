@@ -123,7 +123,7 @@ class DCF(ProfitabilityRatio):
         self.total_equity = self.marketcap+ self.long_term_debt[-1]
         self.weighted_equity_capital = np.divide(self.marketcap,self.total_equity)
         self.weight_debt_capital = np.divide(self.long_term_debt[-1],self.total_equity)
-        # 10 is expected return on Equity
+        # 10 is expected return from market
         self.ror_equity_capital = self.risk_free_return + (self.beta*(10-self.risk_free_return))
         self.ror_debt_capital = self.rate_of_interest_expense*(1-(self.corp_tax / 100))
         self.wacc = (self.weighted_equity_capital*self.ror_equity_capital) + (self.weight_debt_capital*self.ror_debt_capital)

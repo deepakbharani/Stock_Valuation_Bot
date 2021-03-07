@@ -118,13 +118,11 @@ class Base:
 
     def variablefunction(self):
 
+
         # Balance Sheet parameters
         self.tot_assets = np.array(self.balsheet.loc['Total Assets']).astype('float')
         self.cur_assets = np.array(self.balsheet.loc['Current Assets']).astype('float')
         self.cash_cashequ = np.array(self.balsheet.loc['Cash And Cash Equivalents']).astype('float')
-        self.cash = np.array(self.balsheet.loc['Cash']).astype('float')
-        self.cashequ = np.array(self.balsheet.loc['Cash Equivalents']).astype('float')
-        self.receivables = np.array(self.balsheet.loc['Receivables']).astype('float')
         self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
         self.tot_noncur_assets = np.array(self.balsheet.loc['Total non-current assets']).astype('float')
         self.cur_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
@@ -142,7 +140,6 @@ class Base:
         self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
         self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
         self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
-
 
     @classmethod
     def percentage_growth(self,vector):
