@@ -68,11 +68,6 @@ class DCF(ProfitabilityRatio):
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
         logger.info("Margin of Safety is : %f", self.margin_of_safety)
 
-        # print("Total Revenue", self.tot_revenue)
-        # print("Net Income", self.net_income)
-        # print("Free Cashflow", self.free_cashflow)
-        # print("Present Value", self.present_value)
-
     def get_current_price(self):
         self.stock_data = self.tic.history(period='1d')
         return self.stock_data['Close'][0]

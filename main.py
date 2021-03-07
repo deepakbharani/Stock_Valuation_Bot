@@ -9,5 +9,5 @@ if __name__ == "__main__":
     mainlogger = logging.getLogger(__name__)
     mainlogger.info("Stock Valuation started")
 
-    # Creating object for class LiquidityRatio
-    pr = DCF()
+    # Creating object for class DCF
+    Obj = DCF()
