@@ -10,10 +10,13 @@ In this example Apple(AAPL) stock is valuated
 Base.py is the base class which reads the financial statements as .txt files and formats the data to create a data 
 frame which can be used for further analysis
 
+Base.Py class has a method "variablefunction" where the variables are assigned with financial data. New variables must be defined here to 
+use them later in the code 
+
+
 # LiquidityRatio.py
 This Subclass helps to calculate the Liquidity ratios such as 
 - Current Ratio
-
 - Cash Ratio
 - Operating Cashflow Ratio, with the data which are now available as a dataframe from Base class method 'listformatter'
 
