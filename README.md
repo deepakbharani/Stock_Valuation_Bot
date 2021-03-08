@@ -13,6 +13,7 @@ frame which can be used for further analysis
 # LiquidityRatio.py
 This Subclass helps to calculate the Liquidity ratios such as 
 - Current Ratio
+
 - Cash Ratio
 - Operating Cashflow Ratio, with the data which are now available as a dataframe from Base class method 'listformatter'
 
