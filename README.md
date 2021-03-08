@@ -31,7 +31,9 @@ This Subclass helps to calculate the Profitability ratios such as
 
 # DCF.py
 This Subclass performs Discounted Cashflow valuation analysis by accessing the yahoo finance stock related data using
-yfinance module
+yfinance module.
+To Valuate a different stock the Variable "self.stock_ticker" must be adjusted.  
+
 
 # Plotter.py
 A Class which is to plot the results from calculations and the data 
