@@ -22,9 +22,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         super().__init__()
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
-        a = [1, 2, 3]
-        b = [1, 2, 3]
-
+        
         fig,(ax1,ax2) = plt.subplot(1,2)
         ax1.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
                         self.bs_column_name[1:])

@@ -1,21 +1,21 @@
-INFO - [09/03/2021] (21:52:54) - __main__ - Stock Valuation started
-INFO - [09/03/2021] (21:52:54) - Base - All 3 Financial statements have been accepted
-INFO - [09/03/2021] (21:52:54) - Base - Creating list of paths for the files containing financial data
-INFO - [09/03/2021] (21:52:54) - Base - Reading Balance sheet
-INFO - [09/03/2021] (21:52:54) - Base - Balance sheet read
-INFO - [09/03/2021] (21:52:54) - Base - Reading Cash flow statement
-INFO - [09/03/2021] (21:52:54) - Base - Cash flow statement read
-INFO - [09/03/2021] (21:52:54) - Base - Reading Income statement
-INFO - [09/03/2021] (21:52:54) - Base - Income statement read
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Current Ratio is BAD : 1.325909
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Calculating Cash Ratio
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Cash Ratio is BAD : 0.311429
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [09/03/2021] (21:52:54) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
-INFO - [09/03/2021] (21:52:54) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [09/03/2021] (21:52:54) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
-INFO - [09/03/2021] (21:52:54) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [09/03/2021] (21:52:54) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
+INFO - [09/03/2021] (22:00:09) - __main__ - Stock Valuation started
+INFO - [09/03/2021] (22:00:09) - Base - All 3 Financial statements have been accepted
+INFO - [09/03/2021] (22:00:09) - Base - Creating list of paths for the files containing financial data
+INFO - [09/03/2021] (22:00:09) - Base - Reading Balance sheet
+INFO - [09/03/2021] (22:00:09) - Base - Balance sheet read
+INFO - [09/03/2021] (22:00:09) - Base - Reading Cash flow statement
+INFO - [09/03/2021] (22:00:09) - Base - Cash flow statement read
+INFO - [09/03/2021] (22:00:09) - Base - Reading Income statement
+INFO - [09/03/2021] (22:00:09) - Base - Income statement read
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Current Ratio is BAD : 1.325909
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Calculating Cash Ratio
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Cash Ratio is BAD : 0.311429
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [09/03/2021] (22:00:09) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
+INFO - [09/03/2021] (22:00:09) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [09/03/2021] (22:00:09) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
+INFO - [09/03/2021] (22:00:09) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [09/03/2021] (22:00:09) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
