@@ -7,6 +7,7 @@ Helper : Plot arguments (labeltext,xlabel,ylabel,title,array,xaxis = None):
 
 from LiquidityRatio import *
 from Plotter import *
+from matplotlib import pyplot as plt
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -21,6 +22,14 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         super().__init__()
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
+        a = [1, 2, 3]
+        b = [1, 2, 3]
+
+        fig,(ax1,ax2) = plt.subplot(1,2)
+        ax1.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
+                        self.bs_column_name[1:])
+        ax2.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
+                        self.int_cov_ratio,self.ins_column_name[1:])
 
     def valuation(func):
 

@@ -6,6 +6,7 @@ Purpose: plot
 
 # from LiquidityRatio import *
 # from Log import *
+import numpy as np
 from matplotlib import pyplot as plt
 
 #plt.xkcd()
@@ -29,3 +30,19 @@ class Plotter():
         plt.grid(True)
         plt.legend()
         plt.show()
+
+    def scatter_plot(self,labeltext,xlabel,ylabel,title,x,xaxis = None):
+
+        if xaxis is None:
+            xaxis = np.arange(1,len(x)+1)
+        else:
+            xaxis = xaxis
+
+        plt.scatter(xaxis,x,label = labeltext, color = '#444444',marker = 'o')
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.grid(True)
+        plt.legend()
+        plt.show()
+
