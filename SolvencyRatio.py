@@ -22,12 +22,22 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         super().__init__()
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
-        
-        fig,(ax1,ax2) = plt.subplot(1,2)
-        ax1.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
-                        self.bs_column_name[1:])
-        ax2.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
-                        self.int_cov_ratio,self.ins_column_name[1:])
+
+        fig,(ax1,ax2) = plt.subplots(2)
+        ax1.plot([1,2,3,4], self.debt2equity, label="Debt to Equity", color='#444444', marker='o')
+        ax1.grid(True)
+        plt.title("Debt to Equity")
+        plt.xlabel("Year")
+        plt.ylabel("Debt to Equity")
+        plt.legend()
+        ax2.plot([1, 2, 3, 4, 5], self.int_cov_ratio, label="Interest coverage ratio", color='#444444', marker='o')
+        ax2.grid(True)
+        plt.title("Interest coverage ratio")
+        plt.xlabel("Year")
+        plt.ylabel("Interest coverage ratio")
+        plt.legend()
+        plt.show()
+
 
     def valuation(func):
 
@@ -107,4 +117,5 @@ class SolvencyRatio(LiquidityRatio,Plotter):
 
         except AttributeError:
             logger.exception(AttributeError)
+
 

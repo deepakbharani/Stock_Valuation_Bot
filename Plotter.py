@@ -22,14 +22,14 @@ class Plotter():
             xaxis = np.arange(1,len(array)+1)
         else:
             xaxis = xaxis
-
-        plt.plot(xaxis,array,label = labeltext, color = '#444444',marker = 'o')
-        plt.title(title)
-        plt.xlabel(xlabel)
-        plt.ylabel(ylabel)
-        plt.grid(True)
-        plt.legend()
-        plt.show()
+        #
+        # plt.plot(xaxis,array,label = labeltext, color = '#444444',marker = 'o')
+        # plt.title(title)
+        # plt.xlabel(xlabel)
+        # plt.ylabel(ylabel)
+        # plt.grid(True)
+        # plt.legend()
+        # plt.show()
 
     def scatter_plot(self,labeltext,xlabel,ylabel,title,x,xaxis = None):
 
