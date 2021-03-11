@@ -7,7 +7,7 @@ Purpose: plot
 import numpy as np
 from matplotlib import pyplot as plt
 
-#plt.xkcd()
+plt.xkcd()
 
 class Plotter():
 
