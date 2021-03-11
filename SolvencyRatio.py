@@ -23,20 +23,23 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
-        fig,(ax1,ax2) = plt.subplots(2)
-        ax1.plot([1,2,3,4], self.debt2equity, label="Debt to Equity", color='#444444', marker='o')
-        ax1.grid(True)
-        plt.title("Debt to Equity")
-        plt.xlabel("Year")
-        plt.ylabel("Debt to Equity")
-        plt.legend()
-        ax2.plot([1, 2, 3, 4, 5], self.int_cov_ratio, label="Interest coverage ratio", color='#444444', marker='o')
-        ax2.grid(True)
-        plt.title("Interest coverage ratio")
-        plt.xlabel("Year")
-        plt.ylabel("Interest coverage ratio")
-        plt.legend()
-        plt.show()
+        # fig,(ax1,ax2) = plt.subplots(2)
+        # fig.suptitle("Solvency Ratios")
+        # ax1.plot([1,2,3,4], self.debt2equity, label="Debt to Equity", color='blue', marker='o')
+        # ax1.grid(True)
+        # ax1.set_title("Debt to Equity")
+        # ax1.set_xlabel("Year")
+        # ax1.set_ylabel("Debt to Equity")
+        # ax1.legend()
+        # ax2.plot([1, 2, 3, 4, 5], self.int_cov_ratio, label="Interest coverage ratio", color='purple', marker='o')
+        # ax2.grid(True)
+        # ax2.set_title("Interest coverage ratio")
+        # ax2.set_xlabel("Year")
+        # ax2.set_ylabel("Interest coverage ratio")
+        # ax2.legend()
+        # plt.show()
+        pt.twoDplot("SolvencyRatio",self.debt2equity,self.int_cov_ratio)
+
 
 
     def valuation(func):
