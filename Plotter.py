@@ -23,7 +23,7 @@ class Plotter():
             self.int_cov_ratio = args[1]
 
             # Plot the results
-            fig,axs = plt.subplots(2)
+            fig,axs = plt.subplots(len(args))
             fig.suptitle("Solvency Ratios")
             axs[0].plot(self.xaxis, self.debt2equity, label="Debt to Equity", color='blue', marker='o')
             axs[0].grid(True)
@@ -37,10 +37,31 @@ class Plotter():
             axs[1].set_xlabel("Year")
             axs[1].set_ylabel("Interest coverage ratio")
             axs[1].legend()
+            #plt.show()
+
+        elif classname is "ProfitabilityRatio":
+
+            # Extract args
+            self.roa = args[0]
+            self.roe = args[1]
+
+            # Plot the results
+            fig,axs = plt.subplots(len(args))
+            fig.suptitle("Profitability Ratio")
+            axs[0].plot(self.xaxis, self.roa, label="Return on Assets", color='blue', marker='o')
+            axs[0].grid(True)
+            axs[0].set_title("Return on Assets")
+            axs[0].set_xlabel("Year")
+            axs[0].set_ylabel("Return on Assets")
+            axs[0].legend()
+            axs[1].plot(self.xaxis, self.roe, label="Return on Equity", color='purple', marker='o')
+            axs[1].grid(True)
+            axs[1].set_title("Return on Equity")
+            axs[1].set_xlabel("Year")
+            axs[1].set_ylabel("Return on Equity")
+            axs[1].legend()
             plt.show()
 
-        else:
-            pass
 
 
         #
