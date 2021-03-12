@@ -26,7 +26,7 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
         self.G_opr_income_margin = self.operating_margin()      # Growth in Operating Income Margin
 
         # Call plotter to plot the results
-        pt.twoDplot("ProfitabilityRatio", self.roa, self.roe)
+        pt.twoDplot("ProfitabilityRatio", self.roa, self.roe, self.net_prft_margin, self.opr_income_margin)
 
     def valuation(func):
 

@@ -44,34 +44,43 @@ class Plotter():
             # Extract args
             self.roa = args[0]
             self.roe = args[1]
+            self.net_prft_margin = args[2]
+            self.opr_income_margin = args[3]
 
             # Plot the results
-            fig,axs = plt.subplots(len(args))
+            fig,axs = plt.subplots(int(len(args)/2),int(len(args)/2))
             fig.suptitle("Profitability Ratio")
-            axs[0].plot(self.xaxis, self.roa, label="Return on Assets", color='blue', marker='o')
-            axs[0].grid(True)
-            axs[0].set_title("Return on Assets")
-            axs[0].set_xlabel("Year")
-            axs[0].set_ylabel("Return on Assets")
-            axs[0].legend()
-            axs[1].plot(self.xaxis, self.roe, label="Return on Equity", color='purple', marker='o')
-            axs[1].grid(True)
-            axs[1].set_title("Return on Equity")
-            axs[1].set_xlabel("Year")
-            axs[1].set_ylabel("Return on Equity")
-            axs[1].legend()
+            # Plot Return on Assets
+            axs[0,0].plot(self.xaxis, self.roa, label="Return on Assets", color='blue', marker='o')
+            axs[0,0].grid(True)
+            axs[0,0].set_title("Return on Assets")
+            axs[0,0].set_xlabel("Year")
+            axs[0,0].set_ylabel("Return on Assets")
+            axs[0,0].legend()
+            # Plot Return on Equity
+            axs[0,1].plot(self.xaxis, self.roe, label="Return on Equity", color='purple', marker='o')
+            axs[0,1].grid(True)
+            axs[0,1].set_title("Return on Equity")
+            axs[0,1].set_xlabel("Year")
+            axs[0,1].set_ylabel("Return on Equity")
+            axs[0,1].legend()
+            # Plot Net Profit Margin
+            axs[1,0].plot(self.xaxis, self.net_prft_margin[:-1], label="Net Profit Margin", color='purple', marker='o')
+            axs[1,0].grid(True)
+            axs[1,0].set_title("Net Profit Margin")
+            axs[1,0].set_xlabel("Year")
+            axs[1,0].set_ylabel("Net Profit Margin")
+            axs[1,0].legend()
+            # Plot Operating Income Margin
+            axs[1,1].plot(self.xaxis, self.opr_income_margin[:-1], label="Operating Income Margin", color='purple', marker='o')
+            axs[1,1].grid(True)
+            axs[1,1].set_title("Operating Income Margin")
+            axs[1,1].set_xlabel("Year")
+            axs[1,1].set_ylabel("Operating Income Margin")
+            axs[1,1].legend()
             plt.show()
 
 
-
-        #
-        # plt.plot(xaxis,array,label = labeltext, color = '#444444',marker = 'o')
-        # plt.title(title)
-        # plt.xlabel(xlabel)
-        # plt.ylabel(ylabel)
-        # plt.grid(True)
-        # plt.legend()
-        # plt.show()
 
     def scatter_plot(self,labeltext,xlabel,ylabel,title,x,xaxis = None):
 
