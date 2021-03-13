@@ -25,6 +25,8 @@ class LiquidityRatio(Base,Plotter):
         self.G_oper_cashflow_ratio = self.oper_cashflow_ratio()     # Growth in Operating Cashflow
         self.G_inv_turnover_ratio = self.inventory_turnover_ratio() # Growth in Inventory turnover ratio
 
+        pt.twoDplot("Liquidity Ratio", self.cur_ratio, self.cshratio, self.op_cashflow_ratio, self.inv_turnover_ratio)
+
     def valuation(func):
 
         def wrapper(*args,**kwargs):

@@ -24,7 +24,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         self.G_int_cov_ratio = self.interest_coverage_ratio()       # Growth in interest coverage ratio
 
         # Call plotter to plot the results
-        # pt.twoDplot("SolvencyRatio",self.debt2equity,self.int_cov_ratio)
+        pt.twoDplot("SolvencyRatio",self.debt2equity,self.int_cov_ratio)
 
     def valuation(func):
 
