@@ -4,7 +4,7 @@ Info   : This Subclass contains Methods and Attributes for plotting the results
 Purpose: plot
 """
 
-import numpy as np
+import os
 from matplotlib import pyplot as plt
 
 plt.xkcd()
@@ -13,6 +13,11 @@ class Plotter():
 
     def __init__(self):
         self.xaxis = ["2017","2018","2019","2020"]
+
+        # Define path to store image
+        self.source_path = os.path.dirname(__file__)
+        self.source_path = self.source_path.replace('/', '\\')
+        self.image_path = os.path.join(self.source_path, 'results\\')
 
     def twoDplot(self,classname,*args):
 
@@ -25,6 +30,7 @@ class Plotter():
             # Plot the results
             figs,axs = plt.subplots(len(args))
             figs.suptitle("Solvency Ratios")
+            figs.set_size_inches(20, 20)
             axs[0].plot(self.xaxis, self.debt2equity, label="Debt to Equity", color='blue', marker='o')
             axs[0].grid(True)
             axs[0].set_title("Debt to Equity")
@@ -37,7 +43,7 @@ class Plotter():
             axs[1].set_xlabel("Year")
             axs[1].set_ylabel("Interest coverage ratio")
             axs[1].legend()
-            plt.show()
+            figs.savefig(os.path.join(self.image_path,"solvRatio.png"))
 
         elif classname is "ProfitabilityRatio":
 
@@ -50,6 +56,7 @@ class Plotter():
             # Plot the results
             figp,axs = plt.subplots(int(len(args)/2),int(len(args)/2))
             figp.suptitle("Profitability Ratio")
+            figp.set_size_inches(25, 12)
             # Plot Return on Assets
             axs[0,0].plot(self.xaxis, self.roa, label="Return on Assets", color='blue', marker='o')
             axs[0,0].grid(True)
@@ -78,7 +85,7 @@ class Plotter():
             axs[1,1].set_xlabel("Year")
             axs[1,1].set_ylabel("Operating Income Margin")
             axs[1,1].legend()
-            plt.show()
+            figp.savefig(os.path.join(self.image_path, "profRatio.png"))
 
         else:
 
@@ -91,6 +98,7 @@ class Plotter():
             # Plot the results
             figl,axs = plt.subplots(int(len(args)/2),int(len(args)/2))
             figl.suptitle("Liquidity Ratio")
+            figl.set_size_inches(25, 12)
             # Plot Return on Assets
             axs[0,0].plot(self.xaxis, self.cur_ratio, label="Current Ratio", color='blue', marker='o')
             axs[0,0].grid(True)
@@ -119,21 +127,4 @@ class Plotter():
             axs[1,1].set_xlabel("Year")
             axs[1,1].set_ylabel("Inventor Turnover Ratio")
             axs[1,1].legend()
-            plt.show()
-
-
-    def scatter_plot(self,labeltext,xlabel,ylabel,title,x,xaxis = None):
-
-        if xaxis is None:
-            xaxis = np.arange(1,len(x)+1)
-        else:
-            xaxis = xaxis
-
-        plt.scatter(xaxis,x,label = labeltext, color = '#444444',marker = 'o')
-        plt.title(title)
-        plt.xlabel(xlabel)
-        plt.ylabel(ylabel)
-        plt.grid(True)
-        plt.legend()
-        plt.show()
-
+            figl.savefig(os.path.join(self.image_path, "liqRatio.png"))
