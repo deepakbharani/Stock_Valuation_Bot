@@ -25,6 +25,7 @@ This Subclass helps to calculate the Liquidity ratios such as
 This Subclass helps to calculate the Solvency ratios such as 
 - Debt to Equity Ratio
 - Interest Coverage Ratio
+![SolvencyRatio Graph](results/solvRatio.png)
 
 # ProfitabilityRatio.py
 This Subclass helps to calculate the Profitability ratios such as 
@@ -33,6 +34,7 @@ This Subclass helps to calculate the Profitability ratios such as
 - EBITDA Margin
 - Net profit Margin
 - Operating Income Margin
+![ProfitabilityRatio Graph](results/profRatio.png)
 
 # DCF.py
 This Subclass performs Discounted Cashflow valuation analysis by accessing the yahoo finance stock related data using
