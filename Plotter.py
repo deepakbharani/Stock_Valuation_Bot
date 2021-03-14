@@ -7,7 +7,7 @@ Purpose: plot
 import os
 from matplotlib import pyplot as plt
 
-plt.xkcd()
+#plt.xkcd()
 
 class Plotter():
 
@@ -31,13 +31,13 @@ class Plotter():
             figs,axs = plt.subplots(len(args))
             figs.suptitle("Solvency Ratios")
             figs.set_size_inches(20, 20)
-            axs[0].plot(self.xaxis, self.debt2equity, label="Debt to Equity", color='blue', marker='o')
+            axs[0].bar(self.xaxis, self.debt2equity, label="Debt to Equity", color='blue')
             axs[0].grid(True)
             axs[0].set_title("Debt to Equity")
             axs[0].set_xlabel("Year")
             axs[0].set_ylabel("Debt to Equity")
             axs[0].legend()
-            axs[1].plot(self.xaxis, self.int_cov_ratio[:-1], label="Interest coverage ratio", color='purple', marker='o')
+            axs[1].bar(self.xaxis, self.int_cov_ratio[:-1], label="Interest coverage ratio", color='purple')
             axs[1].grid(True)
             axs[1].set_title("Interest coverage ratio")
             axs[1].set_xlabel("Year")
