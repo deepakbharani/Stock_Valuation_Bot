@@ -5,19 +5,28 @@ Purpose: plot
 """
 
 import os
+from dataclasses import dataclass
 from matplotlib import pyplot as plt
 
 #plt.xkcd()
 
+@dataclass
 class Plotter():
 
-    def __init__(self):
-        self.xaxis = ["2017","2018","2019","2020"]
+    xaxis = ["2017", "2018", "2019", "2020"]
 
-        # Define path to store image
-        self.source_path = os.path.dirname(__file__)
-        self.source_path = self.source_path.replace('/', '\\')
-        self.image_path = os.path.join(self.source_path, 'results\\')
+    # Define path to store image
+    source_path = os.path.dirname(__file__)
+    source_path = source_path.replace('/', '\\')
+    image_path = os.path.join(source_path, 'results\\')
+
+    # def __init__(self):
+    #     self.xaxis = ["2017","2018","2019","2020"]
+    #
+    #     # Define path to store image
+    #     self.source_path = os.path.dirname(__file__)
+    #     self.source_path = self.source_path.replace('/', '\\')
+    #     self.image_path = os.path.join(self.source_path, 'results\\')
 
     def twoDplot(self,classname,*args):
 
