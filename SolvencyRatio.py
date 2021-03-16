@@ -7,7 +7,6 @@ Helper : Plot arguments (labeltext,xlabel,ylabel,title,array,xaxis = None):
 
 from LiquidityRatio import *
 from Plotter import *
-from matplotlib import pyplot as plt
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -16,7 +15,9 @@ logger.addHandler(file_handler)
 
 pt = Plotter()
 
+
 class SolvencyRatio(LiquidityRatio,Plotter):
+
 
     def __init__(self):
         super().__init__()
