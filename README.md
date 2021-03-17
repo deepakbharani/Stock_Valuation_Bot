@@ -6,6 +6,8 @@ derive a fair value of the stock.
 
 In this example Apple(AAPL) stock is valuated
 
+Further Optimisation in collecting financial data are tried to be accessed using yfinancial module
+
 # Base.py
 Base.py is the base class which reads the financial statements as .txt files and formats the data to create a data 
 frame which can be used for further analysis
