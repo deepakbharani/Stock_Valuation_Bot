@@ -1,4 +1,5 @@
 from DCF import *
+import yfinance.yfinance as yf
 
 if __name__ == "__main__":
 
@@ -8,6 +9,10 @@ if __name__ == "__main__":
 
     mainlogger = logging.getLogger(__name__)
     mainlogger.info("Stock Valuation started")
+
+    name = "AAPL"
+    tic = yf.Ticker(name)
+    print(tic.cashflow)
 
     # Creating object for class DCF
     Obj = DCF()
