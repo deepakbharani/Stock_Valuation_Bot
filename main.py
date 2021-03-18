@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     name = "AAPL"
     tic = yf.Ticker(name)
-    print(tic.cashflow)
+    # print(tic.cashflow)
 
     # Creating object for class DCF
     Obj = DCF()

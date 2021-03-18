@@ -8,6 +8,7 @@ import os
 import logging
 import pandas as pd
 import numpy as np
+import yfinance.yfinance as yf
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -17,6 +18,8 @@ logger.addHandler(file_handler)
 class Base:
 
     def __init__(self,path = None):
+
+        self.get_financials()
 
         # files inside "input" folder is defined in tuple
         self.indata = ('balance_sheet.txt', 'cash_flow.txt', 'income_statement.txt')
@@ -118,7 +121,6 @@ class Base:
 
     def variablefunction(self):
 
-
         # Balance Sheet parameters
         self.tot_assets = np.array(self.balsheet.loc['Total Assets']).astype('float')
         self.cur_assets = np.array(self.balsheet.loc['Current Assets']).astype('float')
@@ -140,6 +142,13 @@ class Base:
         self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
         self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
         self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
+
+    def get_financials(self):
+        self.stock_ticker = 'AAPL'
+        self.tic = yf.Ticker(self.stock_ticker)
+        print(type(self.tic.cashflow))
+        print(np.array(self.tic.cashflow.iloc[1]).astype('float'))
+
 
     @classmethod
     def percentage_growth(self,vector):
