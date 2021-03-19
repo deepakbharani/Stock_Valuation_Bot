@@ -149,10 +149,13 @@ class Base:
 
         # Cashflow statement parameters
         self.op_cashflow = np.array(self.tic.cashflow.loc['Total Cash From Operating Activities'])
-        #self.free_cashflow = np.array(self.tic.cashflow.loc['Free Cash Flow'])
+        self.interest_expense = np.array(self.tic.financials.loc['Interest Expense'])
+        self.tax_expense = np.array(self.tic.financials.loc['Income Tax Expense'])
+        self.capex = np.array(self.tic.cashflow.loc['Capital Expenditures'])
+        self.free_cashflow = self.op_cashflow+self.interest_expense-self.tax_expense-self.capex
 
         print("Op Cashflow", self.op_cashflow)
-        #print("free Cashflow", self.free_cashflow)
+        print("free Cashflow", self.free_cashflow)
 
 
 
