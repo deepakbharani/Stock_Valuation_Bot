@@ -1,5 +1,6 @@
 from DCF import *
 import yfinance.yfinance as yf
+#from yahoofinancials import YahooFinancials as yf
 
 if __name__ == "__main__":
 
@@ -12,7 +13,9 @@ if __name__ == "__main__":
 
     name = "AAPL"
     tic = yf.Ticker(name)
-    # print(tic.cashflow)
+    print(tic.cashflow)
+    print(tic.financials)
+    print(tic.balance_sheet)
 
     # Creating object for class DCF
     Obj = DCF()

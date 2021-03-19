@@ -146,8 +146,14 @@ class Base:
     def get_financials(self):
         self.stock_ticker = 'AAPL'
         self.tic = yf.Ticker(self.stock_ticker)
-        print(type(self.tic.cashflow))
-        print(np.array(self.tic.cashflow.iloc[1]).astype('float'))
+
+        # Cashflow statement parameters
+        self.op_cashflow = np.array(self.tic.cashflow.loc['Total Cash From Operating Activities'])
+        #self.free_cashflow = np.array(self.tic.cashflow.loc['Free Cash Flow'])
+
+        print("Op Cashflow", self.op_cashflow)
+        #print("free Cashflow", self.free_cashflow)
+
 
 
     @classmethod
