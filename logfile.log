@@ -1,58 +1,58 @@
-INFO - [19/03/2021] (19:45:08) - __main__ - Stock Valuation started
-INFO - [19/03/2021] (19:45:13) - Base - All 3 Financial statements have been accepted
-INFO - [19/03/2021] (19:45:13) - Base - Creating list of paths for the files containing financial data
-INFO - [19/03/2021] (19:45:13) - Base - Reading Balance sheet
-INFO - [19/03/2021] (19:45:13) - Base - Balance sheet read
-INFO - [19/03/2021] (19:45:13) - Base - Reading Cash flow statement
-INFO - [19/03/2021] (19:45:13) - Base - Cash flow statement read
-INFO - [19/03/2021] (19:45:13) - Base - Reading Income statement
-INFO - [19/03/2021] (19:45:13) - Base - Income statement read
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Current Ratio is BAD : 1.325909
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Calculating Cash Ratio
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Cash Ratio is BAD : 0.311429
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [19/03/2021] (19:45:13) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:13) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:14) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [19/03/2021] (19:45:14) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
-INFO - [19/03/2021] (19:45:14) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [19/03/2021] (19:45:14) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
-INFO - [19/03/2021] (19:45:14) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:14) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:14) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:14) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - EBITDA Margin is : 6.054182
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [19/03/2021] (19:45:14) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:15) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-INFO - [19/03/2021] (19:45:18) - DCF - Calculating Weighted average cost of capital
-INFO - [19/03/2021] (19:45:18) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
-INFO - [19/03/2021] (19:45:18) - DCF - Calculating Terminal Value
-INFO - [19/03/2021] (19:45:18) - DCF - Calculating intrinsic value
-INFO - [19/03/2021] (19:45:18) - DCF - Current Market price is : 120.170000
-INFO - [19/03/2021] (19:45:18) - DCF - Intrinsic Value is : 94.811716
-INFO - [19/03/2021] (19:45:18) - DCF - Margin of Safety is : -21.102009
+INFO - [20/03/2021] (19:08:18) - __main__ - Stock Valuation started
+INFO - [20/03/2021] (19:08:20) - Base - All 3 Financial statements have been accepted
+INFO - [20/03/2021] (19:08:20) - Base - Creating list of paths for the files containing financial data
+INFO - [20/03/2021] (19:08:20) - Base - Reading Balance sheet
+INFO - [20/03/2021] (19:08:20) - Base - Balance sheet read
+INFO - [20/03/2021] (19:08:20) - Base - Reading Cash flow statement
+INFO - [20/03/2021] (19:08:20) - Base - Cash flow statement read
+INFO - [20/03/2021] (19:08:20) - Base - Reading Income statement
+INFO - [20/03/2021] (19:08:20) - Base - Income statement read
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Current Ratio is BAD : 1.325909
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Calculating Cash Ratio
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Cash Ratio is BAD : 0.311429
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.678819
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [20/03/2021] (19:08:20) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 61.328888
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:21) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [20/03/2021] (19:08:21) - SolvencyRatio - Debt to Equity Ratio is BAD : 1.031163
+INFO - [20/03/2021] (19:08:21) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [20/03/2021] (19:08:21) - SolvencyRatio - Interest Coverage Ratio is GOOD : 23.846251
+INFO - [20/03/2021] (19:08:22) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:22) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:22) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:22) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Return on Assets is GOOD : 15.802188
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Return on Equity is GOOD : 60.140278
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - EBITDA Margin is : 6.054182
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.398418
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [20/03/2021] (19:08:22) - ProfitabilityRatio - Operating Margin is GOOD : 25.337900
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:23) - matplotlib.category - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO - [20/03/2021] (19:08:25) - DCF - Calculating Weighted average cost of capital
+INFO - [20/03/2021] (19:08:25) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
+INFO - [20/03/2021] (19:08:25) - DCF - Calculating Terminal Value
+INFO - [20/03/2021] (19:08:25) - DCF - Calculating intrinsic value
+INFO - [20/03/2021] (19:08:25) - DCF - Current Market price is : 119.990000
+INFO - [20/03/2021] (19:08:25) - DCF - Intrinsic Value is : 94.811724
+INFO - [20/03/2021] (19:08:25) - DCF - Margin of Safety is : -20.983646

@@ -136,7 +136,8 @@ class Base:
         self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
 
         # Income statement parameters
-        self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')
+
+        self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')   #
         self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
         self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
         self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
@@ -154,8 +155,12 @@ class Base:
         self.capex = np.array(self.tic.cashflow.loc['Capital Expenditures'])
         self.free_cashflow = self.op_cashflow+self.interest_expense-self.tax_expense-self.capex
 
+        # Balance Sheet statement parameters
+        self.tot_revenue = np.array(self.tic.financials.loc['Total Revenue']).astype('float')
+        self.ebit = np.array(self.tic.financials.loc['Ebit']).astype('float')
+
         print("Op Cashflow", self.op_cashflow)
-        print("free Cashflow", self.free_cashflow)
+        print("ebit", self.ebit)
 
 
 
