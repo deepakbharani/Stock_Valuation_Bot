@@ -19,7 +19,7 @@ class Base:
 
     def __init__(self,path = None):
 
-        self.get_financials()
+        # self.get_financials()
 
         # files inside "input" folder is defined in tuple
         self.indata = ('balance_sheet.txt', 'cash_flow.txt', 'income_statement.txt')
