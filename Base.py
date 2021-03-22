@@ -130,6 +130,7 @@ class Base:
         self.cur_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
         self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
         self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
+        self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
 
         # Cashflow statement parameters
         self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
@@ -143,6 +144,7 @@ class Base:
         self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
         self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
         self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
+        self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')
 
     def get_financials(self):
         self.stock_ticker = 'AAPL'
