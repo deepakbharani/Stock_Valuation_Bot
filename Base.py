@@ -145,6 +145,7 @@ class Base:
         self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
         self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
         self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')
+        self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')
 
     def get_financials(self):
         self.stock_ticker = 'AAPL'
