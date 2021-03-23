@@ -1,48 +1,45 @@
-BreakdownTTM6/29/20206/29/20196/29/20186/29/2017
-Total Revenue	153,284,000	143,015,000	125,843,000	110,360,000	89,950,000
-Operating Revenue	153,284,000	143,015,000	125,843,000	110,360,000	89,950,000
-Cost of Revenue	48,510,000	46,078,000	42,910,000	38,353,000	34,261,000
-Gross Profit	104,774,000	96,937,000	82,933,000	72,007,000	55,689,000
-Operating Expense	44,619,000	43,978,000	39,974,000	36,949,000	33,057,000
-Selling General and Administrative	24,693,000	24,709,000	23,098,000	22,223,000	20,020,000
-General & Administrative Expense	5,187,000	5,111,000	4,885,000	4,754,000	4,481,000
-Other G and A	5,187,000	5,111,000	4,885,000	4,754,000	4,481,000
-Selling & Marketing Expense	19,506,000	19,598,000	18,213,000	17,469,000	15,539,000
-Research & Development	19,926,000	19,269,000	16,876,000	14,726,000	13,037,000
-Operating Income	60,155,000	52,959,000	42,959,000	35,058,000	22,632,000
-Net Non Operating Interest Income Expense	-2,757,000	-2,591,000	-2,686,000	-2,733,000	-2,222,000
-Interest Income Non Operating	-	2,680,000	-	-	-
-Interest Expense Non Operating	2,460,000	2,591,000	2,686,000	2,733,000	2,222,000
-Other Income Expense	3,328,000	2,668,000	3,415,000	4,149,000	2,739,000
-Gain on Sale of Security	3,261,000	2,708,000	3,472,000	4,208,000	3,296,000
-Special Income Charges	-	-	0	0	-306,000
-Restructuring & Mergers Acquisition	-	-	0	0	306,000
-Other Non Operating Income Expenses	67,000	-40,000	-57,000	-59,000	-251,000
-Pretax Income	60,726,000	53,036,000	43,688,000	36,474,000	23,149,000
-Tax Provision	9,416,000	8,755,000	4,448,000	19,903,000	1,945,000
-Net Income Common Stockholders	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Net Income	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Net Income Including Non-Controlling Interests	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Net Income Continuous Operations	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Diluted NI Available to Com Stockholders	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Basic EPS	-	5.82	5.11	2.15	2.74
-Diluted EPS	-	5.76	5.06	2.13	2.71
-Basic Average Shares	-	7,610,000	7,673,000	7,700,000	7,746,000
-Diluted Average Shares	-	7,683,000	7,753,000	7,794,000	7,832,000
-Total Operating Income as Reported	60,155,000	52,959,000	42,959,000	35,058,000	22,326,000
-Total Expenses	93,129,000	90,056,000	82,884,000	75,302,000	67,318,000
-Net Income from Continuing & Discontinued Operation	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Normalized Income	48,554,641	42,019,820	36,122,144	13,499,160	18,453,200
-Interest Income	-	2,680,000	-	-	-
-Interest Expense	2,460,000	2,591,000	2,686,000	2,733,000	2,222,000
-Net Interest Income	-2,757,000	-2,591,000	-2,686,000	-2,733,000	-2,222,000
-EBIT	63,186,000	55,627,000	46,374,000	39,207,000	25,371,000
-EBITDA	75,214,000	-	-	-	-
-Reconciled Cost of Revenue	48,510,000	46,078,000	42,910,000	38,353,000	34,261,000
-Reconciled Depreciation	12,028,000	12,796,000	11,682,000	10,261,000	8,778,000
-Net Income from Continuing Operation Net Minority Interest	51,310,000	44,281,000	39,240,000	16,571,000	21,204,000
-Total Unusual Items Excluding Goodwill	3,261,000	2,708,000	3,472,000	4,208,000	2,990,000
-Total Unusual Items	3,261,000	2,708,000	3,472,000	4,208,000	2,990,000
-Normalized EBITDA	71,953,000	65,715,000	54,584,000	45,260,000	31,159,000
+BreakdownTTM10/30/202010/30/201910/30/201810/30/2017
+Total Revenue	5,857,949	5,603,056	5,991,065	6,200,942	5,107,503
+Operating Revenue	5,857,949	5,603,056	5,991,065	6,200,942	5,107,503
+Cost of Revenue	1,970,242	1,912,578	1,977,315	1,967,640	2,045,907
+Gross Profit	3,887,707	3,690,478	4,013,750	4,233,302	3,061,596
+Operating Expense	2,157,392	2,139,897	2,207,483	2,290,249	1,956,999
+Selling General and Administrative	645,918	659,923	648,094	695,937	691,046
+Research & Development	1,081,596	1,050,519	1,130,348	1,165,410	968,602
+Depreciation Amortization Depletion	429,878	429,455	429,041	428,902	297,351
+Depreciation & amortization	429,878	429,455	429,041	428,902	297,351
+Amortization	429,878	429,455	429,041	428,902	297,351
+Amortization of Intangibles	429,878	429,455	429,041	428,902	297,351
+Operating Income	1,730,315	1,550,581	1,806,267	1,943,053	1,104,597
+Net Non Operating Interest Income Expense	-184,397	-189,000	-218,846	-244,206	-220,507
+Interest Income Non Operating	2,574	4,305	10,229	9,383	30,333
+Interest Expense Non Operating	186,971	193,305	229,075	253,589	250,840
+Other Income Expense	-23,900	-49,964	-101,693	-60,330	-55,605
+Special Income Charges	-41,639	-52,337	-95,659	-61,318	-49,463
+Restructuring & Mergers Acquisition	41,639	52,337	95,659	61,318	49,463
+Other Non Operating Income Expenses	17,739	2,373	-6,034	988	-6,142
+Pretax Income	1,522,018	1,311,617	1,485,728	1,638,517	828,485
+Tax Provision	116,612	90,856	122,717	143,085	101,226
+Net Income Common Stockholders	1,405,406	1,220,761	1,359,782	1,489,523	725,016
+Diluted NI Available to Com Stockholders	1,405,406	1,220,761	1,359,782	1,489,523	725,016
+Basic EPS	-	3.31	3.68	4.02	2.09
+Diluted EPS	-	3.28	3.65	3.97	2.07
+Basic Average Shares	-	368,633	369,133	370,430	346,371
+Diluted Average Shares	-	371,973	372,871	374,938	350,484
+Total Operating Income as Reported	1,688,676	1,498,244	1,710,608	1,881,735	1,055,134
+Total Expenses	4,127,634	4,052,475	4,184,798	4,257,889	4,002,906
+Net Income from Continuing & Discontinued Operation	1,405,406	1,220,761	1,363,011	1,495,432	727,259
+Normalized Income	1,443,855	1,269,487	1,450,730	1,551,415	770,688
+Interest Income	2,574	4,305	10,229	9,383	30,333
+Interest Expense	186,971	193,305	229,075	253,589	250,840
+Net Interest Income	-184,397	-189,000	-218,846	-244,206	-220,507
+EBIT	1,708,989	1,504,922	1,714,803	1,892,106	1,079,325
+EBITDA	2,517,333	-	-	-	-
+Reconciled Cost of Revenue	1,591,776	1,531,110	1,595,105	1,597,479	1,759,199
+Reconciled Depreciation	808,344	810,923	811,251	799,063	584,059
+Net Income from Continuing Operation Net Minority Interest	1,405,406	1,220,761	1,363,011	1,495,432	727,259
+Total Unusual Items Excluding Goodwill	-41,639	-52,337	-95,659	-61,318	-49,463
+Total Unusual Items	-41,639	-52,337	-95,659	-61,318	-49,463
+Normalized EBITDA	2,558,972	2,368,182	2,621,713	2,752,487	1,712,847
 Tax Rate for Calcs	0	0	0	0	0
-Tax Effect of Unusual Items	505,641	446,820	354,144	1,136,160	239,200
+Tax Effect of Unusual Items	-3,190	-3,611	-7,940	-5,335	-6,034

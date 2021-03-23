@@ -99,7 +99,8 @@ class Base:
 
         else:
             num_years = 4
-            column_name = ['Breakdown','2020','2019','2018','2017']
+            data[0] = "Breakdown 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
+            column_name = list(data[0].split())
             # Rearrange columns names for exchanging columns
             cname = column_name.copy()
             cname[1:len(cname)] = cname[1:len(cname)][::-1]
@@ -131,7 +132,7 @@ class Base:
         self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
         self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
         self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
-
+        print(self.cashflow)
         # Cashflow statement parameters
         self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
         self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
