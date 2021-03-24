@@ -21,6 +21,10 @@ Other Non Operating Income Expenses	17,739	2,373	-6,034	988	-6,142
 Pretax Income	1,522,018	1,311,617	1,485,728	1,638,517	828,485
 Tax Provision	116,612	90,856	122,717	143,085	101,226
 Net Income Common Stockholders	1,405,406	1,220,761	1,359,782	1,489,523	725,016
+Net Income	1,405,406	1,220,761	1,363,011	1,495,432	727,259
+Net Income Including Non-Controlling Interests	1,405,406	1,220,761	1,363,011	1,495,432	727,259
+Net Income Continuous Operations	1,405,406	1,220,761	1,363,011	1,495,432	727,259
+Otherunder Preferred Stock Dividend	-	0	3,229	5,909	2,243
 Diluted NI Available to Com Stockholders	1,405,406	1,220,761	1,359,782	1,489,523	725,016
 Basic EPS	-	3.31	3.68	4.02	2.09
 Diluted EPS	-	3.28	3.65	3.97	2.07

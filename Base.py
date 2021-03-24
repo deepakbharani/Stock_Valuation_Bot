@@ -65,23 +65,23 @@ class Base:
         with open(self.path[1], 'r') as cf:
             logger.info("Reading Cash flow statement")
             data_cf = cf.readlines()
-            self.cashflow,self.cs_column_name = self.listformatter(data_cf)
+            self.cashflow,self.cs_column_name = self.listformatter(data_cf,cf)      # cf is tag
             logger.info("Cash flow statement read")
 
         with open(self.path[2], 'r') as ins:
             logger.info("Reading Income statement")
             data_ins = ins.readlines()
-            self.incomestmt,self.ins_column_name = self.listformatter(data_ins)
+            self.incomestmt,self.ins_column_name = self.listformatter(data_ins,ins) # ins is tag
             logger.info("Income statement read")
 
         return self.balsheet, self.cashflow, self.incomestmt
 
-    def listformatter(self, data):
+    def listformatter(self, data,tag = None):
 
         # This function formats the data from input file to meaningful elements of the list
         formatted_list = []
 
-        if len(data[0]) is 46:
+        if tag == None:
             data[0] = "Breakdown 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
             column_name = list(data[0].split())
             # Rearrange columns names for exchanging columns
@@ -89,21 +89,13 @@ class Base:
             cname[1:len(cname)] = cname[1:len(cname)][::-1]
             num_years = 4
 
-        elif len(data[0]) is 49:
+        else:
             data[0] = "Breakdown TTM 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
             column_name = list(data[0].split())
             # Rearrange columns names for exchanging columns
             cname = column_name.copy()
             cname[1:len(cname)] = cname[1:len(cname)][::-1]
             num_years = 5
-
-        else:
-            num_years = 4
-            data[0] = "Breakdown 9/29/2020 9/29/2019 9/29/2018 9/29/2017"
-            column_name = list(data[0].split())
-            # Rearrange columns names for exchanging columns
-            cname = column_name.copy()
-            cname[1:len(cname)] = cname[1:len(cname)][::-1]
 
         for items in data:
             items = items.split()
@@ -132,7 +124,7 @@ class Base:
         self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
         self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
         self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
-        print(self.cashflow)
+
         # Cashflow statement parameters
         self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
         self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
