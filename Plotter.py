@@ -7,13 +7,15 @@ Purpose: plot
 import os
 from dataclasses import dataclass
 from matplotlib import pyplot as plt
+import numpy as np
+from datetime import date
 
 plt.xkcd()
 
 @dataclass
 class Plotter():
-
-    xaxis = ["2017", "2018", "2019", "2020"]
+    year = date.today().year
+    xaxis = [year - 1, year - 2, year - 3, year - 4]
 
     # Define path to store image
     source_path = os.path.dirname(__file__)
