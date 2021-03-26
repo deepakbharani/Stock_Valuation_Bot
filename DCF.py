@@ -53,6 +53,7 @@ class DCF(ProfitabilityRatio):
 
         # Calculate expected return / WACC
         self.expected_return = self.wacc()
+        self.WACC = self.expected_return
 
         # Calculate discount factor and the present value of projected free cashflow
         self.discount_factor, self.present_value = self.forcast()
@@ -69,6 +70,16 @@ class DCF(ProfitabilityRatio):
         # Calculate Margin of Safety
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
         logger.info("Margin of Safety is : %f", self.margin_of_safety)
+
+        # ## Write Results to file
+        # # source_path is the path where this script is saved
+        self.destination_path = os.path.dirname(__file__)
+        self.destination_path = self.destination_path .replace('/', '\\')
+
+        self.destination_path = os.path.join(self.destination_path,"valuations.txt")
+        print(self.destination_path)
+        with open(self.destination_path, 'w') as val:
+            val.write("WACC calculated as = %f \n" %self.WACC )
 
     def get_current_price(self):
         self.stock_data = self.tic.history(period='1d')
