@@ -27,9 +27,17 @@ class Result():
         val.write("-----------------------------VALUATION------------------------------\n")
         val.write("--------------------------------------------------------------------\n\n")
         val.write("1) SOLVENCY RATIO: \n")
+
         if Obj.debt2equity[0] < 1:
             val.write("The Company has a GOOD Debt to Equity ratio\n")
         else:
             val.write("The Company has a BAD Debt to Equity ratio\n")
         val.write("Debt to Equity Ratio = %f \n" % Obj.debt2equity[0])
+
+        if Obj.int_cov_ratio[0] > 1:
+            val.write("The Company has a GOOD Interest Coverage Ratio\n")
+        else:
+            val.write("The Company has a BAD Interest Coverage Ratio\n")
+        val.write("Interest Coverage Ratio = %f \n\n" % Obj.int_cov_ratio[0])
+
         val.write("WACC calculated as = %f \n" % Obj.WACC)

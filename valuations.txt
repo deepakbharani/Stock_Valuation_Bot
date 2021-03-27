@@ -5,4 +5,7 @@
 1) SOLVENCY RATIO: 
 The Company has a GOOD Debt to Equity ratio
 Debt to Equity Ratio = 0.743104 
+The Company has a GOOD Interest Coverage Ratio
+Interest Coverage Ratio = 4.302842 
+
 WACC calculated as = 11.929930 

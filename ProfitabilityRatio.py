@@ -76,10 +76,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
 
             self.roa = np.divide(self.net_income[:-1],self.tot_assets) * 100
 
-            ## PLOTTING
-            # pt.twoDplot('Return on Assets', 'Years', 'Return on Assets', 'ROA',
-            #             self.roa,self.bs_column_name[1:])
-
             return self.roa
 
         except KeyError:
@@ -103,10 +99,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating Return on Equity (ROE)")
             self.roe = np.divide(self.net_income[:-1],self.shareholder_equity) * 100
-
-            ## PLOTTING
-            # pt.twoDplot('Return on Equity', 'Years', 'Return on Equity', 'ROE',
-            #             self.roe,self.bs_column_name[1:])
 
             return self.roe
 
@@ -133,10 +125,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             self.ebitda_margin = np.divide(self.ebitda,self.tot_revenue) * 100
             logger.info("EBITDA Margin is : %f",self.ebitda_margin.mean())
 
-            ## PLOTTING
-            # pt.twoDplot('EBITDA Margin', 'Years', 'EBITDA Margin', 'EBITDA Margin',
-            #             self.ebitda_margin,self.ins_column_name[1:])
-
             return self.ebitda_margin
 
         except KeyError:
@@ -162,10 +150,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
 
             self.net_prft_margin = np.divide(self.net_income,self.tot_revenue) * 100
 
-            ## PLOTTING
-            # pt.twoDplot('Net Profit Margin', 'Years', 'Net Profit Margin', 'Net Profit Margin',
-            #             self.net_prft_margin,self.ins_column_name[1:])
-
             return self.net_prft_margin
 
         except KeyError:
@@ -190,10 +174,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             logger.info("Calculating Operating Income Margin")
 
             self.opr_income_margin = np.divide(self.opr_income,self.tot_revenue) * 100
-
-            ## PLOTTING
-            # pt.twoDplot('Operating Income Margin', 'Years', 'Operating Income Margin', 'Operating Income Margin',
-            #             self.opr_income_margin,self.ins_column_name[1:])
 
             return self.opr_income_margin
 

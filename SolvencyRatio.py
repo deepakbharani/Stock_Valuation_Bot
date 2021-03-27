@@ -15,7 +15,6 @@ logger.addHandler(file_handler)
 
 pt = Plotter()
 
-
 class SolvencyRatio(LiquidityRatio,Plotter):
 
 
@@ -59,11 +58,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             logger.info("Calculating Debt to Equity ratio")
             self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
 
-            ## PLOTTING
-            # pt.twoDplot('Debt to Equity', 'Years', 'Debt to Equity', 'Debt to Equity ratio', self.debt2equity,
-            #             self.bs_column_name[1:])
-
-            # return self.debt2equity, Base.percentage_growth(self.debt2equity)
             return self.debt2equity
 
         except KeyError:
@@ -89,10 +83,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             logger.info("Calculating Interest Coverage ratio")
 
             self.int_cov_ratio = np.divide(self.ebit,self.interest_expense)
-
-            ## PLOTTING
-            # pt.twoDplot('Interest Coverage ratio', 'Years', 'Interest coverage ratio', 'Interest coverage ratio',
-            #             self.int_cov_ratio,self.ins_column_name[1:])
 
             return self.int_cov_ratio
 
