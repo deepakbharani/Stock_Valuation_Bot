@@ -1,38 +1,38 @@
-INFO - [26/03/2021] (21:14:21) - __main__ - Stock Valuation started
-INFO - [26/03/2021] (21:14:21) - Base - All 3 Financial statements have been accepted
-INFO - [26/03/2021] (21:14:21) - Base - Creating list of paths for the files containing financial data
-INFO - [26/03/2021] (21:14:21) - Base - Reading Balance sheet
-INFO - [26/03/2021] (21:14:21) - Base - Balance sheet read
-INFO - [26/03/2021] (21:14:21) - Base - Reading Cash flow statement
-INFO - [26/03/2021] (21:14:21) - Base - Cash flow statement read
-INFO - [26/03/2021] (21:14:21) - Base - Reading Income statement
-INFO - [26/03/2021] (21:14:21) - Base - Income statement read
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Current Ratio is BAD : 1.533841
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Calculating Cash Ratio
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Cash Ratio is BAD : 0.610103
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Operating Cashflow Ratio is GOOD : 1.349701
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Calculating Inventory turnover ratio
-INFO - [26/03/2021] (21:14:21) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 9.718896
-INFO - [26/03/2021] (21:14:22) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [26/03/2021] (21:14:22) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.546393
-INFO - [26/03/2021] (21:14:22) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [26/03/2021] (21:14:22) - SolvencyRatio - Interest Coverage Ratio is GOOD : 7.235108
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Return on Assets is BAD : 5.702590
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Return on Equity is GOOD : 10.645317
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - EBITDA Margin is : 8.594588
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.376963
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [26/03/2021] (21:14:23) - ProfitabilityRatio - Operating Margin is GOOD : 28.064568
-INFO - [26/03/2021] (21:14:26) - DCF - Calculating Weighted average cost of capital
-INFO - [26/03/2021] (21:14:26) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
-INFO - [26/03/2021] (21:14:26) - DCF - Calculating Terminal Value
-INFO - [26/03/2021] (21:14:26) - DCF - Calculating intrinsic value
-INFO - [26/03/2021] (21:14:26) - DCF - Current Market price is : 157.110000
-INFO - [26/03/2021] (21:14:26) - DCF - Intrinsic Value is : 121.693878
-INFO - [26/03/2021] (21:14:26) - DCF - Margin of Safety is : -22.542245
+INFO - [27/03/2021] (18:42:02) - Result - Stock Valuation started
+INFO - [27/03/2021] (18:42:02) - Base - All 3 Financial statements have been accepted
+INFO - [27/03/2021] (18:42:02) - Base - Creating list of paths for the files containing financial data
+INFO - [27/03/2021] (18:42:02) - Base - Reading Balance sheet
+INFO - [27/03/2021] (18:42:02) - Base - Balance sheet read
+INFO - [27/03/2021] (18:42:02) - Base - Reading Cash flow statement
+INFO - [27/03/2021] (18:42:02) - Base - Cash flow statement read
+INFO - [27/03/2021] (18:42:02) - Base - Reading Income statement
+INFO - [27/03/2021] (18:42:02) - Base - Income statement read
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Current Ratio is BAD : 1.533841
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Calculating Cash Ratio
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Cash Ratio is BAD : 0.610103
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Operating Cashflow Ratio is GOOD : 1.349701
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [27/03/2021] (18:42:02) - LiquidityRatio - Inventory Turnover Ratio is GOOD : 9.718896
+INFO - [27/03/2021] (18:42:03) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [27/03/2021] (18:42:03) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.546393
+INFO - [27/03/2021] (18:42:03) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [27/03/2021] (18:42:03) - SolvencyRatio - Interest Coverage Ratio is GOOD : 7.235108
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Return on Assets is BAD : 5.702590
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Return on Equity is GOOD : 10.645317
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - EBITDA Margin is : 8.594588
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Net Profit Margin is GOOD : 21.376963
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [27/03/2021] (18:42:04) - ProfitabilityRatio - Operating Margin is GOOD : 28.064568
+INFO - [27/03/2021] (18:42:08) - DCF - Calculating Weighted average cost of capital
+INFO - [27/03/2021] (18:42:08) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
+INFO - [27/03/2021] (18:42:08) - DCF - Calculating Terminal Value
+INFO - [27/03/2021] (18:42:08) - DCF - Calculating intrinsic value
+INFO - [27/03/2021] (18:42:08) - DCF - Current Market price is : 157.110000
+INFO - [27/03/2021] (18:42:08) - DCF - Intrinsic Value is : 121.693878
+INFO - [27/03/2021] (18:42:08) - DCF - Margin of Safety is : -22.542245
