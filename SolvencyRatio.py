@@ -17,7 +17,6 @@ pt = Plotter()
 
 class SolvencyRatio(LiquidityRatio,Plotter):
 
-
     def __init__(self):
         super().__init__()
         self.G_debtequity = self.debttoequity()                     # Growth in Debt to Equity
@@ -42,7 +41,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
                 else:
                     logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
             else:
-                logger.info("Keep working hard")
+                pass
 
         return wrapper
 

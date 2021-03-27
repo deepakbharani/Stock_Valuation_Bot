@@ -26,8 +26,9 @@ class Result():
         val.write("--------------------------------------------------------------------\n")
         val.write("-----------------------------VALUATION------------------------------\n")
         val.write("--------------------------------------------------------------------\n\n")
-        val.write("1) SOLVENCY RATIO: \n")
 
+        # Solvency Ratio
+        val.write("1) SOLVENCY RATIO: \n")
         if Obj.debt2equity[0] < 1:
             val.write("The Company has a GOOD Debt to Equity ratio\n")
         else:
@@ -39,5 +40,31 @@ class Result():
         else:
             val.write("The Company has a BAD Interest Coverage Ratio\n")
         val.write("Interest Coverage Ratio = %f \n\n" % Obj.int_cov_ratio[0])
+
+        # Liquidity Ratio
+        val.write("2) LIQUIDITY RATIO: \n")
+        if Obj.cur_ratio[0] > 2:
+            val.write("The Company has a GOOD Current Ratio\n")
+        else:
+            val.write("The Company has a BAD Current Ratio\n")
+        val.write("Current Ratio = %f \n" % Obj.cur_ratio[0])
+
+        if Obj.cshratio[0] > 1:
+            val.write("The Company has a GOOD Cash Ratio\n")
+        else:
+            val.write("The Company has a BAD Cash Ratio\n")
+        val.write("Cash Ratio = %f \n" % Obj.cshratio[0])
+
+        if Obj.op_cashflow_ratio[0] > 1:
+            val.write("The Company has a GOOD Operating Cashflow Ratio\n")
+        else:
+            val.write("The Company has a BAD Operating Cashflow Ratio\n")
+        val.write("Operating Cashflow Ratio = %f \n" % Obj.op_cashflow_ratio[0])
+
+        if Obj.inv_turnover_ratio[0] > 5:
+            val.write("The Company has a GOOD Inventory Turnover Ratio\n")
+        else:
+            val.write("The Company has a BAD Inventory Turnover Ratio\n")
+        val.write("Inventory Turnover Ratio = %f \n\n" % Obj.inv_turnover_ratio[0])
 
         val.write("WACC calculated as = %f \n" % Obj.WACC)

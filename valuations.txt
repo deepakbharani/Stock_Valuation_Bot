@@ -8,4 +8,14 @@ Debt to Equity Ratio = 0.743104
 The Company has a GOOD Interest Coverage Ratio
 Interest Coverage Ratio = 4.302842 
 
+2) LIQUIDITY RATIO: 
+The Company has a BAD Current Ratio
+Current Ratio = 1.472963 
+The Company has a BAD Cash Ratio
+Cash Ratio = 0.656404 
+The Company has a BAD Operating Cashflow Ratio
+Operating Cashflow Ratio = 0.696968 
+The Company has a GOOD Inventory Turnover Ratio
+Inventory Turnover Ratio = 9.272612 
+
 WACC calculated as = 11.929930 
