@@ -23,8 +23,6 @@ The Company has a GOOD Operating Income Margin
 Operating Income Margin = 21.626948 
 The Company has a BAD Net Profit Margin
 Net Profit Margin = 14.239032 
-The Company has a BAD EBITDA Margin
-EBITDA Margin = 0.000000 
 The Company has a BAD Return on Equity
 Return on Equity = 7.156976 
 The Company has a BAD Return on Assets

@@ -81,12 +81,6 @@ class Result():
             val.write("The Company has a BAD Net Profit Margin\n")
         val.write("Net Profit Margin = %f \n" % Obj.net_prft_margin[0])
 
-        if Obj.ebitda_margin[0] > 10:
-            val.write("The Company has a GOOD EBITDA Margin\n")
-        else:
-            val.write("The Company has a BAD EBITDA Margin\n")
-        val.write("EBITDA Margin = %f \n" % Obj.ebitda_margin[0])
-
         if Obj.roe[0] > 10:
             val.write("The Company has a GOOD Return on Equity\n")
         else:
