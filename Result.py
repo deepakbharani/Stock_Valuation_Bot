@@ -67,4 +67,37 @@ class Result():
             val.write("The Company has a BAD Inventory Turnover Ratio\n")
         val.write("Inventory Turnover Ratio = %f \n\n" % Obj.inv_turnover_ratio[0])
 
+        # Profitability Ratio
+        val.write("3) Profitability RATIO: \n")
+        if Obj.opr_income_margin[0] > 15:
+            val.write("The Company has a GOOD Operating Income Margin\n")
+        else:
+            val.write("The Company has a BAD Operating Income Margin\n")
+        val.write("Operating Income Margin = %f \n" % Obj.opr_income_margin[0])
+
+        if Obj.net_prft_margin[0] > 15:
+            val.write("The Company has a GOOD Net Profit Margin\n")
+        else:
+            val.write("The Company has a BAD Net Profit Margin\n")
+        val.write("Net Profit Margin = %f \n" % Obj.net_prft_margin[0])
+
+        if Obj.ebitda_margin[0] > 10:
+            val.write("The Company has a GOOD EBITDA Margin\n")
+        else:
+            val.write("The Company has a BAD EBITDA Margin\n")
+        val.write("EBITDA Margin = %f \n" % Obj.ebitda_margin[0])
+
+        if Obj.roe[0] > 10:
+            val.write("The Company has a GOOD Return on Equity\n")
+        else:
+            val.write("The Company has a BAD Return on Equity\n")
+        val.write("Return on Equity = %f \n" % Obj.roe[0])
+
+        if Obj.roa[0] > 10:
+            val.write("The Company has a GOOD Return on Assets\n")
+        else:
+            val.write("The Company has a BAD Return on Assets\n")
+        val.write("Return on Assets = %f \n\n" % Obj.roa[0])
+
+
         val.write("WACC calculated as = %f \n" % Obj.WACC)
