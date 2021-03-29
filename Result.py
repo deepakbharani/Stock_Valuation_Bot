@@ -94,4 +94,9 @@ class Result():
         val.write("Return on Assets = %f \n\n" % Obj.roa[0])
 
 
+        # Intrinsic Value Calculation
+        val.write("--------------------------------------------------------------------\n")
+        val.write("----------------------Intrinsic Value Calculation-------------------\n")
+        val.write("--------------------------------------------------------------------\n\n")
+        val.write("WACC Calculation \n")
         val.write("WACC calculated as = %f \n" % Obj.WACC)

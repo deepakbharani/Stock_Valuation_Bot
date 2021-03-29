@@ -28,4 +28,9 @@ Return on Equity = 7.156976
 The Company has a BAD Return on Assets
 Return on Assets = 3.439993 
 
-WACC calculated as = 11.929930 
+--------------------------------------------------------------------
+----------------------Intrinsic Value Calculation-------------------
+--------------------------------------------------------------------
+
+WACC Calculation 
+WACC calculated as = 11.929907 
