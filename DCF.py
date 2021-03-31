@@ -4,7 +4,7 @@ Info   : This Subclass performs Discounted Cashflow Valuation analysis
 """
 
 from ProfitabilityRatio import *
-import yfinance.yfinance as yf
+import yfinance as yf
 import numpy as np
 
 logger = logging.getLogger(__name__)

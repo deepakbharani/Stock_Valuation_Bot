@@ -19,12 +19,12 @@ class Plotter():
 
     # Define path to store image
     source_path = os.path.dirname(__file__)
-    source_path = source_path.replace('/', '\\')
-    image_path = os.path.join(source_path, 'results\\')
+    #source_path = source_path.replace('/', '\\')
+    image_path = os.path.join(source_path, 'results')
 
     def twoDplot(self,classname,*args):
 
-        if classname is "SolvencyRatio":
+        if classname == "SolvencyRatio":
 
             # Extract args
             self.debt2equity = args[0]
@@ -48,7 +48,7 @@ class Plotter():
             axs[1].legend()
             figs.savefig(os.path.join(self.image_path,"solvRatio.png"))
 
-        elif classname is "ProfitabilityRatio":
+        elif classname == "ProfitabilityRatio":
 
             # Extract args
             self.roa = args[0]

@@ -8,7 +8,7 @@ import os
 import logging
 import pandas as pd
 import numpy as np
-import yfinance.yfinance as yf
+import yfinance as yf
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -29,7 +29,7 @@ class Base:
         else:
             self.path = path
 
-        if len(self.indata) is 3:
+        if len(self.indata) == 3:
             logger.info("All 3 Financial statements have been accepted")
             self.balsheet,self.cashflow,self.incomestmt = self.readfinancials()
             self.variablefunction()
@@ -49,12 +49,12 @@ class Base:
 
         # source_path is the path where this script is saved
         self.source_path = os.path.dirname(__file__)
-        self.source_path = self.source_path.replace('/', '\\')
+        #self.source_path = self.source_path.replace('/', '\\')
 
         logger.info("Creating list of paths for the files containing financial data")
         # Set path for all the financial files inside "inputs" folder
         for file in self.indata:
-            self.path.append(os.path.join(self.source_path, 'inputs\\', file))
+            self.path.append(os.path.join(self.source_path, 'inputs', file))
 
         with open(self.path[0], 'r') as bs:
             logger.info("Reading Balance sheet")

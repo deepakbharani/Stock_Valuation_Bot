@@ -18,7 +18,7 @@ class Result():
 
     # ## Write Results to file
     destination_path = os.path.dirname(__file__)
-    destination_path = destination_path.replace('/', '\\')
+    #destination_path = destination_path.replace('/', '\\')
 
     destination_path = os.path.join(destination_path, "valuations.txt")
 
