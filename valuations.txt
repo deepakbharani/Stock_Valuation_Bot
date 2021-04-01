@@ -33,4 +33,4 @@ Return on Assets = 3.439993
 --------------------------------------------------------------------
 
 WACC Calculation 
-WACC calculated as = 11.929924 
+WACC calculated as = 11.929942 
