@@ -3,7 +3,10 @@ Author : Bharani Deepak
 Info   : This class writes the valuation results to a file
 """
 from dataclasses import dataclass
+from fpdf import FPDF
 from DCF import *
+from Base import *
+
 
 logging.basicConfig(filename="logfile.log", level=logging.INFO,
                     format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',
@@ -18,9 +21,17 @@ class Result():
 
     # ## Write Results to file
     destination_path = os.path.dirname(__file__)
-    #destination_path = destination_path.replace('/', '\\')
-
     destination_path = os.path.join(destination_path, "valuations.txt")
+
+    #pdf = FPDF(os.path.join(destination_path,'valuations.pdf'))
+    pdf = FPDF('P', 'mm', 'A4')
+    pdf.add_page()
+    pdf.set_font('Arial','',16)
+    pdf.set_margins(3,3)
+    pdf.cell(0,10,'Valuations',0,1,'C')
+    pdf.set_font('Arial', '', 12)
+    pdf.cell(0,10,'1) Solvency Ratio',0,1)
+    pdf.output('Valuations.pdf','F')
 
     with open(destination_path, 'w') as val:
         val.write("--------------------------------------------------------------------\n")
