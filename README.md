@@ -44,7 +44,7 @@ yfinance module.
 To Valuate a different stock the Variable "self.stock_ticker" must be adjusted.  
 
 # Result.py
-Result.py is a class to write the valuations into a text file
+Result.py is a class to write the valuations into a pdf file
 
 # Plotter.py
 A Class which is to plot the results from calculations and the data 
