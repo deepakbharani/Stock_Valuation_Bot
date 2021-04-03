@@ -30,7 +30,21 @@ class Result():
     pdf.set_margins(3,3)
     pdf.cell(0,10,'Valuations',0,1,'C')
     pdf.set_font('Arial', '', 12)
+    pdf.set_margins(3, 3)
     pdf.cell(0,10,'1) Solvency Ratio',0,1)
+
+    if Obj.debt2equity[0] < 1:
+        pdf.cell(0,10,"The Company has a GOOD Debt to Equity ratio\n",0,1)
+    else:
+        pdf.cell(0,10,"The Company has a BAD Debt to Equity ratio\n",0,1)
+    pdf.cell(0,10,"Debt to Equity Ratio = %f \n",0,1)
+
+    #if Obj.int_cov_ratio[0] > 1:
+    #    val.write("The Company has a GOOD Interest Coverage Ratio\n")
+    #else:
+    #    val.write("The Company has a BAD Interest Coverage Ratio\n")
+    #val.write("Interest Coverage Ratio = %f \n\n" % Obj.int_cov_ratio[0])
+
     pdf.output('Valuations.pdf','F')
 
     with open(destination_path, 'w') as val:
