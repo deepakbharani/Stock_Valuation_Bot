@@ -1,0 +1,36 @@
+--------------------------------------------------------------------
+-----------------------------VALUATION------------------------------
+--------------------------------------------------------------------
+
+1) SOLVENCY RATIO: 
+The Company has a GOOD Debt to Equity ratio
+Debt to Equity Ratio = 0.743104 
+The Company has a GOOD Interest Coverage Ratio
+Interest Coverage Ratio = 4.302842 
+
+2) LIQUIDITY RATIO: 
+The Company has a BAD Current Ratio
+The Company has a BAD Cash Ratio
+Current Ratio = 1.472963 
+Cash Ratio = 0.656404 
+The Company has a BAD Operating Cashflow Ratio
+Operating Cashflow Ratio = 0.696968 
+The Company has a GOOD Inventory Turnover Ratio
+Inventory Turnover Ratio = 9.272612 
+
+3) Profitability RATIO: 
+The Company has a GOOD Operating Income Margin
+Operating Income Margin = 21.626948 
+The Company has a BAD Net Profit Margin
+Net Profit Margin = 14.239032 
+The Company has a BAD Return on Equity
+Return on Equity = 7.156976 
+The Company has a BAD Return on Assets
+Return on Assets = 3.439993 
+
+--------------------------------------------------------------------
+----------------------Intrinsic Value Calculation-------------------
+--------------------------------------------------------------------
+
+WACC Calculation 
+WACC calculated as = 11.746697 
