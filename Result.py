@@ -104,11 +104,11 @@ class Result():
         val.write("WACC Calculation \n")
         val.write("WACC calculated as = %f \n" % Obj.WACC)
 
-        pdf.add_page()
-        pdf.set_font('Arial', 'B', 16)
-
-        pdfwrite = open("valuations.txt", "r")
-        for items in pdfwrite:
-            pdf.cell(200, 10,txt = items,ln = 1)
-        pdfwrite.close()
-        pdf.output('Valuations.pdf', 'F')
+        # pdf.add_page()
+        # pdf.set_font('Arial', 'B', 16)
+        #
+        # pdfwrite = open("valuations.txt", "r")
+        # for items in pdfwrite:
+        #     pdf.cell(200, 10,txt = items,ln = 1)
+        # pdfwrite.close()
+        # pdf.output('Valuations.pdf', 'F')
