@@ -2,35 +2,53 @@
 -----------------------------VALUATION------------------------------
 --------------------------------------------------------------------
 
+STOCK DETAILS
+Stock Ticker - JD
+Stock Beta - 0.810259
+Market Capitalisation - 126378795008
+Current Market Price - 80.41
+Shares Outstanding - 1551750016
+
 1) SOLVENCY RATIO: 
 The Company has a GOOD Debt to Equity ratio
-Debt to Equity Ratio = 0.743104 
+Debt to Equity Ratio = 0.066815 
 The Company has a GOOD Interest Coverage Ratio
-Interest Coverage Ratio = 4.302842 
+Interest Coverage Ratio = 46.165081 
 
 2) LIQUIDITY RATIO: 
 The Company has a BAD Current Ratio
+Current Ratio = 1.349303 
 The Company has a BAD Cash Ratio
-Current Ratio = 1.472963 
-Cash Ratio = 0.656404 
+Cash Ratio = 0.494693 
 The Company has a BAD Operating Cashflow Ratio
-Operating Cashflow Ratio = 0.696968 
+Operating Cashflow Ratio = 0.244484 
 The Company has a GOOD Inventory Turnover Ratio
-Inventory Turnover Ratio = 9.272612 
+Inventory Turnover Ratio = 12.655184 
 
 3) Profitability RATIO: 
-The Company has a GOOD Operating Income Margin
-Operating Income Margin = 21.626948 
+The Company has a BAD Operating Income Margin
+Operating Income Margin = 1.433903 
 The Company has a BAD Net Profit Margin
-Net Profit Margin = 14.239032 
-The Company has a BAD Return on Equity
-Return on Equity = 7.156976 
-The Company has a BAD Return on Assets
-Return on Assets = 3.439993 
+Net Profit Margin = 6.624443 
+The Company has a GOOD Return on Equity
+Return on Equity = 26.343369 
+The Company has a GOOD Return on Assets
+Return on Assets = 11.699420 
 
 --------------------------------------------------------------------
 ----------------------Intrinsic Value Calculation-------------------
 --------------------------------------------------------------------
 
 WACC Calculation 
-WACC calculated as = 11.746698 
+WACC calculated as = 8.861565 
+
+CAGR Total Revenue  = 20.413821134596922
+Present Value  = [1.00953729e+09 9.56915118e+08 9.07035880e+08 8.59756599e+08
+ 8.14941753e+08]
+Discount Factor  = [1.08861565 1.18508404 1.29010104 1.40442419 1.52887816]
+Total Revenue  = [3.62331754e+08 4.62019759e+08 5.76888484e+08 7.45801886e+08
+ 7.45801886e+08 8.98048549e+08 1.08137457e+09 1.30212444e+09
+ 1.56793780e+09 1.88801382e+09]
+Present Terminal Value  = 17678843043370.5
+Intrinsic Value  = 11392.842185329482
+Margin of Safety  = 14068.439479330285

@@ -29,7 +29,7 @@ class DCF(ProfitabilityRatio):
         self.present_value = []
 
         # Get stock related data from yfinance module
-        self.stock_ticker = 'ADI'
+        self.stock_ticker = 'JD'
         self.tic = yf.Ticker(self.stock_ticker)
         self.beta = self.tic.info.get('beta')
         self.marketcap = self.tic.info.get('marketCap')

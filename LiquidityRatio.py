@@ -104,7 +104,6 @@ class LiquidityRatio(Base,Plotter):
             """
             logger.info("Calculating Cash Ratio")
             self.cshratio = np.divide(self.cash_cashequ,self.cur_liabilities)
-
             ## PLOTTING
             # pt.twoDplot('Cash and Cash Equivalent to Current Liabilities', 'Years', 'Cash Ratio', 'Cash Ratio', self.cshratio,
             #             self.bs_column_name[1:])
@@ -134,12 +133,6 @@ class LiquidityRatio(Base,Plotter):
 
             logger.info("Calculating Operating Cashflow ratio")
             self.op_cashflow_ratio = np.divide(self.op_cashflow[0:-1],self.cur_liabilities)
-
-            ## PLOTTING
-            # pt.twoDplot('Operating Cashflow to Current Liabilities', 'Years', 'Operating Cashflow ratio',
-            #             'Operating Cashflow ratio', self.op_cashflow_ratio,self.bs_column_name[1:])
-            # pt.twoDplot('Growth in Current Ratio', 'Years', 'Growth', 'Current Ratio growth', Base.percentage_growth(self.cur_ratio))
-
             return self.op_cashflow_ratio
 
         except KeyError:

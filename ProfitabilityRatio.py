@@ -75,7 +75,6 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             logger.info("Calculating Return on Assets (ROA)")
 
             self.roa = np.divide(self.net_income[:-1],self.tot_assets) * 100
-
             return self.roa
 
         except KeyError:
