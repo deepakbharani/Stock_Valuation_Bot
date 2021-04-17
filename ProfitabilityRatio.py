@@ -20,7 +20,8 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
     def __init__(self):
         super().__init__()
         self.G_roa = self.return_on_asset()                     # Growth in Return on Assets
-        self.G_roe = self.return_on_equity()                    # Growth in Return on Assets
+        self.G_roe = self.return_on_equity()                    # Growth in Return on Equity
+        self.G_roce = self.return_on_capital_employed()         # Growth in Return on Capital Employed
         self.G_ebitda_margin = self.ebitda_margin()             # Growth in EBITA Margin
         self.G_net_profit_margin = self.net_profit_margin()     # Growth in Net Profit Margin
         self.G_opr_income_margin = self.operating_margin()      # Growth in Operating Income Margin
@@ -62,6 +63,29 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
                     logger.info("Operating Margin is BAD : %f", om.mean())
 
         return wrapper
+
+    def return_on_capital_employed(self):
+
+        try:
+            """
+            Return on Capital Employed:
+            ***HIGHER the BETTER***
+            """
+            logger.info("Calculating Return on Capital Employed (ROCE)")
+
+            self.roce = np.divide(self.ebit[:-1],(self.tot_assets-self.cur_liabilities)) * 100
+
+            return self.roce
+
+        except KeyError:
+            logger.error("Return on Capital Employed cannot be calculated")
+            logger.exception(KeyError)
+
+        except ValueError:
+            logger.exception(ValueError)
+
+        except AttributeError:
+            logger.exception(AttributeError)
 
     @valuation
     def return_on_asset(self):

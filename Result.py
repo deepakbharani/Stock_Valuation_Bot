@@ -105,6 +105,11 @@ class Result():
             val.write("The Company has a BAD Return on Assets\n")
         val.write("Return on Assets = %f \n\n" % Obj.roa[-1])
 
+        if Obj.roce[-1] > 10:
+            val.write("The Company has a GOOD Return on Capital Employed\n")
+        else:
+            val.write("The Company has a BAD Return on Capital Employed\n")
+        val.write("Return on Capital Employed = %f \n\n" % Obj.roce[-1])
 
         # Intrinsic Value Calculation
         val.write("--------------------------------------------------------------------\n")
@@ -112,6 +117,9 @@ class Result():
         val.write("--------------------------------------------------------------------\n\n")
         val.write("WACC Calculation \n")
         val.write("WACC calculated as = %f \n\n" % Obj.WACC)
+
+        val.write(f"ROCE is {Obj.roce[-1]} and WACC is {Obj.WACC}\n")
+
         val.write(f"CAGR Total Revenue  = {Obj.cagr_tot_rev_gr}\n")
         val.write(f"Present Value  = {Obj.present_value}\n")
         val.write(f"Discount Factor  = {Obj.discount_factor}\n")
