@@ -32,19 +32,10 @@ class SolvencyRatio(LiquidityRatio,Plotter):
         def wrapper(*args, **kwargs):
             if func.__name__ == "debttoequity":
                 d2e = func(*args, **kwargs)
-                if d2e.mean() < 1:
-                    logger.info("Debt to Equity Ratio is GOOD : %f",d2e.mean())
-                else:
-                    logger.info("Debt to Equity Ratio is BAD : %f",d2e.mean())
+                logger.info("Debt to Equity Ratio is GOOD : %f", d2e.mean()) if d2e.mean()<1 else logger.info("Debt to Equity Ratio is BAD : %f",d2e.mean())
             elif func.__name__ == "interest_coverage_ratio":
                 icr = func(*args, **kwargs)
-                if icr.mean() > 2:
-                    logger.info("Interest Coverage Ratio is GOOD : %f",icr.mean())
-                else:
-                    logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
-            else:
-                pass
-
+                logger.info("Interest Coverage Ratio is GOOD : %f", icr.mean()) if icr.mean() > 2 else logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
         return wrapper
 
     @valuation
