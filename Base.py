@@ -158,8 +158,6 @@ class Base:
         print("Op Cashflow", self.op_cashflow)
         print("ebit", self.ebit)
 
-
-
     @classmethod
     def percentage_growth(self,vector):
 

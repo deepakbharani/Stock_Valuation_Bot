@@ -38,7 +38,7 @@ class SolvencyRatio(LiquidityRatio,Plotter):
                 logger.info("Interest Coverage Ratio is GOOD : %f", icr.mean()) if icr.mean() > 2 else logger.info("Interest Coverage Ratio is BAD : %f",icr.mean())
         return wrapper
 
-    @valuation
+    #@valuation
     def debttoequity(self,*args, **kwargs):
 
         try:
@@ -49,7 +49,6 @@ class SolvencyRatio(LiquidityRatio,Plotter):
             """
             logger.info("Calculating Debt to Equity ratio")
             self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
-
             return self.debt2equity
 
         except KeyError:

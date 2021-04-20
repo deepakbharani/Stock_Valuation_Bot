@@ -5,9 +5,9 @@
 STOCK DETAILS
 Stock Ticker - JD
 Stock Beta - 0.810259
-Market Capitalisation - 121326452736
-Current Market Price - 77.04
-Shares Outstanding - 1551750016
+Market Capitalisation - 116976508928
+Current Market Price - 74.44
+Shares Outstanding - 1558989952
 
 1) SOLVENCY RATIO: 
 The Company has a GOOD Debt to Equity ratio
@@ -45,14 +45,14 @@ Return on Capital Employed = 20.922316
 WACC Calculation 
 WACC calculated as = 8.861566 
 
-ROCE is 20.922316493888623 and WACC is 8.861565894607946
+ROCE is 20.922316493888623 and WACC is 8.86156633687909
 CAGR Total Revenue  = 20.413821134596922
-Present Value  = [1.00953728e+09 9.56915109e+08 9.07035868e+08 8.59756584e+08
- 8.14941736e+08]
-Discount Factor  = [1.08861566 1.18508405 1.29010106 1.40442421 1.52887819]
+Present Value  = [1.00953728e+09 9.56915102e+08 9.07035857e+08 8.59756570e+08
+ 8.14941719e+08]
+Discount Factor  = [1.08861566 1.18508406 1.29010107 1.40442424 1.52887822]
 Total Revenue  = [3.62331754e+08 4.62019759e+08 5.76888484e+08 7.45801886e+08
  7.45801886e+08 8.98048549e+08 1.08137457e+09 1.30212444e+09
  1.56793780e+09 1.88801382e+09]
-Present Terminal Value  = 17678841717742.49
-Intrinsic Value  = 11392.841331050122
-Margin of Safety  = 14688.21564258842
+Present Terminal Value  = 17678840484681.402
+Intrinsic Value  = 11339.932282438087
+Margin of Safety  = 15133.654328906618
