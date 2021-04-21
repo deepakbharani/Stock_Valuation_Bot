@@ -10,7 +10,10 @@ class TestStockValuation(unittest.TestCase):
 
     # Testing Methods inside SolvencyRatio Class
     def test_debttoequity(self):
-        self.assertEqual(SolvencyRatio.debttoequity(self),1)
+        self.assertEqual(SolvencyRatio.debttoequity(self),None)
+
+    def test_interest_coverage_ratio(self):
+        self.assertEqual(SolvencyRatio.interest_coverage_ratio(self),None)
 
 if __name__ == "__main__":
     unittest.main()

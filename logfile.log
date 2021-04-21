@@ -41,3 +41,38 @@ Traceback (most recent call last):
   File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
     self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
 AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 51, in debttoequity
+    self.debt2equity = np.divide(self.long_term_debt,self.shareholder_equity)
+AttributeError: 'TestStockValuation' object has no attribute 'long_term_debt'
+<class 'AttributeError'>
+Traceback (most recent call last):
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/SolvencyRatio.py", line 76, in interest_coverage_ratio
+    self.int_cov_ratio = np.divide(self.ebit,self.interest_expense)
+AttributeError: 'TestStockValuation' object has no attribute 'ebit'
