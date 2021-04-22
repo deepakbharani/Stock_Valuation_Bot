@@ -62,7 +62,7 @@ class LiquidityRatio(Base,Plotter):
 
         return wrapper
 
-    @valuation
+    #@valuation
     def currentratio(self):
 
         try:
@@ -75,12 +75,6 @@ class LiquidityRatio(Base,Plotter):
             logger.info("Calculating Current Ratio and its growth")
             self.cur_ratio = np.divide(self.cur_assets,self.cur_liabilities)
             self.A_cur_ratio = self.cur_ratio.mean()
-
-            ## PLOTTING
-            # pt.twoDplot('Current Asset / Current Liability', 'Years', 'Current Ratio', 'Current Ratio past few Years', self.cur_ratio,
-            #             self.bs_column_name[1:])
-            # pt.twoDplot('Growth in Current Ratio', 'Years', 'Growth', 'Current Ratio growth', Base.percentage_growth(self.cur_ratio))
-
             return self.cur_ratio
 
         except KeyError:
@@ -93,7 +87,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
-    @valuation
+    #@valuation
     def cashratio(self):
 
         try:
@@ -104,9 +98,6 @@ class LiquidityRatio(Base,Plotter):
             """
             logger.info("Calculating Cash Ratio")
             self.cshratio = np.divide(self.cash_cashequ,self.cur_liabilities)
-            ## PLOTTING
-            # pt.twoDplot('Cash and Cash Equivalent to Current Liabilities', 'Years', 'Cash Ratio', 'Cash Ratio', self.cshratio,
-            #             self.bs_column_name[1:])
 
             return self.cshratio
 
@@ -145,7 +136,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
-    @valuation
+    #@valuation
     def inventory_turnover_ratio(self):
 
         try:
@@ -158,20 +149,9 @@ class LiquidityRatio(Base,Plotter):
             logger.info("Calculating Inventory turnover ratio")
             self.inv_turnover_ratio = np.divide(self.tot_revenue[0:-1], self.inventory)
 
-            ## PLOTTING
-            # pt.twoDplot('Inventory turnover ratio', 'Years', 'Inventory turnover ratio',
-            #             'Inventory turnover ratio', self.inv_turnover_ratio,self.bs_column_name[1:])
-            # pt.twoDplot('Growth in Inventory turnover ratio', 'Years', 'Growth', 'Inventory turnover ratio growth',
-            #             Base.percentage_growth(self.inv_turnover_ratio))
-
             return self.inv_turnover_ratio
 
-        except KeyError:
+        except Exception:
             logger.error("Inventory turnover ratio can't be calculated")
-            logger.exception(KeyError)
-
-        except ValueError:
-            logger.exception(ValueError)
-
-        except AttributeError:
-            logger.exception(AttributeError)
+            logger.exception(Exception)
+            self.inv_turnover_ratio = [0,0,0,0]

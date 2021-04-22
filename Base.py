@@ -114,31 +114,38 @@ class Base:
 
     def variablefunction(self):
 
-        # Balance Sheet parameters
-        self.tot_assets = np.array(self.balsheet.loc['Total Assets']).astype('float')
-        self.cur_assets = np.array(self.balsheet.loc['Current Assets']).astype('float')
-        self.cash_cashequ = np.array(self.balsheet.loc['Cash And Cash Equivalents']).astype('float')
-        self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
-        self.tot_noncur_assets = np.array(self.balsheet.loc['Total non-current assets']).astype('float')
-        self.cur_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
-        self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
-        self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
-        self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
+        try:
+            # Balance Sheet parameters
+            self.tot_assets = np.array(self.balsheet.loc['Total Assets']).astype('float')
+            self.cur_assets = np.array(self.balsheet.loc['Current Assets']).astype('float')
+            self.cash_cashequ = np.array(self.balsheet.loc['Cash And Cash Equivalents']).astype('float')
+            self.tot_noncur_assets = np.array(self.balsheet.loc['Total non-current assets']).astype('float')
+            self.cur_liabilities = np.array(self.balsheet.loc['Current Liabilities']).astype('float')
+            self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
+            self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
+            self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
 
-        # Cashflow statement parameters
-        self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
-        self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
+            # Cashflow statement parameters
+            self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
+            self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
 
-        # Income statement parameters
+            # Income statement parameters
 
-        self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')   #
-        self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
-        self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
-        self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
-        self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
-        self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
-        self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')
-        self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')
+            self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')   #
+            self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
+            self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
+            self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
+            self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
+            self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
+            self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')
+            self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')
+
+            self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
+
+        except KeyError:
+            logger.error("Return on Capital Employed cannot be calculated")
+            logger.exception(KeyError)
+            pass
 
     def get_financials(self):
         self.stock_ticker = 'AAPL'

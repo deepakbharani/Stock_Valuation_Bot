@@ -73,11 +73,15 @@ class Result():
             val.write("The Company has a BAD Operating Cashflow Ratio\n")
         val.write("Operating Cashflow Ratio = %f \n" % Obj.op_cashflow_ratio[-1])
 
-        if Obj.inv_turnover_ratio[-1] > 5:
-            val.write("The Company has a GOOD Inventory Turnover Ratio\n")
-        else:
-            val.write("The Company has a BAD Inventory Turnover Ratio\n")
-        val.write("Inventory Turnover Ratio = %f \n\n" % Obj.inv_turnover_ratio[-1])
+        try:
+            if Obj.inv_turnover_ratio[-1] > 5:
+                val.write("The Company has a GOOD Inventory Turnover Ratio\n")
+            else:
+                val.write("The Company has a BAD Inventory Turnover Ratio\n")
+            val.write("Inventory Turnover Ratio = %f \n\n" % Obj.inv_turnover_ratio[-1])
+
+        except AttributeError:
+            pass
 
         # Profitability Ratio
         val.write("3) Profitability RATIO: \n")

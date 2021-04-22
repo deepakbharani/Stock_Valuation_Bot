@@ -91,43 +91,46 @@ class Plotter():
             figp.savefig(os.path.join(self.image_path, "profRatio.png"))
 
         else:
+            try:
+                # Extract args
+                self.cur_ratio = args[0]
+                self.cshratio = args[1]
+                self.op_cashflow_ratio= args[2]
+                self.inv_turnover_ratio = args[3]
 
-            # Extract args
-            self.cur_ratio = args[0]
-            self.cshratio = args[1]
-            self.op_cashflow_ratio= args[2]
-            self.inv_turnover_ratio = args[3]
+                # Plot the results
+                figl,axs = plt.subplots(int(len(args)/2),int(len(args)/2))
+                figl.suptitle("Liquidity Ratio")
+                figl.set_size_inches(25, 12)
+                # Plot Return on Assets
+                axs[0,0].plot(self.xaxis, np.flip(self.cur_ratio), label="Current Ratio", color='blue', marker='o')
+                axs[0,0].grid(True)
+                axs[0,0].set_title("Current Ratio")
+                axs[0,0].set_xlabel("Year")
+                axs[0,0].set_ylabel("Current Ratio")
+                axs[0,0].legend()
+                # Plot Return on Equity
+                axs[0,1].plot(self.xaxis, np.flip(self.cshratio), label="Cash Ratio", color='red', marker='o')
+                axs[0,1].grid(True)
+                axs[0,1].set_title("Cash Ratio")
+                axs[0,1].set_xlabel("Year")
+                axs[0,1].set_ylabel("Cash Ratio")
+                axs[0,1].legend()
+                # Plot Net Profit Margin
+                axs[1,0].plot(self.xaxis, np.flip(self.op_cashflow_ratio), label="Operating Cashflow Ratio", color='green', marker='o')
+                axs[1,0].grid(True)
+                axs[1,0].set_title("Operating Cashflow Ratio")
+                axs[1,0].set_xlabel("Year")
+                axs[1,0].set_ylabel("Operating Cashflow Ratio")
+                axs[1,0].legend()
+                # Plot Operating Income Margin
+                axs[1,1].plot(self.xaxis, np.flip(self.inv_turnover_ratio), label="Inventor Turnover Ratio", color='purple', marker='o')
+                axs[1,1].grid(True)
+                axs[1,1].set_title("Inventor Turnover Ratio")
+                axs[1,1].set_xlabel("Year")
+                axs[1,1].set_ylabel("Inventor Turnover Ratio")
+                axs[1,1].legend()
+                figl.savefig(os.path.join(self.image_path, "liqRatio.png"))
 
-            # Plot the results
-            figl,axs = plt.subplots(int(len(args)/2),int(len(args)/2))
-            figl.suptitle("Liquidity Ratio")
-            figl.set_size_inches(25, 12)
-            # Plot Return on Assets
-            axs[0,0].plot(self.xaxis, np.flip(self.cur_ratio), label="Current Ratio", color='blue', marker='o')
-            axs[0,0].grid(True)
-            axs[0,0].set_title("Current Ratio")
-            axs[0,0].set_xlabel("Year")
-            axs[0,0].set_ylabel("Current Ratio")
-            axs[0,0].legend()
-            # Plot Return on Equity
-            axs[0,1].plot(self.xaxis, np.flip(self.cshratio), label="Cash Ratio", color='red', marker='o')
-            axs[0,1].grid(True)
-            axs[0,1].set_title("Cash Ratio")
-            axs[0,1].set_xlabel("Year")
-            axs[0,1].set_ylabel("Cash Ratio")
-            axs[0,1].legend()
-            # Plot Net Profit Margin
-            axs[1,0].plot(self.xaxis, np.flip(self.op_cashflow_ratio), label="Operating Cashflow Ratio", color='green', marker='o')
-            axs[1,0].grid(True)
-            axs[1,0].set_title("Operating Cashflow Ratio")
-            axs[1,0].set_xlabel("Year")
-            axs[1,0].set_ylabel("Operating Cashflow Ratio")
-            axs[1,0].legend()
-            # Plot Operating Income Margin
-            axs[1,1].plot(self.xaxis, np.flip(self.inv_turnover_ratio), label="Inventor Turnover Ratio", color='purple', marker='o')
-            axs[1,1].grid(True)
-            axs[1,1].set_title("Inventor Turnover Ratio")
-            axs[1,1].set_xlabel("Year")
-            axs[1,1].set_ylabel("Inventor Turnover Ratio")
-            axs[1,1].legend()
-            figl.savefig(os.path.join(self.image_path, "liqRatio.png"))
+            except TypeError:
+                pass
