@@ -62,7 +62,7 @@ class LiquidityRatio(Base,Plotter):
 
         return wrapper
 
-    #@valuation
+    @valuation
     def currentratio(self):
 
         try:
@@ -87,7 +87,7 @@ class LiquidityRatio(Base,Plotter):
         except AttributeError:
             logger.exception(AttributeError)
 
-    #@valuation
+    @valuation
     def cashratio(self):
 
         try:
@@ -126,15 +126,10 @@ class LiquidityRatio(Base,Plotter):
             self.op_cashflow_ratio = np.divide(self.op_cashflow[0:-1],self.cur_liabilities)
             return self.op_cashflow_ratio
 
-        except KeyError:
+        except Exception:
             logger.error("Operative Cashflow Ratio can't be calculated")
-            logger.exception(KeyError)
-
-        except ValueError:
-            logger.exception(ValueError)
-
-        except AttributeError:
-            logger.exception(AttributeError)
+            logger.exception(Exception)
+            self.op_cashflow_ratio = [0, 0, 0, 0]
 
     #@valuation
     def inventory_turnover_ratio(self):

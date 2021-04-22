@@ -1,14 +1,14 @@
-INFO - [22/04/2021] (21:00:21) - Result - Stock Valuation started
-INFO - [22/04/2021] (21:00:21) - Base - All 3 Financial statements have been accepted
-INFO - [22/04/2021] (21:00:21) - Base - Creating list of paths for the files containing financial data
-INFO - [22/04/2021] (21:00:21) - Base - Reading Balance sheet
-INFO - [22/04/2021] (21:00:21) - Base - Balance sheet read
-INFO - [22/04/2021] (21:00:21) - Base - Reading Cash flow statement
-INFO - [22/04/2021] (21:00:21) - Base - Cash flow statement read
-INFO - [22/04/2021] (21:00:21) - Base - Reading Income statement
-INFO - [22/04/2021] (21:00:21) - Base - Income statement read
-ERROR - [22/04/2021] (21:00:21) - Base - Return on Capital Employed cannot be calculated
-ERROR - [22/04/2021] (21:00:21) - Base - <class 'KeyError'>
+INFO - [22/04/2021] (21:04:57) - Result - Stock Valuation started
+INFO - [22/04/2021] (21:04:57) - Base - All 3 Financial statements have been accepted
+INFO - [22/04/2021] (21:04:57) - Base - Creating list of paths for the files containing financial data
+INFO - [22/04/2021] (21:04:57) - Base - Reading Balance sheet
+INFO - [22/04/2021] (21:04:57) - Base - Balance sheet read
+INFO - [22/04/2021] (21:04:57) - Base - Reading Cash flow statement
+INFO - [22/04/2021] (21:04:57) - Base - Cash flow statement read
+INFO - [22/04/2021] (21:04:57) - Base - Reading Income statement
+INFO - [22/04/2021] (21:04:57) - Base - Income statement read
+ERROR - [22/04/2021] (21:04:57) - Base - Return on Capital Employed cannot be calculated
+ERROR - [22/04/2021] (21:04:57) - Base - <class 'KeyError'>
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3080, in get_loc
     return self._engine.get_loc(casted_key)
@@ -34,36 +34,38 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3082, in get_loc
     raise KeyError(key) from err
 KeyError: 'Inventory'
-INFO - [22/04/2021] (21:00:21) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [22/04/2021] (21:00:21) - LiquidityRatio - Calculating Cash Ratio
-INFO - [22/04/2021] (21:00:21) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [22/04/2021] (21:00:21) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.470791
-INFO - [22/04/2021] (21:00:21) - LiquidityRatio - Calculating Inventory turnover ratio
-ERROR - [22/04/2021] (21:00:21) - LiquidityRatio - Inventory turnover ratio can't be calculated
-ERROR - [22/04/2021] (21:00:21) - LiquidityRatio - <class 'Exception'>
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Current Ratio is GOOD : 2.534153
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Cash Ratio
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Cash Ratio is BAD : 0.431821
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.470791
+INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Inventory turnover ratio
+ERROR - [22/04/2021] (21:04:57) - LiquidityRatio - Inventory turnover ratio can't be calculated
+ERROR - [22/04/2021] (21:04:57) - LiquidityRatio - <class 'Exception'>
 Traceback (most recent call last):
-  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/LiquidityRatio.py", line 151, in inventory_turnover_ratio
+  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/LiquidityRatio.py", line 145, in inventory_turnover_ratio
     self.inv_turnover_ratio = np.divide(self.tot_revenue[0:-1], self.inventory)
 AttributeError: 'DCF' object has no attribute 'inventory'
-INFO - [22/04/2021] (21:00:22) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [22/04/2021] (21:00:22) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.333364
-INFO - [22/04/2021] (21:00:22) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [22/04/2021] (21:00:22) - SolvencyRatio - Interest Coverage Ratio is GOOD : 9.491451
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Return on Assets is BAD : 5.993318
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Return on Equity is GOOD : 11.587595
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating Return on Capital Employed (ROCE)
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - EBITDA Margin is : 9.135178
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Net Profit Margin is GOOD : 18.485593
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [22/04/2021] (21:00:22) - ProfitabilityRatio - Operating Margin is GOOD : 13.268554
-INFO - [22/04/2021] (21:00:24) - DCF - Calculating Weighted average cost of capital
-INFO - [22/04/2021] (21:00:24) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
-INFO - [22/04/2021] (21:00:24) - DCF - Calculating Terminal Value
-INFO - [22/04/2021] (21:00:24) - DCF - Calculating intrinsic value
-INFO - [22/04/2021] (21:00:24) - DCF - Current Market price is : 215.810000
-INFO - [22/04/2021] (21:00:24) - DCF - Intrinsic Value is : 3235.082455
-INFO - [22/04/2021] (21:00:24) - DCF - Margin of Safety is : 1399.041960
+INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.333364
+INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Interest Coverage Ratio is GOOD : 9.491451
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Return on Assets is BAD : 5.993318
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Return on Equity is GOOD : 11.587595
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Capital Employed (ROCE)
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - EBITDA Margin is : 9.135178
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Net Profit Margin is GOOD : 18.485593
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Operating Margin is GOOD : 13.268554
+INFO - [22/04/2021] (21:05:00) - DCF - Calculating Weighted average cost of capital
+INFO - [22/04/2021] (21:05:00) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
+INFO - [22/04/2021] (21:05:00) - DCF - Calculating Terminal Value
+INFO - [22/04/2021] (21:05:00) - DCF - Calculating intrinsic value
+INFO - [22/04/2021] (21:05:00) - DCF - Current Market price is : 216.410000
+INFO - [22/04/2021] (21:05:00) - DCF - Intrinsic Value is : 3235.077172
+INFO - [22/04/2021] (21:05:00) - DCF - Margin of Safety is : 1394.883403
