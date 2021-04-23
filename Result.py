@@ -141,5 +141,6 @@ class Result():
         val.write(f"Discount Factor  = {Obj.discount_factor}\n")
         val.write(f"Total Revenue  = {Obj.tot_revenue}\n")
         val.write(f"Present Terminal Value  = {Obj.today_value}\n")
+        val.write(f"Shares Outstanding  = {Obj.sharesoutstanding}\n\n")
         val.write(f"Intrinsic Value  = {Obj.intrinsic_value}\n")
         val.write(f"Margin of Safety  = {Obj.margin_of_safety}\n")

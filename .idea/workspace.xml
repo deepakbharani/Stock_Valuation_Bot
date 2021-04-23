@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c8709dd-2de8-4adf-beb7-8f14439ae9ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DCF.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LiquidityRatio.py" beforeDir="false" afterPath="$PROJECT_DIR$/LiquidityRatio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plotter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProfitabilityRatio.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProfitabilityRatio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Result.py" beforeDir="false" afterPath="$PROJECT_DIR$/Result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/balance_sheet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/balance_sheet.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/cash_flow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/cash_flow.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/income_statement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/income_statement.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/valuations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/valuations.txt" afterDir="false" />
     </list>
