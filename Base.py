@@ -124,46 +124,43 @@ class Base:
             self.shareholder_equity = np.array(self.balsheet.loc['Stockholders\' Equity']).astype('float')
             self.long_term_debt = np.array(self.balsheet.loc['Long Term Debt']).astype('float')
             self.total_debt = np.array(self.balsheet.loc['Total Debt']).astype('float')
+            self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
 
             # Cashflow statement parameters
-            self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')
-            self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')
+            self.op_cashflow = np.array(self.cashflow.loc['Operating Cash Flow']).astype('float')[:-1]
+            self.free_cashflow = np.array(self.cashflow.loc['Free Cash Flow']).astype('float')[:-1]
 
             # Income statement parameters
 
-            self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')   #
-            self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')
-            self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')
-            self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')
-            self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')
-            self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')
-            self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')
-            self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')
+            self.tot_revenue = np.array(self.incomestmt.loc['Total Revenue']).astype('float')[:-1]
+            self.ebit = np.array(self.incomestmt.loc['EBIT']).astype('float')[:-1]
+            self.interest_expense = np.array(self.incomestmt.loc['Interest Expense']).astype('float')[:-1]
+            self.opr_income = np.array(self.incomestmt.loc['Operating Income']).astype('float')[:-1]
+            self.net_income = np.array(self.incomestmt.loc['Net Income']).astype('float')[:-1]
+            self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')[:-1]
+            self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')[:-1]
+            self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')[:-1]
 
             self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
 
         except KeyError:
-            logger.error("Return on Capital Employed cannot be calculated")
             logger.exception(KeyError)
             pass
 
-    def get_financials(self):
-        self.stock_ticker = 'AAPL'
-        self.tic = yf.Ticker(self.stock_ticker)
+    #def get_financials(self):
+    #    self.stock_ticker = 'AAPL'
+    #    self.tic = yf.Ticker(self.stock_ticker)
 
         # Cashflow statement parameters
-        self.op_cashflow = np.array(self.tic.cashflow.loc['Total Cash From Operating Activities'])
-        self.interest_expense = np.array(self.tic.financials.loc['Interest Expense'])
-        self.tax_expense = np.array(self.tic.financials.loc['Income Tax Expense'])
-        self.capex = np.array(self.tic.cashflow.loc['Capital Expenditures'])
-        self.free_cashflow = self.op_cashflow+self.interest_expense-self.tax_expense-self.capex
+    #    self.op_cashflow = np.array(self.tic.cashflow.loc['Total Cash From Operating Activities'])
+    #    self.interest_expense = np.array(self.tic.financials.loc['Interest Expense'])
+    #    self.tax_expense = np.array(self.tic.financials.loc['Income Tax Expense'])
+    #    self.capex = np.array(self.tic.cashflow.loc['Capital Expenditures'])
+    #    self.free_cashflow = self.op_cashflow+self.interest_expense-self.tax_expense-self.capex
 
         # Balance Sheet statement parameters
-        self.tot_revenue = np.array(self.tic.financials.loc['Total Revenue']).astype('float')
-        self.ebit = np.array(self.tic.financials.loc['Ebit']).astype('float')
-
-        print("Op Cashflow", self.op_cashflow)
-        print("ebit", self.ebit)
+#        self.tot_revenue = np.array(self.tic.financials.loc['Total Revenue']).astype('float')
+#        self.ebit = np.array(self.tic.financials.loc['Ebit']).astype('float')
 
     @classmethod
     def percentage_growth(self,vector):

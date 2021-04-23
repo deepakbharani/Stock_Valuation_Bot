@@ -73,7 +73,7 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating Return on Capital Employed (ROCE)")
 
-            self.roce = np.divide(self.ebit[:-1],(self.tot_assets-self.cur_liabilities)) * 100
+            self.roce = np.divide(self.ebit,(self.tot_assets-self.cur_liabilities)) * 100
 
             return self.roce
 
@@ -98,7 +98,7 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             """
             logger.info("Calculating Return on Assets (ROA)")
 
-            self.roa = np.divide(self.net_income[:-1],self.tot_assets) * 100
+            self.roa = np.divide(self.net_income,self.tot_assets) * 100
             return self.roa
 
         except KeyError:
@@ -121,7 +121,7 @@ class ProfitabilityRatio(SolvencyRatio,Plotter):
             ***HIGHER the BETTER***
             """
             logger.info("Calculating Return on Equity (ROE)")
-            self.roe = np.divide(self.net_income[:-1],self.shareholder_equity) * 100
+            self.roe = np.divide(self.net_income,self.shareholder_equity) * 100
 
             return self.roe
 

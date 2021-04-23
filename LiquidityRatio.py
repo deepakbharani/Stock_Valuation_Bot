@@ -123,7 +123,7 @@ class LiquidityRatio(Base,Plotter):
             """
 
             logger.info("Calculating Operating Cashflow ratio")
-            self.op_cashflow_ratio = np.divide(self.op_cashflow[0:-1],self.cur_liabilities)
+            self.op_cashflow_ratio = np.divide(self.op_cashflow,self.cur_liabilities)
             return self.op_cashflow_ratio
 
         except Exception:
@@ -142,7 +142,7 @@ class LiquidityRatio(Base,Plotter):
             """
 
             logger.info("Calculating Inventory turnover ratio")
-            self.inv_turnover_ratio = np.divide(self.tot_revenue[0:-1], self.inventory)
+            self.inv_turnover_ratio = np.divide(self.tot_revenue, self.inventory)
 
             return self.inv_turnover_ratio
 

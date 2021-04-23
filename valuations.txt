@@ -3,56 +3,68 @@
 --------------------------------------------------------------------
 
 STOCK DETAILS
-Stock Ticker - BIDU
-Stock Beta - 1.049641
-Market Capitalisation - 72843608064
-Current Market Price - 216.41
-Shares Outstanding - 269560000
+Stock Ticker - JD
+Stock Beta - 0.810259
+Market Capitalisation - 116452106240
+Current Market Price - 76.86
+Shares Outstanding - 1558989952
 
 1) SOLVENCY RATIO: 
 The Company has a GOOD Debt to Equity ratio
-Debt to Equity Ratio = 0.330248 
+Debt to Equity Ratio = 0.066815 
 The Company has a GOOD Interest Coverage Ratio
-Interest Coverage Ratio = 8.441186 
+Interest Coverage Ratio = 46.165081 
 
 2) LIQUIDITY RATIO: 
-The Company has a GOOD Current Ratio
-Current Ratio = 2.681027 
+The Company has a BAD Current Ratio
+Current Ratio = 1.349303 
 The Company has a BAD Cash Ratio
-Cash Ratio = 0.523243 
+Cash Ratio = 0.494693 
 The Company has a BAD Operating Cashflow Ratio
-Operating Cashflow Ratio = 0.353879 
-The Company has a BAD Inventory Turnover Ratio
-Inventory Turnover Ratio = 0.000000 
+Operating Cashflow Ratio = 0.244484 
+The Company has a GOOD Inventory Turnover Ratio
+Inventory Turnover Ratio = 12.655184 
 
 3) Profitability RATIO: 
 The Company has a BAD Operating Income Margin
-Operating Income Margin = 13.392607 
-The Company has a GOOD Net Profit Margin
-Net Profit Margin = 20.987355 
+Operating Income Margin = 1.433903 
+The Company has a BAD Net Profit Margin
+Net Profit Margin = 6.624443 
 The Company has a GOOD Return on Equity
-Return on Equity = 12.300215 
-The Company has a BAD Return on Assets
-Return on Assets = 6.754271 
+Return on Equity = 26.343369 
+The Company has a GOOD Return on Assets
+Return on Assets = 11.699420 
 
-The Company has a BAD Return on Capital Employed
-Return on Capital Employed = 9.909467 
+The Company has a GOOD Return on Capital Employed
+Return on Capital Employed = 20.922316 
 
 --------------------------------------------------------------------
 ----------------------Intrinsic Value Calculation-------------------
 --------------------------------------------------------------------
 
 WACC Calculation 
-WACC calculated as = 10.293572 
+--------------------------------------------------------------------
+Market Cap = 116452106240 
+Long Term Debt = 12530761.0 
+Beta = 0.810259
+Risk Free Return = 4
+Corporate Tax = 30
+--------------------------------------------------------------------
+Weighted Equity Capital = 0.999892407160468
+Weighted Debt Capital = 0.0001075928395319895
+ROR Equity Capital = 8.861554
+ROR Debt Capital = 6.285545626478711
+WACC calculated as = 8.861276839944436 
 
-ROCE is 9.909466826572034 and WACC is 10.293572339690042
-CAGR Total Revenue  = 6.325730807920176
-Present Value  = [37400366.16554562 40178266.71354779 43162494.95953115 46368375.82899919
- 49812372.50152396]
-Discount Factor  = [1.10293572 1.21646721 1.34168514 1.47979247 1.63211598]
-Total Revenue  = [8.48090000e+07 1.02277000e+08 1.07413000e+08 1.07074000e+08
- 1.07074000e+08 1.13847213e+08 1.21048881e+08 1.28706108e+08
- 1.36847710e+08 1.45504327e+08]
-Present Terminal Value  = 872047402547.3718
-Intrinsic Value  = 3235.0771722339064
-Margin of Safety  = 1394.883402908325
+ROCE is 20.922316493888623 and WACC is 8.861276839944436
+Interest Expense 1125181.0
+CAGR Total Revenue  = 27.218428179462563
+Present Value  = [50533604.87545021 47946520.32003447 45491882.41103087 43162910.49872735
+ 40953171.07100846]
+Discount Factor  = [1.1     1.21    1.331   1.4641  1.61051]
+Total Revenue  = [3.62331754e+08 4.62019759e+08 5.76888484e+08 7.45801886e+08
+ 9.48797437e+08 1.20704519e+09 1.53558391e+09 1.95354572e+09
+ 2.48527015e+09]
+Present Terminal Value  = 887971339095.4662
+Intrinsic Value  = 569.5811816851698
+Margin of Safety  = 641.0632080212981

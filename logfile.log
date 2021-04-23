@@ -1,71 +1,38 @@
-INFO - [22/04/2021] (21:04:57) - Result - Stock Valuation started
-INFO - [22/04/2021] (21:04:57) - Base - All 3 Financial statements have been accepted
-INFO - [22/04/2021] (21:04:57) - Base - Creating list of paths for the files containing financial data
-INFO - [22/04/2021] (21:04:57) - Base - Reading Balance sheet
-INFO - [22/04/2021] (21:04:57) - Base - Balance sheet read
-INFO - [22/04/2021] (21:04:57) - Base - Reading Cash flow statement
-INFO - [22/04/2021] (21:04:57) - Base - Cash flow statement read
-INFO - [22/04/2021] (21:04:57) - Base - Reading Income statement
-INFO - [22/04/2021] (21:04:57) - Base - Income statement read
-ERROR - [22/04/2021] (21:04:57) - Base - Return on Capital Employed cannot be calculated
-ERROR - [22/04/2021] (21:04:57) - Base - <class 'KeyError'>
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3080, in get_loc
-    return self._engine.get_loc(casted_key)
-  File "pandas/_libs/index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas/_libs/index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas/_libs/hashtable_class_helper.pxi", line 4554, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas/_libs/hashtable_class_helper.pxi", line 4562, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'Inventory'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/Base.py", line 143, in variablefunction
-    self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexing.py", line 895, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexing.py", line 1124, in _getitem_axis
-    return self._get_label(key, axis=axis)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexing.py", line 1073, in _get_label
-    return self.obj.xs(label, axis=axis)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/generic.py", line 3739, in xs
-    loc = index.get_loc(key)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3082, in get_loc
-    raise KeyError(key) from err
-KeyError: 'Inventory'
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Current Ratio and its growth
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Current Ratio is GOOD : 2.534153
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Cash Ratio
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Cash Ratio is BAD : 0.431821
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Operating Cashflow ratio
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.470791
-INFO - [22/04/2021] (21:04:57) - LiquidityRatio - Calculating Inventory turnover ratio
-ERROR - [22/04/2021] (21:04:57) - LiquidityRatio - Inventory turnover ratio can't be calculated
-ERROR - [22/04/2021] (21:04:57) - LiquidityRatio - <class 'Exception'>
-Traceback (most recent call last):
-  File "/Users/a2b/Desktop/python_projects/Stock_Valuation_Bot/LiquidityRatio.py", line 145, in inventory_turnover_ratio
-    self.inv_turnover_ratio = np.divide(self.tot_revenue[0:-1], self.inventory)
-AttributeError: 'DCF' object has no attribute 'inventory'
-INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Calculating Debt to Equity ratio
-INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.333364
-INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Calculating Interest Coverage ratio
-INFO - [22/04/2021] (21:04:57) - SolvencyRatio - Interest Coverage Ratio is GOOD : 9.491451
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Assets (ROA)
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Return on Assets is BAD : 5.993318
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Equity (ROE)
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Return on Equity is GOOD : 11.587595
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Return on Capital Employed (ROCE)
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating EBITDA Margin
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - EBITDA Margin is : 9.135178
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Net Profit Margin
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Net Profit Margin is GOOD : 18.485593
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Calculating Operating Income Margin
-INFO - [22/04/2021] (21:04:58) - ProfitabilityRatio - Operating Margin is GOOD : 13.268554
-INFO - [22/04/2021] (21:05:00) - DCF - Calculating Weighted average cost of capital
-INFO - [22/04/2021] (21:05:00) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
-INFO - [22/04/2021] (21:05:00) - DCF - Calculating Terminal Value
-INFO - [22/04/2021] (21:05:00) - DCF - Calculating intrinsic value
-INFO - [22/04/2021] (21:05:00) - DCF - Current Market price is : 216.410000
-INFO - [22/04/2021] (21:05:00) - DCF - Intrinsic Value is : 3235.077172
-INFO - [22/04/2021] (21:05:00) - DCF - Margin of Safety is : 1394.883403
+INFO - [23/04/2021] (20:46:46) - Result - Stock Valuation started
+INFO - [23/04/2021] (20:46:46) - Base - All 3 Financial statements have been accepted
+INFO - [23/04/2021] (20:46:46) - Base - Creating list of paths for the files containing financial data
+INFO - [23/04/2021] (20:46:46) - Base - Reading Balance sheet
+INFO - [23/04/2021] (20:46:46) - Base - Balance sheet read
+INFO - [23/04/2021] (20:46:46) - Base - Reading Cash flow statement
+INFO - [23/04/2021] (20:46:46) - Base - Cash flow statement read
+INFO - [23/04/2021] (20:46:46) - Base - Reading Income statement
+INFO - [23/04/2021] (20:46:46) - Base - Income statement read
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Calculating Current Ratio and its growth
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Current Ratio is BAD : 1.045759
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Calculating Cash Ratio
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Cash Ratio is BAD : 0.314866
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Calculating Operating Cashflow ratio
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Operating Cashflow Ratio is BAD : 0.201037
+INFO - [23/04/2021] (20:46:46) - LiquidityRatio - Calculating Inventory turnover ratio
+INFO - [23/04/2021] (20:46:47) - SolvencyRatio - Calculating Debt to Equity ratio
+INFO - [23/04/2021] (20:46:47) - SolvencyRatio - Debt to Equity Ratio is GOOD : 0.141176
+INFO - [23/04/2021] (20:46:47) - SolvencyRatio - Calculating Interest Coverage ratio
+INFO - [23/04/2021] (20:46:47) - SolvencyRatio - Interest Coverage Ratio is GOOD : 17.238579
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating Return on Assets (ROA)
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Return on Assets is BAD : 4.412952
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating Return on Equity (ROE)
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Return on Equity is GOOD : 11.410980
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating Return on Capital Employed (ROCE)
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating EBITDA Margin
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - EBITDA Margin is : 0.000000
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating Net Profit Margin
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Net Profit Margin is BAD : 2.327829
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Calculating Operating Income Margin
+INFO - [23/04/2021] (20:46:48) - ProfitabilityRatio - Operating Margin is BAD : 0.784037
+INFO - [23/04/2021] (20:46:49) - DCF - Calculating Weighted average cost of capital
+INFO - [23/04/2021] (20:46:49) - DCF - Forecasting total revenue, net income and free cashflow for the next five years
+INFO - [23/04/2021] (20:46:49) - DCF - Calculating Terminal Value
+INFO - [23/04/2021] (20:46:49) - DCF - Calculating intrinsic value
+INFO - [23/04/2021] (20:46:49) - DCF - Current Market price is : 76.860000
+INFO - [23/04/2021] (20:46:49) - DCF - Intrinsic Value is : 569.581182
+INFO - [23/04/2021] (20:46:49) - DCF - Margin of Safety is : 641.063208

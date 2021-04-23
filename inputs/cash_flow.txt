@@ -1,71 +1,24 @@
 BreakdownTTM12/30/202012/30/201912/30/201812/30/2017
-Operating Cash Flow	24,200,000	24,200,000	28,458,000	35,967,000	32,880,000
-Cash Flow from Continuing Operating Activities	24,200,000	24,200,000	28,458,000	35,967,000	32,880,000
-Net Income from Continuing Operations	19,026,000	19,026,000	-2,288,000	22,582,000	18,288,000
-Operating Gains Losses	-9,718,000	-9,718,000	-473,000	-13,145,000	-8,761,000
-Gain Loss On Sale of Business	0	0	578,000	-5,525,000	-5,550,000
-Gain Loss On Sale of PPE	-	-	-	-51,000	-30,000
-Gain Loss On Investment Securities	-11,966,000	-11,966,000	-2,305,000	-7,648,000	-3,244,000
-Earnings Losses from Equity Investments	2,248,000	2,248,000	1,254,000	79,000	63,000
-Depreciation Amortization Depletion	22,714,000	22,714,000	22,138,000	16,187,000	11,748,000
-Depreciation & amortization	22,714,000	22,714,000	22,138,000	16,187,000	11,748,000
-Depreciation	5,772,000	5,772,000	5,615,000	3,730,000	3,805,000
-Amortization	16,942,000	16,942,000	16,523,000	12,457,000	7,943,000
-Amortization of Intangibles	16,942,000	16,942,000	16,523,000	12,457,000	7,943,000
-Deferred Tax	115,000	115,000	-696,000	-761,000	-756,000
-Deferred Income Tax	115,000	115,000	-696,000	-761,000	-756,000
-Asset Impairment Charge	2,928,000	2,928,000	10,714,000	3,655,000	2,358,000
-Provision & Write Off of Assets	679,000	679,000	429,000	451,000	585,000
-Stock based compensation	6,728,000	6,728,000	5,626,000	4,676,000	3,244,000
-Other non-cash items	-65,000	-65,000	-305,000	-959,000	-401,000
-Change in working capital	-18,207,000	-18,207,000	-6,687,000	3,281,000	6,575,000
-Change in Receivables	-1,535,000	-1,535,000	-1,914,000	-1,084,000	-543,000
-Changes in Account Receivables	-1,660,000	-1,660,000	-1,779,000	-1,611,000	-721,000
-Change in Prepaid Assets	1,177,000	1,177,000	-	-	-
-Change in Payables And Accrued Expense	51,000	51,000	-1,792,000	4,850,000	4,794,000
-Change in Payable	51,000	51,000	-1,792,000	4,850,000	4,794,000
-Change in Account Payable	208,000	208,000	-1,653,000	4,094,000	5,100,000
-Change in Other Current Assets	-351,000	-351,000	-4,459,000	-1,333,000	1,259,000
-Change in Other Working Capital	-17,549,000	-17,549,000	1,478,000	848,000	1,065,000
-Investing Cash Flow	-27,552,000	-27,552,000	-19,974,000	-34,460,000	-76,935,000
-Cash Flow from Continuing Investing Activities	-27,552,000	-27,552,000	-19,974,000	-34,460,000	-76,935,000
-Capital Expenditure Reported	-	-	-	-	0
-Net PPE Purchase And Sale	-5,084,000	-5,084,000	-6,428,000	-8,818,000	-4,785,000
-Purchase of PPE	-5,084,000	-5,084,000	-6,428,000	-8,861,000	-4,829,000
-Sale of PPE	-	-	-	43,000	44,000
-Net Intangibles Purchase And Sale	-247,000	-247,000	-12,693,000	-13,501,000	-9,122,000
-Purchase of Intangibles	-247,000	-247,000	-12,693,000	-13,501,000	-9,122,000
-Net Business Purchase And Sale	-2,882,000	-2,882,000	-1,445,000	3,603,000	892,000
-Purchase of Business	-2,882,000	-2,882,000	-1,445,000	-1,978,000	-553,000
-Sale of Business	-	-	-	5,581,000	1,445,000
-Net Investment Purchase And Sale	-20,244,000	-20,244,000	561,000	-21,668,000	-40,411,000
-Purchase of Investment	-296,672,000	-296,672,000	-344,682,000	-338,042,000	-316,444,000
-Sale of Investment	276,428,000	276,428,000	345,243,000	316,374,000	276,033,000
-Dividends Received CFI	-	-	-	47,000	13,000
-Net Other Investing Changes	905,000	905,000	31,000	5,877,000	-23,522,000
-Financing Cash Flow	5,665,000	5,665,000	-3,873,000	15,082,000	44,557,000
-Cash Flow from Continuing Financing Activities	5,665,000	5,665,000	-3,873,000	15,082,000	44,557,000
-Net Issuance Payments of Debt	12,390,000	12,390,000	1,338,000	20,727,000	23,596,000
-Net Long Term Debt Issuance	12,054,000	12,054,000	1,766,000	17,995,000	23,671,000
-Long Term Debt Issuance	18,497,000	18,497,000	8,846,000	38,365,000	34,696,000
-Long Term Debt Payments	-6,443,000	-6,443,000	-7,080,000	-20,370,000	-11,025,000
-Net Short Term Debt Issuance	336,000	336,000	-428,000	2,732,000	-75,000
-Short Term Debt Issuance	3,559,000	3,559,000	2,738,000	3,787,000	751,000
-Short Term Debt Payments	-3,223,000	-3,223,000	-3,166,000	-1,055,000	-826,000
-Net Common Stock Issuance	-8,392,000	-8,392,000	-4,557,000	12,377,000	2,323,000
-Common Stock Issuance	4,662,000	4,662,000	401,000	15,689,000	4,046,000
-Common Stock Payments	-13,054,000	-13,054,000	-4,958,000	-3,312,000	-1,723,000
-Proceeds from Stock Option Exercised	228,000	228,000	18,000	676,000	453,000
-Net Other Financing Charges	1,439,000	1,439,000	-672,000	-18,698,000	18,185,000
-End Cash Position	36,540,000	36,540,000	34,439,000	29,827,000	11,084,000
-Changes in Cash	2,313,000	2,313,000	4,611,000	16,589,000	502,000
-Effect of Exchange Rate Changes	-212,000	-212,000	1,000	1,902,000	-316,000
-Beginning Cash Position	34,439,000	34,439,000	29,827,000	11,336,000	10,898,000
-Income Tax Paid Supplemental Data	3,608,000	3,608,000	4,100,000	5,509,000	3,300,000
-Interest Paid Supplemental Data	2,204,000	2,204,000	2,448,000	1,579,000	758,000
-Capital Expenditure	-5,331,000	-5,331,000	-19,121,000	-22,362,000	-13,951,000
-Issuance of Capital Stock	4,662,000	4,662,000	401,000	15,689,000	4,046,000
-Issuance of Debt	22,056,000	22,056,000	11,584,000	42,152,000	35,447,000
-Repayment of Debt	-9,666,000	-9,666,000	-10,246,000	-21,425,000	-11,851,000
-Repurchase of Capital Stock	-13,054,000	-13,054,000	-4,958,000	-3,312,000	-1,723,000
-Free Cash Flow	18,869,000	18,869,000	9,337,000	13,605,000	18,929,000
+Operating Cash Flow	42,544,317	42,544,317	24,781,220	20,881,422	24,821,273
+Cash Flow from Continuing Operating Activities	-	-	24,781,220	20,881,422	27,307,014
+Net Income from Continuing Operations	-	-	11,890,092	-2,800,550	-18,633
+Operating Gains Losses	-	-	-3,404,475	-25,836	1,649,864
+Depreciation Amortization Depletion	-	-	5,828,055	5,560,034	4,192,716
+Deferred Tax	-	-	533,117	-10,454	-221,010
+Asset Impairment Charge	-	-	1,954,031	615,455	139,823
+Unrealized Gain Loss On Investment Securities	-	-	-3,495,709	1,512,979	-
+Stock based compensation	-	-	3,694,955	3,659,989	2,780,062
+Other non-cash items	-	-	14,812	13,649	13,426
+Change in working capital	-	-	7,766,342	12,356,156	18,770,766
+Cash from Discontinued Operating Activities	-	-	0	0	-2,485,741
+Investing Cash Flow	-57,810,588	-57,810,588	-25,349,357	-26,078,992	-37,498,092
+Financing Cash Flow	71,071,595	71,071,595	2,572,467	11,219,928	19,234,985
+End Cash Position	90,635,223	90,635,223	39,912,279	37,502,058	25,688,327
+Income Tax Paid Supplemental Data	-	-	807,622	666,305	240,899
+Interest Paid Supplemental Data	-	-	679,120	421,035	577,306
+Capital Expenditure	-	-	-8,999,592	-21,369,494	-11,355,875
+Issuance of Capital Stock	-	-	0	19,490,662	-
+Issuance of Debt	-	-	5,803,800	4,069,997	17,200,000
+Repayment of Debt	-	-	-9,855,995	-13,160,194	-13,246,259
+Repurchase of Capital Stock	-	-	-131,010	-205,886	0
+Free Cash Flow	42,544,317	42,544,317	15,781,628	-488,072	13,465,398

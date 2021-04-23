@@ -23,13 +23,14 @@ class DCF(ProfitabilityRatio):
         self.num_period = 4
         self.risk_free_return = 4
         self.corp_tax = self.tax_expense / self.income_before_tax
-        self.corp_tax = self.corp_tax[-1]
+        #self.corp_tax = self.corp_tax[-1]
+        self.corp_tax = 30
         self.perpetual_growth = 2.5
         self.discount_factor = []
         self.present_value = []
 
         # Get stock related data from yfinance module
-        self.stock_ticker = 'BIDU'
+        self.stock_ticker = 'JD'
         self.tic = yf.Ticker(self.stock_ticker)
         self.beta = self.tic.info.get('beta')
         self.marketcap = self.tic.info.get('marketCap')
@@ -42,14 +43,16 @@ class DCF(ProfitabilityRatio):
 
         # Calculate ratio of net income to total revenue
         self.net_income_to_tot_revenue = np.divide(self.net_income,self.tot_revenue) * 100
-        self.avg_net_income_to_tot_revenue = self.net_income_to_tot_revenue.mean()
+        #self.avg_net_income_to_tot_revenue = self.net_income_to_tot_revenue.mean()
+        self.avg_net_income_to_tot_revenue = self.net_income_to_tot_revenue[2:].mean()
 
         # Calculate ratio of free cash flow to net income
         self.free_cashflow_to_net_income = np.divide(self.free_cashflow,self.net_income) * 100
-        self.avg_free_cashflow_to_net_income = self.free_cashflow_to_net_income.mean()
+        #self.avg_free_cashflow_to_net_income = self.free_cashflow_to_net_income.mean()
+        self.avg_free_cashflow_to_net_income = self.free_cashflow_to_net_income[2:].mean()
 
         # Calculate rate of interest expense
-        self.rate_of_interest_expense = (self.interest_expense[:-1] / self.long_term_debt) * 100
+        self.rate_of_interest_expense = (self.interest_expense / self.long_term_debt) * 100
 
         # Calculate expected return / WACC
         self.expected_return = self.wacc()
@@ -65,7 +68,6 @@ class DCF(ProfitabilityRatio):
         self.intrinsic_value = self.today_value / self.sharesoutstanding
         logger.info("Current Market price is : %f", self.cmp)
         logger.info("Intrinsic Value is : %f", self.intrinsic_value)
-
 
         # Calculate Margin of Safety
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
@@ -94,7 +96,7 @@ class DCF(ProfitabilityRatio):
             self.free_cashflow = np.append(self.free_cashflow, self.free_cashflow_forecast)
 
             # Calculate Discount Factor
-            self.discount_factor.append((1+(self.expected_return/100))**(i+1))
+            self.discount_factor.append((1+(10/100))**(i+1))
 
             # Calculate present value of future free cashflow
             self.present_value.append(self.free_cashflow[-1] / self.discount_factor[i])
@@ -104,7 +106,7 @@ class DCF(ProfitabilityRatio):
     def terminal_value(self):
 
         logger.info("Calculating Terminal Value")
-        self.terminal_value = self.free_cashflow[-1] * (1 + self.perpetual_growth / 100) / (
+        self.terminal_value = self.free_cashflow[-1] * (1 + (self.perpetual_growth / 100)) / (
                     (self.wacc / 100) - (self.perpetual_growth / 100))
         self.present_terminal_value = self.terminal_value / self.discount_factor[-1]
         # self.today_value = (sum(self.present_value)+self.present_terminal_value)*0.0001
