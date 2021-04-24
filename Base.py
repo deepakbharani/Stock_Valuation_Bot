@@ -9,6 +9,7 @@ import logging
 import pandas as pd
 import numpy as np
 import yfinance as yf
+import re
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('logfile.log')
@@ -98,11 +99,18 @@ class Base:
             num_years = 5
 
         for items in data:
+            # RegEx for negative values
+            # This will help to read the negative values as such and to change - to 0 for converting it to a numpy array
+            numregex = re.compile(r'[-+]?\d*\.\d+|\d+')
+
             items = items.split()
             items[0:(len(items) - num_years)] = [' '.join(items[0:(len(items) - num_years)])]
             for elements in range(-num_years,0):
                 items[elements] = items[elements].replace(',', '')
-                items[elements] = items[elements].replace('-', '0')
+                if numregex.findall(items[elements]):
+                    pass
+                else:
+                    items[elements] = items[elements].replace('-', '0')
             formatted_list.append(items)
 
         dataframe = pd.DataFrame(formatted_list, columns = column_name)
@@ -140,34 +148,21 @@ class Base:
             self.ebitda = np.array(self.incomestmt.loc['EBITDA']).astype('float')[:-1]
             self.tax_expense = np.array(self.incomestmt.loc['Tax Provision']).astype('float')[:-1]
             self.income_before_tax = np.array(self.incomestmt.loc['Pretax Income']).astype('float')[:-1]
-
-            self.inventory = np.array(self.balsheet.loc['Inventory']).astype('float')
+            self.eps = np.array(self.incomestmt.loc['Basic EPS']).astype('float')[:-1]
 
         except KeyError:
             logger.exception(KeyError)
             pass
-
-    #def get_financials(self):
-    #    self.stock_ticker = 'AAPL'
-    #    self.tic = yf.Ticker(self.stock_ticker)
-
-        # Cashflow statement parameters
-    #    self.op_cashflow = np.array(self.tic.cashflow.loc['Total Cash From Operating Activities'])
-    #    self.interest_expense = np.array(self.tic.financials.loc['Interest Expense'])
-    #    self.tax_expense = np.array(self.tic.financials.loc['Income Tax Expense'])
-    #    self.capex = np.array(self.tic.cashflow.loc['Capital Expenditures'])
-    #    self.free_cashflow = self.op_cashflow+self.interest_expense-self.tax_expense-self.capex
-
-        # Balance Sheet statement parameters
-#        self.tot_revenue = np.array(self.tic.financials.loc['Total Revenue']).astype('float')
-#        self.ebit = np.array(self.tic.financials.loc['Ebit']).astype('float')
 
     @classmethod
     def percentage_growth(self,vector):
 
         # Calculate percentage change / growth for two value
         growth = []
+        if vector[-1] == 0:
+            vector = vector[:-1]
+        else:
+            pass
         for i in range(0,len(vector)-1):
-            growth.append(((vector[i+1]-vector[i])/vector[i]) * 100)
-
+            growth.append(((vector[i+1]-vector[i])/abs(vector[i])) * 100)
         return growth

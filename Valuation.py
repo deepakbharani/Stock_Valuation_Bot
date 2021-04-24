@@ -12,7 +12,7 @@ file_handler = logging.FileHandler('logfile.log')
 file_handler.setLevel(logging.ERROR)
 logger.addHandler(file_handler)
 
-class DCF(ProfitabilityRatio):
+class Valuation(ProfitabilityRatio):
 
     def __init__(self):
 
@@ -73,6 +73,9 @@ class DCF(ProfitabilityRatio):
         self.margin_of_safety = ((self.intrinsic_value - self.cmp)/self.cmp)*100
         logger.info("Margin of Safety is : %f", self.margin_of_safety)
 
+        # Calculate Peterlynch factor
+        self.lynchfactor()
+
     def get_current_price(self):
         self.stock_data = self.tic.history(period='1d')
         return self.stock_data['Close'][0]
@@ -131,3 +134,11 @@ class DCF(ProfitabilityRatio):
 
         return self.wacc
 
+    def lynchfactor(self):
+        self.avg_eps_growth = Base.percentage_growth(self.eps)
+        if np.array(self.avg_eps_growth).mean() < 0:
+            self.avg_eps_growth = self.avg_eps_growth[-1]
+        else:
+            self.avg_eps_growth = np.array(self.avg_eps_growth).mean()
+
+        print(self.avg_eps_growth)

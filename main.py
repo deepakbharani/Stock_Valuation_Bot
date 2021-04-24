@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import time
     print(f"Program Started at {time.perf_counter()} ")
 
-    from DCF import *
+    from Valuation import *
     from Result import *
     from fpdf import FPDF
 

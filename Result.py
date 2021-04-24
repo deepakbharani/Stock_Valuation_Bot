@@ -4,7 +4,7 @@ Info   : This class writes the valuation results to a file
 """
 from dataclasses import dataclass
 from fpdf import FPDF
-from DCF import *
+from Valuation import *
 from Base import *
 
 
@@ -17,7 +17,7 @@ mainlogger.info("Stock Valuation started")
 
 @dataclass
 class Result():
-    Obj = DCF()
+    Obj = Valuation()
     pdf = FPDF()
 
     # ## Write Results to file
@@ -80,7 +80,7 @@ class Result():
                 val.write("The Company has a BAD Inventory Turnover Ratio\n")
             val.write("Inventory Turnover Ratio = %f \n\n" % Obj.inv_turnover_ratio[-1])
 
-        except AttributeError:
+        except Exception:
             pass
 
         # Profitability Ratio

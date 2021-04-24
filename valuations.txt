@@ -5,8 +5,8 @@
 STOCK DETAILS
 Stock Ticker - JD
 Stock Beta - 0.810259
-Market Capitalisation - 116467261440
-Current Market Price - 76.83
+Market Capitalisation - 115368304640
+Current Market Price - 76.75
 Shares Outstanding - 1558989952
 
 1) SOLVENCY RATIO: 
@@ -44,19 +44,19 @@ Return on Capital Employed = 20.922316
 
 WACC Calculation 
 --------------------------------------------------------------------
-Market Cap = 116467261440 
+Market Cap = 115368304640 
 Long Term Debt = 12530761.0 
 Beta = 0.810259
 Risk Free Return = 4
 Corporate Tax = 30
 --------------------------------------------------------------------
-Weighted Equity Capital = 0.9998924211593855
-Weighted Debt Capital = 0.00010757884061448748
+Weighted Equity Capital = 0.9998913965134986
+Weighted Debt Capital = 0.00010860348650146276
 ROR Equity Capital = 8.861554
 ROR Debt Capital = 6.285545626478711
-WACC calculated as = 8.861276876005762 
+WACC calculated as = 8.861274236509379 
 
-ROCE is 20.922316493888623 and WACC is 8.861276876005762
+ROCE is 20.922316493888623 and WACC is 8.861274236509379
 Interest Expense 1125181.0
 CAGR Total Revenue  = 27.218428179462563
 Present Value  = [50533604.87545021 47946520.32003447 45491882.41103087 43162910.49872735
@@ -65,8 +65,8 @@ Discount Factor  = [1.1     1.21    1.331   1.4641  1.61051]
 Total Revenue  = [3.62331754e+08 4.62019759e+08 5.76888484e+08 7.45801886e+08
  9.48797437e+08 1.20704519e+09 1.53558391e+09 1.95354572e+09
  2.48527015e+09]
-Present Terminal Value  = 887971335354.666
+Present Terminal Value  = 887971609161.3557
 Shares Outstanding  = 1558989952
 
-Intrinsic Value  = 569.5811792856674
-Margin of Safety  = 641.3525696806813
+Intrinsic Value  = 569.5813549164913
+Margin of Safety  = 642.1255438651352
